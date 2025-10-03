@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contract Manufacturing - Kriya Ltd</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+</head>
+<body class="contract-manufacturing-page">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/img/logo.png" alt="Kriya Ltd">
+            </a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                
+                <!-- Products Dropdown -->
+                <li class="nav-item dropdown">
+                    <a href="products/biocontrol.html" class="nav-link">Products <span class="material-symbols-outlined">expand_more</span></a>
+                    <div class="dropdown-menu products-menu">
+                        <div class="dropdown-category">
+                            <a href="products/biocontrol.html">Biocontrol <span class="material-symbols-outlined">chevron_right</span></a>
+                            <div class="subcategory-menu">
+                                <div class="subcategory-items">
+                                    <a href="products/biocontrol/ecoza.html" class="subcategory-item" data-tooltip="Azadirachtin">Ecoza</a>
+                                    <a href="products/biocontrol/margoshine.html" class="subcategory-item" data-tooltip="Neem Oil">Margoshine</a>
+                                    <a href="products/biocontrol/k-guard.html" class="subcategory-item" data-tooltip="Karanjin">K-Guard</a>
+                                    <a href="products/biocontrol/weedx.html" class="subcategory-item" data-tooltip="MCT">WeedX</a>
+                                    <a href="products/biocontrol/admira.html" class="subcategory-item" data-tooltip="Essential Oil">Admira</a>
+                                    <a href="products/biocontrol/spindura.html" class="subcategory-item" data-tooltip="Spinosad">Spindura</a>
+                                    <a href="products/biocontrol/margospin.html" class="subcategory-item" data-tooltip="Neem Oil + Spinosad">MargoSpin</a>
+                                    <a href="products/biocontrol/mycova.html" class="subcategory-item" data-tooltip="Beauveria bassian">Mycova</a>
+                                    <a href="products/biocontrol/rexora.html" class="subcategory-item" data-tooltip="Metarhizium anisopliae">Rexora</a>
+                                    <a href="products/biocontrol/biota.html" class="subcategory-item" data-tooltip="Trichoderma viride">Biota (V/H)</a>
+                                    <a href="products/biocontrol/seira.html" class="subcategory-item" data-tooltip="Verticillium lecanii">Seira</a>
+                                    <a href="products/biocontrol/encilo.html" class="subcategory-item" data-tooltip="Paecilomyces fumosoroseus">EnCilo</a>
+                                    <a href="products/biocontrol/neuvita.html" class="subcategory-item" data-tooltip="Ampelomyces quisqualis">Neuvita</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dropdown-category">
+                            <a href="products/biostimulants.html">Biostimulants <span class="material-symbols-outlined">chevron_right</span></a>
+                            <div class="subcategory-menu">
+                                <div class="subcategory-items">
+                                    <a href="products/biostimulants/igreen.html" class="subcategory-item" data-tooltip="Microbial Consortium">IGreen</a>
+                                    <a href="products/biostimulants/zenita.html" class="subcategory-item" data-tooltip="Neem Limonoids based PGP">Zenita</a>
+                                    <a href="products/biostimulants/cropsia.html" class="subcategory-item" data-tooltip="Plant Extract based PGP">Cropsia</a>
+                                    <a href="products/biostimulants/blooma.html" class="subcategory-item" data-tooltip="Seaweed based PGP">Blooma</a>
+                                    <a href="products/biostimulants/enrhize.html" class="subcategory-item" data-tooltip="Arbuscular Mycorrhizal">Enrhize</a>
+                                    <a href="products/biostimulants/orgocare.html" class="subcategory-item" data-tooltip="Plant based Stress Management">Orgocare</a>
+                                    <a href="products/biostimulants/envicta.html" class="subcategory-item" data-tooltip="Humic based PGP">Envicta</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dropdown-category">
+                            <a href="products/substrates.html">Substrates <span class="material-symbols-outlined">chevron_right</span></a>
+                            <div class="subcategory-menu">
+                                <div class="subcategory-items">
+                                    <a href="products/substrates/maxineem.html" class="subcategory-item" data-tooltip="Neem Cake">Maxineem</a>
+                                    <a href="products/substrates/kmix.html" class="subcategory-item" data-tooltip="Karanja Cake">K-Mix</a>
+                                    <a href="products/substrates/mystica.html" class="subcategory-item" data-tooltip="Wetting & Spreading Agents">Mystica</a>
+                                    <a href="products/substrates/engrow.html" class="subcategory-item" data-tooltip="Seed Coating">Engrow</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dropdown-category">
+                            <a href="products/home-garden.html">Home & Garden</a>
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Technology Dropdown -->
+                <li class="nav-item dropdown">
+                    <a href="technology/karyo.html" class="nav-link">Technology <span class="material-symbols-outlined">expand_more</span></a>
+                    <div class="dropdown-menu technology-menu">
+                        <div class="dropdown-category">
+                            <a href="technology/karyo.html" class="subcategory-item" data-tooltip="Advanced Delivery Platform">Karyo</a>
+                        </div>
+                        
+                        <div class="dropdown-category">
+                            <a href="technology/wynn.html" class="subcategory-item" data-tooltip="Microbial Platform">Wynn</a> 
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a href="contract-manufacturing.html" class="nav-link">Contract Manufacturing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contract Manufacturing Hero -->
+    <section class="cm-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Your Manufacturing Partner for Sustainable Agri-Inputs</h1>
+                    <p class="hero-subtitle">Leverage our state-of-the-art facilities and expertise to scale your organic crop care solutions. From formulation to packaging, we provide end-to-end manufacturing services aligned with global standards.</p>
+                    
+                    <div class="badges">
+                        <span class="badge">EU 2019/1009 Compliant</span>
+                        <span class="badge">Organic Certification Ready</span>
+                        <span class="badge">Scalable Production</span>
+                    </div>
+                    
+                    <div class="hero-cta">
+                        <a href="#capabilities" class="btn btn-primary">Explore Capabilities</a>
+                        <a href="contact.html" class="btn btn-secondary">
+                            <span class="material-symbols-outlined">request_quote</span>
+                            Request Quote
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/img/cm-hero.jpg" alt="Contract Manufacturing Facilities">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Capabilities -->
+    <section id="capabilities" class="why-kriya">
+        <div class="container">
+            <h2>Core Manufacturing Capabilities</h2>
+            <p class="section-subtitle">Comprehensive services from raw material to finished product</p>
+            
+            <div class="capabilities-grid">
+                <div class="capability-card-large">
+                    <div class="capability-icon">
+                        <span class="material-symbols-outlined">science</span>
+                    </div>
+                    <div class="capability-content">
+                        <h3>Extraction Technologies</h3>
+                        <p>Advanced extraction methods for maximum bioactive compound recovery and purity.</p>
+                        <ul class="capability-list">
+                            <li>Supercritical CO₂ Extraction</li>
+                            <li>Solvent Extraction</li>
+                            <li>Aqueous Extraction</li>
+                            <li>Ultrasound-Assisted Extraction</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="capability-card-large">
+                    <div class="capability-icon">
+                        <span class="material-symbols-outlined">biotech</span>
+                    </div>
+                    <div class="capability-content">
+                        <h3>Microbial Fermentation</h3>
+                        <p>Large-scale production of beneficial microorganisms and their metabolites.</p>
+                        <ul class="capability-list">
+                            <li>Solid-State Fermentation</li>
+                            <li>Submerged Fermentation</li>
+                            <li>Metabolite Extraction</li>
+                            <li>Strain Optimization</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="capability-card-large">
+                    <div class="capability-icon">
+                        <span class="material-symbols-outlined">layers</span>
+                    </div>
+                    <div class="capability-content">
+                        <h3>Formulation Development</h3>
+                        <p>Custom formulation services for diverse application needs and market requirements.</p>
+                        <ul class="capability-list">
+                            <li>EC, SC, WP Formulations</li>
+                            <li>Water-Soluble Products</li>
+                            <li>Granules & Powders</li>
+                            <li>Encapsulation Technology</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="capability-card-large">
+                    <div class="capability-icon">
+                        <span class="material-symbols-outlined">inventory_2</span>
+                    </div>
+                    <div class="capability-content">
+                        <h3>Packaging Solutions</h3>
+                        <p>Flexible packaging options from bulk industrial to consumer-ready formats.</p>
+                        <ul class="capability-list">
+                            <li>Bulk Drums & IBCs</li>
+                            <li>Retail Sachets & Bottles</li>
+                            <li>Water-Soluble Tablets</li>
+                            <li>RTU Sprays</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Flow -->
+    <section class="product-categories">
+        <div class="container">
+            <h2>Our Manufacturing Process</h2>
+            <p class="section-subtitle">Streamlined workflow ensuring quality at every stage</p>
+            
+            <div class="process-flow">
+                <div class="process-step-vertical">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Consultation & Scope Definition</h3>
+                        <p>Initial discussion to understand your requirements, market needs, and technical specifications.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step-vertical">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Feasibility & R&D</h3>
+                        <p>Laboratory-scale trials to confirm technical viability and optimize formulation parameters.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step-vertical">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Pilot Production</h3>
+                        <p>Intermediate-scale production runs to validate process parameters and product quality.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step-vertical">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Scale-Up & Validation</h3>
+                        <p>Full-scale manufacturing with comprehensive quality control and stability testing.</p>
+                    </div>
+                </div>
+                
+                <div class="process-step-vertical">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Commercial Supply</h3>
+                        <p>Ongoing production with batch documentation, quality assurance, and reliable delivery.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipment & Scale -->
+    <section class="technology-manufacturing">
+        <div class="container">
+            <h2>Equipment & Production Scale</h2>
+            <p class="section-subtitle">State-of-the-art infrastructure for flexible manufacturing</p>
+            
+            <div class="equipment-showcase">
+                <div class="equipment-category">
+                    <h3>Extraction Equipment</h3>
+                    <div class="equipment-details">
+                        <div class="equipment-item">
+                            <span class="material-symbols-outlined">precision_manufacturing</span>
+                            <div>
+                                <h4>Supercritical CO₂ Extractors</h4>
+                                <p>50L to 500L capacity with precision control</p>
+                            </div>
+                        </div>
+                        <div class="equipment-item">
+                            <span class="material-symbols-outlined">water_ph</span>
+                            <div>
+                                <h4>Solvent Extraction Units</h4>
+                                <p>Stainless steel reactors with recovery systems</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="equipment-category">
+                    <h3>Fermentation Capacity</h3>
+                    <div class="equipment-details">
+                        <div class="equipment-item">
+                            <span class="material-symbols-outlined">fermentation</span>
+                            <div>
+                                <h4>Bioreactors</h4>
+                                <p>100L to 5000L scale with automated control</p>
+                            </div>
+                        </div>
+                        <div class="equipment-item">
+                            <span class="material-symbols-outlined">grass</span>
+                            <div>
+                                <h4>Solid-State Fermenters</h4>
+                                <p>Tray and packed-bed systems for fungal cultures</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="equipment-category">
+                    <h3>Formulation Lines</h3>
+                    <div class="equipment-details">
+                        <div class="equipment-item">
+                            <span class="material-symbols-outlined">mixing</span>
+                            <div>
+                                <h4>High-Shear Mixers</h4>
+                                <p>50L to 2000L capacity for emulsion preparation</p>
+                            </div>
+                        </div>
+                        <div class="equipment-item">
+                            <span class="material-symbols-outlined">auto_mode</span>
+                            <div>
+                                <h4>Automated Filling Lines</h4>
+                                <p>Liquid and powder filling with precision dosing</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality Assurance -->
+    <section class="why-kriya">
+        <div class="container">
+            <h2>Quality Assurance & Compliance</h2>
+            <p class="section-subtitle">Rigorous quality systems ensuring product safety and efficacy</p>
+            
+            <div class="qa-grid">
+                <div class="qa-pillar">
+                    <div class="qa-icon">
+                        <span class="material-symbols-outlined">assay</span>
+                    </div>
+                    <h3>Analytical Testing</h3>
+                    <ul>
+                        <li>Active ingredient quantification</li>
+                        <li>Microbial purity and potency</li>
+                        <li>Residual solvent analysis</li>
+                        <li>Heavy metal screening</li>
+                    </ul>
+                </div>
+                
+                <div class="qa-pillar">
+                    <div class="qa-icon">
+                        <span class="material-symbols-outlined">monitoring</span>
+                    </div>
+                    <h3>Stability Studies</h3>
+                    <ul>
+                        <li>Accelerated stability testing</li>
+                        <li>Real-time shelf-life studies</li>
+                        <li>Packaging compatibility</li>
+                        <li>Temperature and light stability</li>
+                    </ul>
+                </div>
+                
+                <div class="qa-pillar">
+                    <div class="qa-icon">
+                        <span class="material-symbols-outlined">description</span>
+                    </div>
+                    <h3>Documentation</h3>
+                    <ul>
+                        <li>Batch manufacturing records</li>
+                        <li>Quality control certificates</li>
+                        <li>Regulatory documentation</li>
+                        <li>Traceability systems</li>
+                    </ul>
+                </div>
+                
+                <div class="qa-pillar">
+                    <div class="qa-icon">
+                        <span class="material-symbols-outlined">verified</span>
+                    </div>
+                    <h3>Certifications</h3>
+                    <ul>
+                        <li>ISO 9001:2015 Certified</li>
+                        <li>GMP Compliant Operations</li>
+                        <li>Organic Certification Support</li>
+                        <li>EU 2019/1009 Alignment</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnership Models -->
+    <section class="product-categories">
+        <div class="container">
+            <h2>Partnership Models</h2>
+            <p class="section-subtitle">Flexible engagement options to suit your business needs</p>
+            
+            <div class="partnership-models">
+                <div class="partnership-card">
+                    <h3>Full Turnkey</h3>
+                    <div class="price-range">$50K - $500K</div>
+                    <p>End-to-end service from formulation development to commercial supply</p>
+                    <ul>
+                        <li>Complete product development</li>
+                        <li>Regulatory support</li>
+                        <li>Packaging design</li>
+                        <li>Ongoing manufacturing</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Discuss Project</a>
+                </div>
+                
+                <div class="partnership-card featured">
+                    <div class="featured-badge">Most Popular</div>
+                    <h3>Contract Manufacturing</h3>
+                    <div class="price-range">$25K - $250K</div>
+                    <p>Manufacturing of established formulations with your branding</p>
+                    <ul>
+                        <li>Scale-up of existing products</li>
+                        <li>Quality control testing</li>
+                        <li>Custom packaging</li>
+                        <li>Batch documentation</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Get Quote</a>
+                </div>
+                
+                <div class="partnership-card">
+                    <h3>Toll Manufacturing</h3>
+                    <div class="price-range">$10K - $100K</div>
+                    <p>You provide raw materials, we provide manufacturing services</p>
+                    <ul>
+                        <li>Raw material testing</li>
+                        <li>Manufacturing process</li>
+                        <li>In-process quality control</li>
+                        <li>Finished product testing</li>
+                    </ul>
+                    <a href="contact.html" class="btn btn-primary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="technology-manufacturing">
+        <div class="container">
+            <h2>Success Stories</h2>
+            <p class="section-subtitle">Real examples of successful manufacturing partnerships</p>
+            
+            <div class="case-studies">
+                <div class="case-study">
+                    <div class="case-image">
+                        <img src="assets/img/case-study1.jpg" alt="European Biocontrol Company">
+                    </div>
+                    <div class="case-content">
+                        <h3>European Biocontrol Expansion</h3>
+                        <p class="case-client">Leading European biocontrol company</p>
+                        <p>Developed and scaled a neem-based bioinsecticide for EU market entry, achieving OMRI and Ecocert certification within 12 months.</p>
+                        <div class="case-results">
+                            <div class="result-item">
+                                <span class="result-number">6</span>
+                                <span class="result-label">Months to Market</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">50T</span>
+                                <span class="result-label">Annual Production</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">15+</span>
+                                <span class="result-label">Countries Served</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="case-study">
+                    <div class="case-image">
+                        <img src="assets/img/case-study2.jpg" alt="US Biostimulant Startup">
+                    </div>
+                    <div class="case-content">
+                        <h3>US Biostimulant Startup</h3>
+                        <p class="case-client">Innovative ag-tech startup</p>
+                        <p>Partnered from concept to commercial production of a microbial consortium biostimulant, supporting their Series A funding round.</p>
+                        <div class="case-results">
+                            <div class="result-item">
+                                <span class="result-number">9</span>
+                                <span class="result-label">Months Development</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">$2M</span>
+                                <span class="result-label">Funding Raised</span>
+                            </div>
+                            <div class="result-item">
+                                <span class="result-number">100%</span>
+                                <span class="result-label">Quality Pass Rate</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Start Your Manufacturing Project</h2>
+                <p>Ready to scale your organic agricultural inputs? Let's discuss your requirements and create a customized manufacturing solution.</p>
+                <a href="contact.html" class="btn btn-primary">Request Manufacturing Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="about.html">About</a>
+                    <a href="products/biocontrol.html">Products</a>
+                    <a href="technology/karyo.html">Technology</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="footer-contact">
+                    <a href="mailto:info@kriya.ltd">info@kriya.ltd</a>
+                    <a href="https://wa.me/916385848466">+91 6385848466</a>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/108402158/" aria-label="LinkedIn">
+                        <span class="material-symbols-outlined">person</span>
+                    </a>
+                    <a href="https://x.com/kriyabiosys" aria-label="Twitter">
+                        <span class="material-symbols-outlined">chat</span>
+                    </a>
+                    <a href="https://www.instagram.com/kriyabiosys/" aria-label="Instagram">
+                        <span class="material-symbols-outlined">photo_camera</span>
+                    </a>
+                    <a href="https://www.youtube.com/@kriyabiosys" aria-label="YouTube">
+                        <span class="material-symbols-outlined">play_circle</span>
+                    </a>
+                    <a href="https://www.facebook.com/kriyabiosys" aria-label="Facebook">
+                        <span class="material-symbols-outlined">thumb_up</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-disclaimer">
+                <p>For usage/dosage information, please refer to product documentation. Always follow label instructions and local regulations.</p>
+            </div>
+            
+            <div class="footer-legal">
+                <p>© Kriya Ltd 2025 | <a href="#">Privacy Policy</a> | <a href="#">Responsible Use</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
