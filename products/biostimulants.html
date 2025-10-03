@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Biostimulants | Kriya Ltd</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+  <!-- Internal CSS -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #222;
+    }
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-logo img { height: 45px; }
+    .nav-menu { list-style: none; display: flex; gap: 1.5rem; }
+    .nav-menu li a {
+      text-decoration: none;
+      font-weight: 500;
+      color: inherit;
+    }
+    .nav-menu li a.active { border-bottom: 2px solid #EA6E26; }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      font-size: 0.9rem;
+      padding: 1rem 2rem;
+      background: #fafafa;
+      border-bottom: 1px solid #eee;
+    }
+    .breadcrumb a {
+      text-decoration: none;
+      color: #555;
+    }
+
+    /* Page Header */
+    .page-header {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .page-header h1 {
+      margin-bottom: 1rem;
+      font-size: 2.2rem;
+      color: #2A4E35;
+    }
+    .page-header p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    /* Product Cards */
+    .product-grid {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .product-card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+    .product-card img {
+      max-width: 120px;
+      margin-bottom: 1rem;
+    }
+    .product-card h3 {
+      margin: 0.5rem 0;
+      font-size: 1.3rem;
+      color: #2A4E35;
+    }
+    .product-card p {
+      margin: 0.5rem 0 1rem;
+      font-size: 0.95rem;
+      color: #444;
+    }
+    .product-card a {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background: #2A4E35;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    .product-card a:hover {
+      background: #EA6E26;
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid #ddd;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">
+      <img src="../assets/img/logo.png" alt="Kriya Ltd">
+    </a>
+    <ul class="nav-menu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="biostimulants.html" class="active">Biostimulants</a></li>
+      <li><a href="biocontrol.html">Biocontrol</a></li>
+      <li><a href="substrates.html">Substrates</a></li>
+      <li><a href="home-garden.html">Home & Garden</a></li>
+      <li><a href="../technology/karyo.html">Technology</a></li>
+      <li><a href="../contract-manufacturing.html">Contract Manufacturing</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> > <a href="#">Products</a> > <span>Biostimulants</span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1>Biostimulants</h1>
+    <p>Microbial and plant extract-based products designed to improve crop performance and resilience.</p>
+  </div>
+
+  <!-- Product Grid -->
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="../assets/img/products/igreen-packshot.jpg" alt="IGreen">
+      <h3>IGreen</h3>
+      <p>Microbial Consortium</p>
+      <a href="biostimulants/igreen.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/zenita-packshot.jpg" alt="Zenita">
+      <h3>Zenita</h3>
+      <p>Neem Limonoids</p>
+      <a href="biostimulants/zenita.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/cropsia-packshot.jpg" alt="Cropsia">
+      <h3>Cropsia</h3>
+      <p>Moringa & Adhatoda Extracts</p>
+      <a href="biostimulants/cropsia.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/blooma-packshot.jpg" alt="Blooma">
+      <h3>Blooma</h3>
+      <p>Seaweed Extract</p>
+      <a href="biostimulants/blooma.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/enrhize-packshot.jpg" alt="Enrhize">
+      <h3>Enrhize</h3>
+      <p>Arbuscular Mycorrhizae</p>
+      <a href="biostimulants/enrhize.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/orgocare-packshot.jpg" alt="Orgocare">
+      <h3>Orgocare</h3>
+      <p>Plant Extract Blend</p>
+      <a href="biostimulants/orgocare.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/envicta-packshot.jpg" alt="Envicta">
+      <h3>Envicta</h3>
+      <p>Humic & Amino Acids</p>
+      <a href="biostimulants/envicta.html">View Product Details</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© Kriya Ltd 2025 | <a href="../about.html">About</a> | <a href="../contact.html">Contact</a></p>
+  </footer>
+
+</body>
+</html>

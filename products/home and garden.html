@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home & Garden | Kriya Ltd</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+  <!-- Internal CSS -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #fff;
+      color: #222;
+    }
+    h1, h2, h3 {
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    /* Navbar */
+    .navbar {
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-logo img { height: 45px; }
+    .nav-menu { list-style: none; display: flex; gap: 1.5rem; }
+    .nav-menu li a {
+      text-decoration: none;
+      font-weight: 500;
+      color: inherit;
+    }
+    .nav-menu li a.active { border-bottom: 2px solid #EA6E26; }
+
+    /* Breadcrumb */
+    .breadcrumb {
+      font-size: 0.9rem;
+      padding: 1rem 2rem;
+      background: #fafafa;
+      border-bottom: 1px solid #eee;
+    }
+    .breadcrumb a {
+      text-decoration: none;
+      color: #555;
+    }
+
+    /* Page Header */
+    .page-header {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .page-header h1 {
+      margin-bottom: 1rem;
+      font-size: 2.2rem;
+      color: #2A4E35;
+    }
+    .page-header p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    /* Product Cards */
+    .product-grid {
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .product-card {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+    }
+    .product-card img {
+      max-width: 120px;
+      margin-bottom: 1rem;
+    }
+    .product-card h3 {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+      color: #2A4E35;
+    }
+    .product-card p {
+      margin: 0.5rem 0 1rem;
+      font-size: 0.95rem;
+      color: #444;
+    }
+    .product-card a {
+      display: inline-block;
+      padding: 0.6rem 1.2rem;
+      background: #2A4E35;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.3s;
+    }
+    .product-card a:hover {
+      background: #EA6E26;
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid #ddd;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <a href="../index.html" class="nav-logo">
+      <img src="../assets/img/logo.png" alt="Kriya Ltd">
+    </a>
+    <ul class="nav-menu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../about.html">About</a></li>
+      <li><a href="home-garden.html" class="active">Home & Garden</a></li>
+      <li><a href="biocontrol.html">Biocontrol</a></li>
+      <li><a href="biostimulants.html">Biostimulants</a></li>
+      <li><a href="substrates.html">Substrates</a></li>
+      <li><a href="../technology/karyo.html">Technology</a></li>
+      <li><a href="../contract-manufacturing.html">Contract Manufacturing</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <div class="breadcrumb">
+    <a href="../index.html">Home</a> > <a href="#">Products</a> > <span>Home & Garden</span>
+  </div>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1>Home & Garden Range</h1>
+    <p>Consumer-friendly packs that bring the benefits of biocontrols and biostimulants to everyday growers.</p>
+  </div>
+
+  <!-- Product Grid -->
+  <div class="product-grid">
+    <div class="product-card">
+      <img src="../assets/img/products/ecoza-packshot.jpg" alt="Ecoza Rix">
+      <h3>Ecoza Rix</h3>
+      <p>Azadirachtin based</p>
+      <a href="home-garden/ecoza-rix.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/k-guard-packshot.jpg" alt="K-Rix">
+      <h3>K-Rix</h3>
+      <p>Karanjin based</p>
+      <a href="home-garden/k-rix.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/margoshine-packshot.jpg" alt="MargoRix">
+      <h3>MargoRix</h3>
+      <p>Neem Oil based</p>
+      <a href="home-garden/margorix.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/spindura-packshot.jpg" alt="Spindura Rix">
+      <h3>Spindura Rix</h3>
+      <p>Spinosad based</p>
+      <a href="home-garden/spindura-rix.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/mycova-packshot.jpg" alt="Mycova">
+      <h3>Mycova</h3>
+      <p>Beauveria bassiana</p>
+      <a href="home-garden/mycova.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/rexora-packshot.jpg" alt="Rexora">
+      <h3>Rexora</h3>
+      <p>Metarhizium anisopliae</p>
+      <a href="home-garden/rexora.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/biota-packshot.jpg" alt="Biota">
+      <h3>Biota</h3>
+      <p>Trichoderma spp.</p>
+      <a href="home-garden/biota.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/seira-packshot.jpg" alt="Seira">
+      <h3>Seira</h3>
+      <p>Verticillium lecanii</p>
+      <a href="home-garden/seira.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/encilo-packshot.jpg" alt="EnCilo">
+      <h3>EnCilo</h3>
+      <p>Paecilomyces fumosoroseus</p>
+      <a href="home-garden/encilo.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/neuvita-packshot.jpg" alt="Neuvita">
+      <h3>Neuvita</h3>
+      <p>Ampelomyces quisqualis</p>
+      <a href="home-garden/neuvita.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/zenita-packshot.jpg" alt="Zenita">
+      <h3>Zenita</h3>
+      <p>Neem Limonoids</p>
+      <a href="home-garden/zenita.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/cropsia-packshot.jpg" alt="Cropsia">
+      <h3>Cropsia</h3>
+      <p>Moringa & Adhatoda</p>
+      <a href="home-garden/cropsia.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/envicta-packshot.jpg" alt="Envicta">
+      <h3>Envicta</h3>
+      <p>Humic + Amino Acids</p>
+      <a href="home-garden/envicta.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/igreen-packshot.jpg" alt="IGreen NPK">
+      <h3>IGreen NPK</h3>
+      <p>Microbial consortium</p>
+      <a href="home-garden/igreen-npk.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/igreen-packshot.jpg" alt="IGreen Soil+">
+      <h3>IGreen Soil+</h3>
+      <p>Soil amendment</p>
+      <a href="home-garden/igreen-soil.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/igreen-packshot.jpg" alt="IGreen Tres">
+      <h3>IGreen Tres</h3>
+      <p>Growth promoter</p>
+      <a href="home-garden/igreen-tres.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/igreen-packshot.jpg" alt="IGreen Shield">
+      <h3>IGreen Shield</h3>
+      <p>Disease resistance</p>
+      <a href="home-garden/igreen-shield.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/admira-packshot.jpg" alt="Admira Adrlc">
+      <h3>Admira Adrlc</h3>
+      <p>Garlic oil extract</p>
+      <a href="home-garden/admira-adrlc.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/admira-packshot.jpg" alt="Admira Admon">
+      <h3>Admira Admon</h3>
+      <p>Cinnamon oil extract</p>
+      <a href="home-garden/admira-admon.html">View Product Details</a>
+    </div>
+
+    <div class="product-card">
+      <img src="../assets/img/products/admira-packshot.jpg" alt="Admira Adyme">
+      <h3>Admira Adyme</h3>
+      <p>Thyme oil extract</p>
+      <a href="home-garden/admira-adyme.html">View Product Details</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© Kriya Ltd 2025 | <a href="../about.html">About</a> | <a href="../contact.html">Contact</a></p>
+  </footer>
+
+</body>
+</html>
