@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enrhize | Biostimulants | Kriya Ltd</title>
+  
+  <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+  
+  <style>
+    :root {
+      --primary-green: #4CAF50;
+      --light-green: #E8F5E9;
+      --neutral-gray: #666;
+      --dark-text: #333;
+      --light-bg: #f9f9f9;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--dark-text);
+      background-color: #fff;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Navbar Styles */
+    .navbar {
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+    
+    .nav-logo img {
+      height: 40px;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+    }
+    
+    .nav-menu li {
+      margin-left: 30px;
+      position: relative;
+    }
+    
+    .nav-menu a {
+      text-decoration: none;
+      color: var(--dark-text);
+      font-weight: 500;
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+    }
+    
+    .nav-menu a:hover {
+      color: var(--primary-green);
+    }
+    
+    .nav-menu a.active {
+      color: var(--primary-green);
+      font-weight: 600;
+    }
+    
+    .material-symbols-outlined {
+      font-size: 18px;
+      margin-left: 5px;
+    }
+    
+    /* Dropdown Styles */
+    .nav-item.dropdown {
+      position: relative;
+    }
+    
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      min-width: 200px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-radius: 5px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+    
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 15px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .dropdown-menu a:last-child {
+      border-bottom: none;
+    }
+    
+    .dropdown-menu a:hover {
+      background-color: var(--light-green);
+    }
+    
+    .nav-item.dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .products-menu {
+      display: flex;
+      min-width: 400px;
+    }
+    
+    .dropdown-category {
+      flex: 1;
+    }
+    
+    .dropdown-category a {
+      font-weight: 500;
+    }
+    
+    .dropdown-category a.active {
+      background-color: var(--light-green);
+      color: var(--primary-green);
+    }
+    
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    
+    .hamburger .bar {
+      width: 25px;
+      height: 3px;
+      background-color: var(--dark-text);
+      margin: 3px 0;
+      transition: 0.3s;
+    }
+    
+    /* Breadcrumb */
+    .breadcrumb {
+      margin-top: 90px;
+      padding: 1rem 0;
+      font-size: 0.95rem;
+      color: var(--neutral-gray);
+    }
+    
+    .breadcrumb a {
+      color: var(--neutral-gray);
+      text-decoration: none;
+    }
+    
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Hero Section */
+    .hero {
+      padding: 3rem 0 2rem;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--dark-text);
+    }
+    
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--neutral-gray);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    /* Products Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 40px 0 80px;
+    }
+    
+    .product-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid #f0f0f0;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    
+    .product-image {
+      height: 200px;
+      background-color: #f8f8f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .product-image img {
+      max-width: 80%;
+      max-height: 80%;
+    }
+    
+    .product-content {
+      padding: 25px;
+    }
+    
+    .product-badge {
+      display: inline-block;
+      background: #f5f5f5;
+      color: var(--primary-green);
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      border: 1px solid #e0e0e0;
+    }
+    
+    .product-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: var(--dark-text);
+    }
+    
+    .product-spec {
+      font-size: 14px;
+      color: var(--primary-green);
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    
+    .product-description {
+      color: var(--neutral-gray);
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .btn {
+      display: inline-block;
+      background: var(--primary-green);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s;
+      font-size: 14px;
+    }
+    
+    .btn:hover {
+      background: #3d8b40;
+    }
+    
+    /* Footer */
+    .footer {
+      background: #f5f5f5;
+      padding: 30px 0;
+      text-align: center;
+      border-top: 1px solid #e0e0e0;
+    }
+    
+    .footer p {
+      color: var(--neutral-gray);
+      font-size: 14px;
+    }
+    
+    .footer a {
+      color: var(--primary-green);
+      text-decoration: none;
+    }
+    
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Product Benefits Section */
+    .benefits-section {
+      background-color: var(--light-bg);
+      padding: 60px 0;
+      margin: 40px 0;
+    }
+    
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .benefit-card {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+    
+    .benefit-icon {
+      font-size: 2.5rem;
+      color: var(--primary-green);
+      margin-bottom: 20px;
+    }
+    
+    .benefit-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+    
+    /* Application Guide */
+    .application-guide {
+      padding: 60px 0;
+    }
+    
+    .guide-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    }
+    
+    .guide-table th, .guide-table td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .guide-table th {
+      background-color: var(--light-green);
+      font-weight: 600;
+    }
+    
+    .guide-table tr:hover {
+      background-color: #f9f9f9;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+        padding: 20px 0;
+      }
+      
+      .nav-menu.active {
+        left: 0;
+      }
+      
+      .nav-menu li {
+        margin: 15px 0;
+      }
+      
+      .hamburger {
+        display: flex;
+      }
+      
+      .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      
+      .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+      
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        display: none;
+      }
+      
+      .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+      }
+      
+      .products-menu {
+        flex-direction: column;
+        min-width: auto;
+      }
+      
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .guide-table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/img/logo.png" alt="Kriya Ltd">
+            </a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                
+		<!-- Updated Products Dropdown -->
+<li class="nav-item dropdown">
+    <a class="nav-link">Products <span class="material-symbols-outlined">expand_more</span></a>
+    <div class="dropdown-menu products-menu">
+        <div class="dropdown-category">
+            <a href="biocontrol.html">Biocontrol <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
+                <div class="subcategory-items">
+                    <a href="ecoza.html" class="subcategory-item" data-tooltip="Azadirachtin">Ecoza</a>
+                    <a href="margoshine.html" class="subcategory-item" data-tooltip="Neem Oil">Margoshine</a>
+                    <a href="kguard.html" class="subcategory-item" data-tooltip="Karanjin">K-Guard</a>
+                    <a href="weedx.html" class="subcategory-item" data-tooltip="MCT">WeedX</a>
+                    <a href="admira.html" class="subcategory-item" data-tooltip="Essential Oil">Admira</a>
+                    <a href="spindura.html" class="subcategory-item" data-tooltip="Spinosad">Spindura</a>
+                    <a href="margospin.html" class="subcategory-item" data-tooltip="Neem Oil + Spinosad">MargoSpin</a>
+                    <a href="mycova.html" class="subcategory-item" data-tooltip="Beauveria bassian">Mycova</a>
+                    <a href="rexora.html" class="subcategory-item" data-tooltip="Metarhizium anisopliae">Rexora</a>
+                    <a href="biota.html" class="subcategory-item" data-tooltip="Trichoderma viride">Biota (V/H)</a>
+                    <a href="seira.html" class="subcategory-item" data-tooltip="Verticillium lecanii">Seira</a>
+                    <a href="encilo.html" class="subcategory-item" data-tooltip="Paecilomyces fumosoroseus">EnCilo</a>
+                    <a href="neuvita.html" class="subcategory-item" data-tooltip="Ampelomyces quisqualis">Neuvita</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="biostimulants.html" class="active">Biostimulants <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
+                <div class="subcategory-items">
+                    <a href="igreen.html" class="subcategory-item" data-tooltip="Microbial Consortium">IGreen</a>
+                    <a href="zenita.html" class="subcategory-item" data-tooltip="Neem Limonoids based PGP">Zenita</a>
+                    <a href="cropsia.html" class="subcategory-item" data-tooltip="Plant Extract based PGP">Cropsia</a>
+                    <a href="blooma.html" class="subcategory-item" data-tooltip="Seaweed based PGP">Blooma</a>
+                    <a href="enrhize.html" class="subcategory-item active" data-tooltip="Arbuscular Mycorrhizal">Enrhize</a>
+                    <a href="orgocare.html" class="subcategory-item" data-tooltip="Plant based Stress Management">Orgocare</a>
+                    <a href="envicta.html" class="subcategory-item" data-tooltip="Humic based PGP">Envicta</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="substrates.html">Substrates <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
+                <div class="subcategory-items">
+                    <a href="maxineem.html" class="subcategory-item" data-tooltip="Neem Cake">Maxineem</a>
+                    <a href="kmix.html" class="subcategory-item" data-tooltip="Karanja Cake">K-Mix</a>
+                    <a href="mystica.html" class="subcategory-item" data-tooltip="Wetting & Spreading Agents">Mystica</a>
+                    <a href="engrow.html" class="subcategory-item" data-tooltip="Seed Coating">Engrow</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="home-garden.html">Home & Garden</a>
+        </div>
+    </div>
+</li>
+
+<li class="nav-item dropdown">
+    <a class="nav-link">Technology <span class="material-symbols-outlined">expand_more</span></a>
+    <div class="dropdown-menu technology-menu">
+        <div class="dropdown-category">
+            <a href="karyo.html" class="subcategory-item" data-tooltip="Advanced Delievery Platform">Karyo</a>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="wynn.html" class="subcategory-item" data-tooltip="Microbial Platform">Wynn</a> 
+        </div>
+    </div>
+</li>
+
+                <li class="nav-item">
+                    <a href="contract-manufacturing.html" class="nav-link">Contract Manufacturing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Breadcrumb -->
+  <section class="breadcrumb container">
+    <a href="index.html">Home</a> &gt;
+    <a href="biostimulants.html">Biostimulants</a> &gt;
+    <strong>Enrhize</strong>
+  </section>
+
+  <!-- Page Header -->
+  <section class="hero">
+    <div class="container">
+      <h1>Enrhize Products</h1>
+      <p class="section-subtitle">
+        Advanced arbuscular mycorrhizal fungi formulations for enhanced root development, nutrient uptake, and plant resilience.
+      </p>
+    </div>
+  </section>
+
+  <!-- Enrhize Products Grid -->
+  <section class="container">
+    <div class="products-grid">
+      <!-- Enrhize Standard -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="assets/img/products/enrhize-packshot.jpg" alt="Enrhize Standard">
+        </div>
+        <div class="product-content">
+          <span class="product-badge">Enrhize Standard</span>
+          <h3 class="product-title">Enrhize Standard</h3>
+          <div class="product-spec">Mycorrhizal Consortium</div>
+          <p class="product-description">A balanced mycorrhizal formulation for general agricultural use, promoting root growth and nutrient absorption.</p>
+          <!-- <a href="enrhize-standard.html" class="btn">View Product Details</a> -->
+        </div>
+      </div>
+
+      <!-- Enrhize Plus -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="assets/img/products/enrhize-packshot.jpg" alt="Enrhize Plus">
+        </div>
+        <div class="product-content">
+          <span class="product-badge">Enrhize Plus</span>
+          <h3 class="product-title">Enrhize Plus</h3>
+          <div class="product-spec">Enhanced Mycorrhizal Formula</div>
+          <p class="product-description">Advanced formulation with higher spore count and additional beneficial microbes for superior plant performance.</p>
+          <!-- <a href="enrhize-plus.html" class="btn">View Product Details</a> -->
+        </div>
+      </div>
+
+      <!-- Enrhize Organic -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="assets/img/products/enrhize-packshot.jpg" alt="Enrhize Organic">
+        </div>
+        <div class="product-content">
+          <span class="product-badge">Enrhize Organic</span>
+          <h3 class="product-title">Enrhize Organic</h3>
+          <div class="product-spec">Certified Organic Mycorrhizae</div>
+          <p class="product-description">Specially certified for organic farming, providing natural root symbiosis without synthetic additives.</p>
+          <!-- <a href="enrhize-organic.html" class="btn">View Product Details</a> -->
+        </div>
+      </div>
+
+      <!-- Enrhize Pro -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="assets/img/products/enrhize-packshot.jpg" alt="Enrhize Pro">
+        </div>
+        <div class="product-content">
+          <span class="product-badge">Enrhize Pro</span>
+          <h3 class="product-title">Enrhize Pro</h3>
+          <div class="product-spec">Professional Grade Mycorrhizae</div>
+          <p class="product-description">Premium formulation with multiple mycorrhizal species for maximum root colonization and plant benefits.</p>
+          <!-- <a href="enrhize-pro.html" class="btn">View Product Details</a> -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits-section">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 20px; font-family: 'Cormorant Garamond', serif;">Key Benefits of Enrhize</h2>
+      <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--neutral-gray);">
+        Enrhize mycorrhizal products establish symbiotic relationships with plant roots, creating extensive fungal networks that dramatically improve plant health and productivity.
+      </p>
+      
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-icon">🌱</div>
+          <h3>Enhanced Root Development</h3>
+          <p>Increases root surface area by up to 700%, improving water and nutrient absorption.</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">💧</div>
+          <h3>Improved Drought Tolerance</h3>
+          <p>Mycorrhizal networks extend beyond root zones, accessing water from larger soil volumes.</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">🌿</div>
+          <h3>Better Nutrient Uptake</h3>
+          <p>Enhances phosphorus, zinc, copper and other micronutrient absorption significantly.</p>
+        </div>
+        
+        <div class="benefit-card">
+          <div class="benefit-icon">🛡️</div>
+          <h3>Disease Resistance</h3>
+          <p>Creates physical and biochemical barriers against root pathogens and soil-borne diseases.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Application Guide -->
+  <section class="application-guide container">
+    <h2 style="text-align: center; margin-bottom: 20px; font-family: 'Cormorant Garamond', serif;">Application Guide</h2>
+    <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; color: var(--neutral-gray);">
+      Follow these guidelines for optimal results with Enrhize mycorrhizal products across different crop types.
+    </p>
+    
+    <table class="guide-table">
+      <thead>
+        <tr>
+          <th>Crop Type</th>
+          <th>Application Method</th>
+          <th>Recommended Rate</th>
+          <th>Application Timing</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Field Crops</td>
+          <td>In-furrow application or seed treatment</td>
+          <td>2-4 kg/hectare</td>
+          <td>At planting or transplanting</td>
+        </tr>
+        <tr>
+          <td>Vegetables</td>
+          <td>Root dip or in planting hole</td>
+          <td>1-2 g/plant</td>
+          <td>During transplanting</td>
+        </tr>
+        <tr>
+          <td>Fruit Trees</td>
+          <td>Soil drench around root zone</td>
+          <td>50-100 g/tree</td>
+          <td>Early spring or during planting</td>
+        </tr>
+        <tr>
+          <td>Ornamentals</td>
+          <td>Mix in potting soil or root dip</td>
+          <td>1-2 g/L of soil</td>
+          <td>At planting or repotting</td>
+        </tr>
+        <tr>
+          <td>Turf & Lawns</td>
+          <td>Broadcast and water in</td>
+          <td>5-10 kg/hectare</td>
+          <td>Spring or fall establishment</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Kriya Ltd | <a href="about.html">About</a> | <a href="biostimulants.html">Products</a> | <a href="technology/karyo.html">Technology</a> | <a href="contact.html">Contact</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll(".nav-menu a").forEach(n => n.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }));
+  </script>
+</body>
+</html>
