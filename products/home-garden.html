@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home & Garden | Kriya Ltd</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  
+  <style>
+    /* Additional styles for home & garden page */
+    .breadcrumb {
+      margin-top: 90px;
+      padding: 1rem 0;
+      font-size: 0.95rem;
+      color: var(--neutral-gray);
+    }
+    
+    .hero {
+      padding: 3rem 0 2rem;
+      text-align: center;
+    }
+    
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--neutral-gray);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .product-categories {
+      padding: 2rem 0 4rem;
+    }
+    
+    .tiles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .tile {
+      display: block;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid #f0f0f0;
+    }
+    
+    .tile:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    
+    .tile-image {
+      height: 200px;
+      background: #f8f9fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #e9ecef;
+    }
+    
+    .tile-image img {
+      max-width: 80%;
+      max-height: 80%;
+      object-fit: contain;
+    }
+    
+    .tile-content {
+      padding: 1.5rem;
+      text-align: center;
+    }
+    
+    .tile-content h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--dark-text);
+    }
+    
+    .tile-content p {
+      color: var(--primary-green);
+      font-weight: 500;
+      font-size: 0.9rem;
+      margin: 0;
+    }
+    
+    @media (max-width: 768px) {
+      .tiles-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+      
+      .tile-image {
+        height: 160px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../assets/img/logo.png" alt="Kriya Ltd">
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+
+        <!-- Products Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="home-garden.html" class="nav-link active">
+            Products <span class="material-symbols-outlined">expand_more</span>
+          </a>
+          <div class="dropdown-menu products-menu">
+            <div class="dropdown-category">
+              <a href="biocontrol.html">Biocontrol</a>
+            </div>
+            <div class="dropdown-category">
+              <a href="biostimulants.html">Biostimulants</a>
+            </div>
+            <div class="dropdown-category">
+              <a href="substrates.html">Substrates</a>
+            </div>
+            <div class="dropdown-category">
+              <a href="home-garden.html" class="active">Home & Garden</a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Technology Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="../technology/karyo.html" class="nav-link">
+            Technology <span class="material-symbols-outlined">expand_more</span>
+          </a>
+          <div class="dropdown-menu">
+            <a href="../technology/karyo.html">Karyo</a>
+            <a href="../technology/wynn.html">Wynn</a>
+          </div>
+        </li>
+
+        <li><a href="../contract-manufacturing.html">Contract Manufacturing</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Breadcrumb -->
+  <section class="breadcrumb container">
+    <a href="../index.html">Home</a> &gt;
+    <a href="#">Products</a> &gt;
+    <strong>Home & Garden</strong>
+  </section>
+
+  <!-- Page Header -->
+  <section class="hero">
+    <div class="container">
+      <h1>Home & Garden Range</h1>
+      <p class="section-subtitle">Consumer-friendly packs that bring the benefits of biocontrols and biostimulants to everyday growers.</p>
+    </div>
+  </section>
+
+  <!-- Product Grid -->
+  <section class="product-categories">
+    <div class="container">
+      <div class="tiles-grid">
+        <!-- Ecoza Rix -->
+        <a href="home-garden/ecoza-rix.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/ecoza-packshot.jpg" alt="Ecoza Rix">
+          </div>
+          <div class="tile-content">
+            <h3>Ecoza Rix</h3>
+            <p>Azadirachtin based</p>
+          </div>
+        </a>
+
+        <!-- K-Rix -->
+        <a href="home-garden/k-rix.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/k-guard-packshot.jpg" alt="K-Rix">
+          </div>
+          <div class="tile-content">
+            <h3>K-Rix</h3>
+            <p>Karanjin based</p>
+          </div>
+        </a>
+
+        <!-- MargoRix -->
+        <a href="home-garden/margorix.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/margoshine-packshot.jpg" alt="MargoRix">
+          </div>
+          <div class="tile-content">
+            <h3>MargoRix</h3>
+            <p>Neem Oil based</p>
+          </div>
+        </a>
+
+        <!-- Spindura Rix -->
+        <a href="home-garden/spindura-rix.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/spindura-packshot.jpg" alt="Spindura Rix">
+          </div>
+          <div class="tile-content">
+            <h3>Spindura Rix</h3>
+            <p>Spinosad based</p>
+          </div>
+        </a>
+
+        <!-- Mycova -->
+        <a href="home-garden/mycova.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/mycova-packshot.jpg" alt="Mycova">
+          </div>
+          <div class="tile-content">
+            <h3>Mycova</h3>
+            <p>Beauveria bassiana</p>
+          </div>
+        </a>
+
+        <!-- Rexora -->
+        <a href="home-garden/rexora.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/rexora-packshot.jpg" alt="Rexora">
+          </div>
+          <div class="tile-content">
+            <h3>Rexora</h3>
+            <p>Metarhizium anisopliae</p>
+          </div>
+        </a>
+
+        <!-- Biota -->
+        <a href="home-garden/biota.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/biota-packshot.jpg" alt="Biota">
+          </div>
+          <div class="tile-content">
+            <h3>Biota</h3>
+            <p>Trichoderma spp.</p>
+          </div>
+        </a>
+
+        <!-- Seira -->
+        <a href="home-garden/seira.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/seira-packshot.jpg" alt="Seira">
+          </div>
+          <div class="tile-content">
+            <h3>Seira</h3>
+            <p>Verticillium lecanii</p>
+          </div>
+        </a>
+
+        <!-- Encilo -->
+        <a href="home-garden/encilo.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/encilo-packshot.jpg" alt="Encilo">
+          </div>
+          <div class="tile-content">
+            <h3>Encilo</h3>
+            <p>Paecilomyces fumosoroseus</p>
+          </div>
+        </a>
+
+        <!-- Neuvita -->
+        <a href="home-garden/neuvita.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/neuvita-packshot.jpg" alt="Neuvita">
+          </div>
+          <div class="tile-content">
+            <h3>Neuvita</h3>
+            <p>Ampelomyces quisqualis</p>
+          </div>
+        </a>
+
+        <!-- Zenita -->
+        <a href="home-garden/zenita.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/zenita-packshot.jpg" alt="Zenita">
+          </div>
+          <div class="tile-content">
+            <h3>Zenita</h3>
+            <p>Neem Limonoids</p>
+          </div>
+        </a>
+
+        <!-- Cropsia -->
+        <a href="home-garden/cropsia.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/cropsia-packshot.jpg" alt="Cropsia">
+          </div>
+          <div class="tile-content">
+            <h3>Cropsia</h3>
+            <p>Moringa & Adhatoda</p>
+          </div>
+        </a>
+
+        <!-- Envicta -->
+        <a href="home-garden/envicta.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/envicta-packshot.jpg" alt="Envicta">
+          </div>
+          <div class="tile-content">
+            <h3>Envicta</h3>
+            <p>Humic + Amino Acids</p>
+          </div>
+        </a>
+
+        <!-- IGreen NPK -->
+        <a href="home-garden/igreen-npk.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/igreen-packshot.jpg" alt="IGreen NPK">
+          </div>
+          <div class="tile-content">
+            <h3>IGreen NPK</h3>
+            <p>Microbial consortium</p>
+          </div>
+        </a>
+
+        <!-- IGreen Soil+ -->
+        <a href="home-garden/igreen-soil.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/igreen-packshot.jpg" alt="IGreen Soil+">
+          </div>
+          <div class="tile-content">
+            <h3>IGreen Soil+</h3>
+            <p>Soil amendment</p>
+          </div>
+        </a>
+
+        <!-- IGreen Tres -->
+        <a href="home-garden/igreen-tres.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/igreen-packshot.jpg" alt="IGreen Tres">
+          </div>
+          <div class="tile-content">
+            <h3>IGreen Tres</h3>
+            <p>Growth promoter</p>
+          </div>
+        </a>
+
+        <!-- IGreen Shield -->
+        <a href="home-garden/igreen-shield.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/igreen-packshot.jpg" alt="IGreen Shield">
+          </div>
+          <div class="tile-content">
+            <h3>IGreen Shield</h3>
+            <p>Disease resistance</p>
+          </div>
+        </a>
+
+        <!-- Admira Adrlc -->
+        <a href="home-garden/admira-adrlc.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/admira-packshot.jpg" alt="Admira Adrlc">
+          </div>
+          <div class="tile-content">
+            <h3>Admira Adrlc</h3>
+            <p>Garlic oil extract</p>
+          </div>
+        </a>
+
+        <!-- Admira Admon -->
+        <a href="home-garden/admira-admon.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/admira-packshot.jpg" alt="Admira Admon">
+          </div>
+          <div class="tile-content">
+            <h3>Admira Admon</h3>
+            <p>Cinnamon oil extract</p>
+          </div>
+        </a>
+
+        <!-- Admira Adyme -->
+        <a href="home-garden/admira-adyme.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/admira-packshot.jpg" alt="Admira Adyme">
+          </div>
+          <div class="tile-content">
+            <h3>Admira Adyme</h3>
+            <p>Thyme oil extract</p>
+          </div>
+        </a>
+
+        <!-- Admira Adove -->
+        <a href="home-garden/admira-adove.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/admira-packshot.jpg" alt="Admira Adove">
+          </div>
+          <div class="tile-content">
+            <h3>Admira Adove</h3>
+            <p>Clove oil extract</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Kriya Ltd | <a href="../about.html">About</a> | <a href="home-garden.html">Products</a> | <a href="../technology/karyo.html">Technology</a> | <a href="../contact.html">Contact</a></p>
+    </div>
+  </footer>
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
