@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ecoza | Biocontrol | Kriya Ltd</title>
+  
+  <!-- Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+  
+  <style>
+    :root {
+      --primary-green: #4CAF50;
+      --light-green: #E8F5E9;
+      --neutral-gray: #666;
+      --dark-text: #333;
+      --light-bg: #f9f9f9;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--dark-text);
+      background-color: #fff;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    /* Navbar Styles */
+    /* .navbar {
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+    
+    .nav-logo img {
+      height: 40px;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+    }
+    
+    .nav-menu li {
+      margin-left: 30px;
+      position: relative;
+    }
+    
+    .nav-menu a {
+      text-decoration: none;
+      color: var(--dark-text);
+      font-weight: 500;
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+    }
+    
+    .nav-menu a:hover {
+      color: var(--primary-green);
+    }
+    
+    .nav-menu a.active {
+      color: var(--primary-green);
+      font-weight: 600;
+    }
+    
+    .material-symbols-outlined {
+      font-size: 18px;
+      margin-left: 5px;
+    } */
+    
+    /* Dropdown Styles */
+    /* .nav-item.dropdown {
+      position: relative;
+    }
+    
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      min-width: 200px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-radius: 5px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+    
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 15px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .dropdown-menu a:last-child {
+      border-bottom: none;
+    }
+    
+    .dropdown-menu a:hover {
+      background-color: var(--light-green);
+    }
+    
+    .nav-item.dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .products-menu {
+      display: flex;
+      min-width: 400px;
+    }
+    
+    .dropdown-category {
+      flex: 1;
+    }
+    
+    .dropdown-category a {
+      font-weight: 500;
+    }
+    
+    .dropdown-category a.active {
+      background-color: var(--light-green);
+      color: var(--primary-green);
+    } */
+    
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    
+    .hamburger .bar {
+      width: 25px;
+      height: 3px;
+      background-color: var(--dark-text);
+      margin: 3px 0;
+      transition: 0.3s;
+    }
+    
+    /* Breadcrumb */
+    .breadcrumb {
+      margin-top: 90px;
+      padding: 1rem 0;
+      font-size: 0.95rem;
+      color: var(--neutral-gray);
+    }
+    
+    .breadcrumb a {
+      color: var(--neutral-gray);
+      text-decoration: none;
+    }
+    
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Hero Section */
+    .hero {
+      padding: 3rem 0 2rem;
+      text-align: center;
+    }
+    
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      font-family: 'Cormorant Garamond', serif;
+      color: var(--dark-text);
+    }
+    
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--neutral-gray);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    /* Products Grid */
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 40px 0 80px;
+    }
+    
+    .product-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+      transition: transform 0.3s, box-shadow 0.3s;
+      border: 1px solid #f0f0f0;
+    }
+    
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    
+    .product-image {
+      height: 200px;
+      background-color: #f8f8f8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .product-image img {
+      max-width: 80%;
+      max-height: 80%;
+    }
+    
+    .product-content {
+      padding: 25px;
+    }
+    
+    .product-badge {
+      display: inline-block;
+      background: #f5f5f5;
+      color: var(--primary-green);
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      border: 1px solid #e0e0e0;
+    }
+    
+    .product-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: var(--dark-text);
+    }
+    
+    .product-spec {
+      font-size: 14px;
+      color: var(--primary-green);
+      font-weight: 600;
+      margin-bottom: 15px;
+    }
+    
+    .product-description {
+      color: var(--neutral-gray);
+      font-size: 15px;
+      margin-bottom: 20px;
+    }
+    
+    .btn {
+      display: inline-block;
+      background: var(--primary-green);
+      color: white;
+      padding: 10px 20px;
+      border-radius: 4px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.3s;
+      font-size: 14px;
+    }
+    
+    .btn:hover {
+      background: #3d8b40;
+    }
+    
+    /* Footer */
+    .footer {
+      background: #f5f5f5;
+      padding: 30px 0;
+      text-align: center;
+      border-top: 1px solid #e0e0e0;
+    }
+    
+    .footer p {
+      color: var(--neutral-gray);
+      font-size: 14px;
+    }
+    
+    .footer a {
+      color: var(--primary-green);
+      text-decoration: none;
+    }
+    
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: white;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
+        padding: 20px 0;
+      }
+      
+      .nav-menu.active {
+        left: 0;
+      }
+      
+      .nav-menu li {
+        margin: 15px 0;
+      }
+      
+      .hamburger {
+        display: flex;
+      }
+      
+      .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+      }
+      
+      .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+      }
+      
+      .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+      
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .dropdown-menu {
+        position: static;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        box-shadow: none;
+        display: none;
+      }
+      
+      .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+      }
+      
+      .products-menu {
+        flex-direction: column;
+        min-width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/img/logo.png" alt="Kriya Ltd">
+            </a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../about.html" class="nav-link">About</a>
+                </li>
+                
+		<!-- Updated Products Dropdown -->
+<li class="nav-item dropdown">
+    <a class="nav-link">Products <span class="material-symbols-outlined">expand_more</span></a>
+    <div class="dropdown-menu products-menu">
+        <div class="dropdown-category">
+            <a href="../products/biocontrol.html">Biocontrol <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
+                <div class="subcategory-items">
+                    <a href="ecoza.html" class="subcategory-item" data-tooltip="Azadirachtin">Ecoza</a>
+                    <a href="margoshine.html" class="subcategory-item" data-tooltip="Neem Oil">Margoshine</a>
+                    <a href="k-guard.html" class="subcategory-item" data-tooltip="Karanjin">K-Guard</a>
+                    <a href="weedx.html" class="subcategory-item" data-tooltip="MCT">WeedX</a>
+                    <a href="admira.html" class="subcategory-item" data-tooltip="Essential Oil">Admira</a>
+                    <a href="spindura.html" class="subcategory-item" data-tooltip="Spinosad">Spindura</a>
+                    <a href="margospin.html" class="subcategory-item" data-tooltip="Neem Oil + Spinosad">MargoSpin</a>
+                    <a href="mycova.html" class="subcategory-item" data-tooltip="Beauveria bassian">Mycova</a>
+                    <a href="rexora.html" class="subcategory-item" data-tooltip="Metarhizium anisopliae">Rexora</a>
+                    <a href="biota.html" class="subcategory-item" data-tooltip="Trichoderma viride">Biota (V/H)</a>
+                    <a href="seira.html" class="subcategory-item" data-tooltip="Verticillium lecanii">Seira</a>
+                    <a href="encilo.html" class="subcategory-item" data-tooltip="Paecilomyces fumosoroseus">EnCilo</a>
+                    <a href="neuvita.html" class="subcategory-item" data-tooltip="Ampelomyces quisqualis">Neuvita</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="../products/biostimulants.html">Biostimulants <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
+                <div class="subcategory-items">
+                    <a href="../biostimulants/igreen.html" class="subcategory-item" data-tooltip="Microbial Consortium">IGreen</a>
+                    <a href="../biostimulants/zenita.html" class="subcategory-item" data-tooltip="Neem Limonoids based PGP">Zenita</a>
+                    <a href="../biostimulants/cropsia.html" class="subcategory-item" data-tooltip="Plant Extract based PGP">Cropsia</a>
+                    <a href="../biostimulants/blooma.html" class="subcategory-item" data-tooltip="Seaweed based PGP">Blooma</a>
+                    <a href="../biostimulants/enrhize.html" class="subcategory-item" data-tooltip="Arbuscular Mycorrhizal">Enrhize</a>
+                    <a href="../biostimulants/orgocare.html" class="subcategory-item" data-tooltip="Plant based Stress Management">Orgocare</a>
+                    <a href="../biostimulants/envicta.html" class="subcategory-item" data-tooltip="Humic based PGP">Envicta</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="../products/substrates.html">Substrates <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
+                <div class="subcategory-items">
+                    <a href="../substrates/maxineem.html" class="subcategory-item" data-tooltip="Neem Cake">Maxineem</a>
+                    <a href="../substrates/kmix.html" class="subcategory-item" data-tooltip="Karanja Cake">K-Mix</a>
+                    <a href="../substrates/mystica.html" class="subcategory-item" data-tooltip="Wetting & Spreading Agents">Mystica</a>
+                    <a href="../substrates/engrow.html" class="subcategory-item" data-tooltip="Seed Coating">Engrow</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="../products/home-garden.html">Home & Garden</a>
+        </div>
+    </div>
+</li>
+
+<li class="nav-item dropdown">
+    <a class="nav-link">Technology <span class="material-symbols-outlined">expand_more</span></a>
+    <div class="dropdown-menu technology-menu">
+        <div class="dropdown-category">
+            <a href="karyo.html" class="subcategory-item" data-tooltip="Advanced Delievery Platform">Karyo</a>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="wynn.html" class="subcategory-item" data-tooltip="Microbial Platform">Wynn</a> 
+        </div>
+    </div>
+</li>
+
+                <li class="nav-item">
+                    <a href="contract-manufacturing.html" class="nav-link">Contract Manufacturing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+  <!-- Breadcrumb -->
+  <section class="breadcrumb container">
+    <a href="../../index.html">Home</a> &gt;
+    <a href="../biocontrol.html">Biocontrol</a> &gt;
+    <strong>Ecoza</strong>
+  </section>
+
+  <!-- Page Header -->
+  <section class="hero">
+    <div class="container">
+      <h1>Ecoza Products</h1>
+      <p class="section-subtitle">
+        Powerful azadirachtin-based solutions for effective and eco-friendly pest management in agriculture.
+      </p>
+    </div>
+  </section>
+
+  <!-- Ecoza Products Grid -->
+  <section class="container">
+    <div class="products-grid">
+      <!-- Ecoza Standard -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="../../assets/img/products/ecoza-packshot.jpg" alt="Ecoza Max">
+        </div>
+        <div class="product-content">
+          <span class="product-badge">Ecoza Standard</span>
+          <h3 class="product-title">Ecoza Max</h3>
+          <div class="product-spec">Azadirachtin 3.0%</div>
+          <p class="product-description">A versatile neem-based biopesticide effective against a wide range of pests including aphids, whiteflies, and caterpillars.</p>
+          <a href="ecoza-max.html" class="btn">View Product Details</a>
+        </div>
+      </div>
+
+      <!-- Ecoza Plus -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="../../assets/img/products/ecoza-packshot.jpg" alt="Ecoza Rix">
+        </div>
+        <div class="product-content">
+          <span class="product-badge">Ecoza Plus</span>
+          <h3 class="product-title">Ecoza Rix</h3>
+          <div class="product-spec">Azadirachtin 12.0% WSP</div>
+          <p class="product-description">Concentrated formula for enhanced pest control in high-value crops and challenging pest conditions.</p>
+          <a href="ecoza-rix.html" class="btn">View Product Details</a>
+        </div>
+      </div>
+
+      <!-- Ecoza Plus -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="../../assets/img/products/ecoza-packshot.jpg" alt="Ecoza Ace">
+        </div>
+        <div class="product-content">
+          <span class="product-badge">Ecoza Plus</span>
+          <h3 class="product-title">Ecoza Ace</h3>
+          <div class="product-spec">Azadirachtin 1.2%</div>
+          <p class="product-description">Enhanced formulation with synergistic botanical extracts for broader spectrum pest control.</p>
+          <a href="ecoza-ace.html" class="btn">View Product Details</a>
+        </div>
+      </div>
+
+      <!-- Ecoza Organic -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="../../assets/img/products/ecoza-packshot.jpg" alt="Ecoza Pro">
+        </div>
+        <div class="product-content">
+          <span class="product-badge">Ecoza Organic</span>
+          <h3 class="product-title">Ecoza Pro</h3>
+          <div class="product-spec">Azadirachtin 0.3%</div>
+          <p class="product-description">Low-dosage formulation suitable for IPM programs, providing consistent pest control with eco-safety.</p>
+          <a href="ecoza-pro.html" class="btn">View Product Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 Kriya Ltd | <a href="../../about.html">About</a> | <a href="../biocontrol.html">Products</a> | <a href="../../technology/karyo.html">Technology</a> | <a href="../../contact.html">Contact</a></p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll(".nav-menu a").forEach(n => n.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }));
+  </script>
+</body>
+</html>
