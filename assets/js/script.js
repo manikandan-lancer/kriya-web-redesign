@@ -1,144 +1,295 @@
-// Navigation and Dropdown functionality
+// Enhanced Navigation and Dropdown functionality
 document.addEventListener('DOMContentLoaded', function() {
+    console.log('Kriya Ltd website initialized');
+
     // Mobile menu toggle
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
+    const body = document.body;
     
-    if (hamburger) {
-        hamburger.addEventListener('click', function() {
-            hamburger.classList.toggle('active');
-            navMenu.classList.toggle('active');
+    // Enhanced mobile menu functionality with smooth animations
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const isActive = !hamburger.classList.contains('active');
+            
+            // Smooth toggle with requestAnimationFrame for better performance
+            requestAnimationFrame(() => {
+                hamburger.classList.toggle('active', isActive);
+                navMenu.classList.toggle('active', isActive);
+                body.classList.toggle('menu-open', isActive);
+            });
         });
     }
 
-    // Dropdown menu functionality with delays
-    const dropdowns = document.querySelectorAll('.dropdown');
-    let closeTimeout;
-    const closeDelay = 120; // ms
-
-    dropdowns.forEach(dropdown => {
-        const menu = dropdown.querySelector('.dropdown-menu');
-        
-        dropdown.addEventListener('mouseenter', function() {
-            clearTimeout(closeTimeout);
-            this.classList.add('active');
-        });
-        
-        dropdown.addEventListener('mouseleave', function() {
-            closeTimeout = setTimeout(() => {
-                this.classList.remove('active');
-            }, closeDelay);
-        });
-
-        // Keep menu open when moving to dropdown
-        if (menu) {
-            menu.addEventListener('mouseenter', function() {
-                clearTimeout(closeTimeout);
-            });
-            
-            menu.addEventListener('mouseleave', function() {
-                closeTimeout = setTimeout(() => {
-                    dropdown.classList.remove('active');
-                }, closeDelay);
-            });
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', function(e) {
+        if (navMenu && navMenu.classList.contains('active') && 
+            !e.target.closest('.nav-menu') && 
+            !e.target.closest('.hamburger')) {
+            closeMobileMenu();
         }
     });
 
-    // Close mobile menu when clicking on links
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', function() {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
-        });
+    // Close mobile menu on escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && navMenu && navMenu.classList.contains('active')) {
+            closeMobileMenu();
+        }
     });
 
-    // Contact form handling
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const company = formData.get('company');
-            const country = formData.get('country');
-            const email = formData.get('email');
-            const whatsapp = formData.get('whatsapp');
-            const productInterest = formData.get('product-interest');
-            const message = formData.get('message');
-            
-            // Compose email
-            const subject = `Sales Inquiry from ${name} - ${company}`;
-            const body = `
-Name: ${name}
-Company: ${company}
-Country: ${country}
-Email: ${email}
-WhatsApp: ${whatsapp || 'Not provided'}
-Product Interest: ${productInterest}
-
-Message:
-${message}
-            `.trim();
-            
-            // Open mail client
-            window.location.href = `mailto:info@kriya.ltd?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-        });
+    // Close mobile menu function
+    function closeMobileMenu() {
+        if (hamburger && navMenu) {
+            requestAnimationFrame(() => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                body.classList.remove('menu-open');
+                
+                // Close all dropdowns
+                document.querySelectorAll('.dropdown, .dropdown-category').forEach(item => {
+                    item.classList.remove('active');
+                });
+            });
+        }
     }
 
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
+    // Enhanced mobile dropdown functionality
+    const dropdowns = document.querySelectorAll('.dropdown');
+    const dropdownCategories = document.querySelectorAll('.dropdown-category');
+    
+    // Handle dropdown clicks on mobile
+    dropdowns.forEach(dropdown => {
+        const link = dropdown.querySelector('.nav-link');
+        
+        link.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const isActive = !dropdown.classList.contains('active');
+                
+                // Smooth dropdown toggle
+                requestAnimationFrame(() => {
+                    dropdown.classList.toggle('active', isActive);
+                    
+                    // Close other dropdowns
+                    if (isActive) {
+                        dropdowns.forEach(otherDropdown => {
+                            if (otherDropdown !== dropdown) {
+                                otherDropdown.classList.remove('active');
+                            }
+                        });
+                        
+                        // Close all categories when opening new dropdown
+                        dropdownCategories.forEach(category => {
+                            category.classList.remove('active');
+                        });
+                    }
                 });
             }
         });
     });
 
-    // Add loading animation for images
-    const images = document.querySelectorAll('img');
-    images.forEach(img => {
-        img.addEventListener('load', function() {
-            this.style.opacity = '1';
-        });
-        img.style.transition = 'opacity 0.3s ease';
-        img.style.opacity = '0';
-    });
-
-    // Header scroll effect
-    let lastScrollTop = 0;
-    const navbar = document.querySelector('.navbar');
-    
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    // Handle dropdown category clicks on mobile
+    dropdownCategories.forEach(category => {
+        const link = category.querySelector('a');
         
-        if (scrollTop > lastScrollTop && scrollTop > 100) {
-            // Scrolling down
-            navbar.style.transform = 'translateY(-100%)';
-        } else {
-            // Scrolling up
-            navbar.style.transform = 'translateY(0)';
+        if (link) {
+            link.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const isActive = !category.classList.contains('active');
+                    
+                    requestAnimationFrame(() => {
+                        category.classList.toggle('active', isActive);
+                        
+                        // Close other categories in the same dropdown
+                        if (isActive) {
+                            const parentDropdown = category.closest('.dropdown');
+                            if (parentDropdown) {
+                                parentDropdown.querySelectorAll('.dropdown-category').forEach(otherCategory => {
+                                    if (otherCategory !== category) {
+                                        otherCategory.classList.remove('active');
+                                    }
+                                });
+                            }
+                        }
+                    });
+                }
+            });
         }
-        
-        lastScrollTop = scrollTop;
     });
 
-    // Tooltip enhancement
-    const tooltipItems = document.querySelectorAll('[data-tooltip]');
-    tooltipItems.forEach(item => {
-        item.addEventListener('mouseenter', function(e) {
-            // Additional tooltip logic if needed
+    // Enhanced desktop dropdown functionality
+    let closeTimeout;
+    const closeDelay = 200; // Slightly longer for better UX
+
+    function setupDesktopDropdowns() {
+        dropdowns.forEach(dropdown => {
+            const menu = dropdown.querySelector('.dropdown-menu');
+            
+            dropdown.addEventListener('mouseenter', function() {
+                clearTimeout(closeTimeout);
+                this.classList.add('active');
+            });
+            
+            dropdown.addEventListener('mouseleave', function() {
+                closeTimeout = setTimeout(() => {
+                    this.classList.remove('active');
+                }, closeDelay);
+            });
+
+            // Keep menu open when moving to dropdown
+            if (menu) {
+                menu.addEventListener('mouseenter', function() {
+                    clearTimeout(closeTimeout);
+                });
+                
+                menu.addEventListener('mouseleave', function() {
+                    closeTimeout = setTimeout(() => {
+                        dropdown.classList.remove('active');
+                    }, closeDelay);
+                });
+            }
+        });
+
+        // Setup category hover for desktop
+        dropdownCategories.forEach(category => {
+            const submenu = category.querySelector('.subcategory-menu');
+            
+            if (submenu) {
+                category.addEventListener('mouseenter', function() {
+                    clearTimeout(closeTimeout);
+                    this.classList.add('active');
+                });
+                
+                category.addEventListener('mouseleave', function() {
+                    closeTimeout = setTimeout(() => {
+                        this.classList.remove('active');
+                    }, closeDelay);
+                });
+
+                submenu.addEventListener('mouseenter', function() {
+                    clearTimeout(closeTimeout);
+                });
+                
+                submenu.addEventListener('mouseleave', function() {
+                    closeTimeout = setTimeout(() => {
+                        category.classList.remove('active');
+                    }, closeDelay);
+                });
+            }
+        });
+    }
+
+    // Close mobile menu when clicking on regular links
+    const navLinks = document.querySelectorAll('.nav-link:not(.dropdown > .nav-link):not(.dropdown-category > a)');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768) {
+                // Allow default behavior for external links
+                if (this.getAttribute('href') && !this.getAttribute('href').startsWith('#')) {
+                    closeMobileMenu();
+                }
+                
+                // Set active link
+                navLinks.forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+            }
         });
     });
+
+    // Handle window resize
+    function handleResize() {
+        if (window.innerWidth > 768) {
+            // Reset mobile states when switching to desktop
+            closeMobileMenu();
+            setupDesktopDropdowns();
+        } else {
+            // Clear any desktop hover timeouts
+            clearTimeout(closeTimeout);
+        }
+    }
+
+    // Debounced resize handler
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(handleResize, 100);
+    });
+
+    // Initial setup based on screen size
+    if (window.innerWidth > 768) {
+        setupDesktopDropdowns();
+    }
+
+    // Set active navigation link based on current page
+    function setActiveNavLink() {
+        const currentPage = window.location.pathname;
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            
+            let linkHref = link.getAttribute('href');
+            if (!linkHref) return;
+            
+            // Handle relative paths
+            if (linkHref.startsWith('./')) {
+                linkHref = linkHref.substring(1);
+            }
+            
+            // Check if current page matches the link href
+            if (currentPage.endsWith(linkHref) || 
+                (currentPage.endsWith('/') && (linkHref === 'index.html' || linkHref === './index.html'))) {
+                link.classList.add('active');
+            }
+            
+            // Special handling for nested pages
+            if (currentPage.includes('/products/') && linkHref.includes('products/')) {
+                if (currentPage.includes(linkHref)) {
+                    link.classList.add('active');
+                }
+            }
+            
+            if (currentPage.includes('/technology/') && linkHref.includes('technology/')) {
+                if (currentPage.includes(linkHref)) {
+                    link.classList.add('active');
+                }
+            }
+        });
+    }
+
+    // Initialize active navigation
+    setActiveNavLink();
+
+    // Enhanced tooltip functionality
+    function setupTooltips() {
+        const tooltipItems = document.querySelectorAll('[data-tooltip]');
+        
+        tooltipItems.forEach(item => {
+            // Remove default title to prevent double tooltips
+            const tooltipText = item.getAttribute('data-tooltip');
+            if (item.getAttribute('title') === tooltipText) {
+                item.removeAttribute('title');
+            }
+            
+            // Add touch support for mobile (though we disable tooltips on mobile)
+            item.addEventListener('touchstart', function(e) {
+                if (window.innerWidth > 768) {
+                    e.preventDefault();
+                }
+            }, { passive: false });
+        });
+    }
+
+    setupTooltips();
 });
 
-// Product data handling (for dynamic content)
+// Your existing product data and utility functions...
 const productData = {
     biocontrol: [
         {
@@ -153,17 +304,14 @@ const productData = {
             ],
             cfu: null
         }
-        // ... other products would be defined here
     ]
-    // ... other categories
 };
 
-// Utility function to format product names
 function formatProductName(name) {
+    if (!name) return '';
     return name.replace(/\s+/g, '-').toLowerCase();
 }
 
-// Initialize when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('Kriya Ltd website initialized');
+window.addEventListener('error', function(e) {
+    console.error('JavaScript Error:', e.error);
 });
