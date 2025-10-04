@@ -4,123 +4,103 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Substrates | Kriya Ltd</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../assets/css/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-
-  <!-- Internal CSS -->
+  
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background: #fff;
-      color: #222;
-    }
-    h1, h2, h3 {
-      font-family: 'Cormorant Garamond', serif;
-    }
-
-    /* Navbar */
-    .navbar {
-      padding: 1rem 2rem;
-      border-bottom: 1px solid #ddd;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .nav-logo img { height: 45px; }
-    .nav-menu { list-style: none; display: flex; gap: 1.5rem; }
-    .nav-menu li a {
-      text-decoration: none;
-      font-weight: 500;
-      color: inherit;
-    }
-    .nav-menu li a.active { border-bottom: 2px solid #EA6E26; }
-
-    /* Breadcrumb */
+    /* Additional styles for substrates page */
     .breadcrumb {
-      font-size: 0.9rem;
-      padding: 1rem 2rem;
-      background: #fafafa;
-      border-bottom: 1px solid #eee;
-    }
-    .breadcrumb a {
-      text-decoration: none;
-      color: #555;
-    }
-
-    /* Page Header */
-    .page-header {
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-    .page-header h1 {
-      margin-bottom: 1rem;
-      font-size: 2.2rem;
-      color: #2A4E35;
-    }
-    .page-header p {
-      font-size: 1.1rem;
-      color: #555;
-    }
-
-    /* Product Cards */
-    .product-grid {
-      padding: 2rem;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-      gap: 2rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .product-card {
-      background: #fff;
-      border: 1px solid #eee;
-      border-radius: 10px;
-      padding: 1.5rem;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .product-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    }
-    .product-card img {
-      max-width: 120px;
-      margin-bottom: 1rem;
-    }
-    .product-card h3 {
-      margin: 0.5rem 0;
-      font-size: 1.3rem;
-      color: #2A4E35;
-    }
-    .product-card p {
-      margin: 0.5rem 0 1rem;
+      margin-top: 90px;
+      padding: 1rem 0;
       font-size: 0.95rem;
-      color: #444;
+      color: var(--neutral-gray);
     }
-    .product-card a {
-      display: inline-block;
-      padding: 0.6rem 1.2rem;
-      background: #2A4E35;
-      color: #fff;
-      border-radius: 5px;
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-      transition: background 0.3s;
-    }
-    .product-card a:hover {
-      background: #EA6E26;
-    }
-
-    /* Footer */
-    .footer {
-      border-top: 1px solid #ddd;
+    
+    .hero {
+      padding: 3rem 0 2rem;
       text-align: center;
+    }
+    
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--neutral-gray);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+    
+    .product-categories {
+      padding: 2rem 0 4rem;
+    }
+    
+    .tiles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    
+    .tile {
+      display: block;
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      border: 1px solid #f0f0f0;
+    }
+    
+    .tile:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+    
+    .tile-image {
+      height: 200px;
+      background: #f8f9fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-bottom: 1px solid #e9ecef;
+    }
+    
+    .tile-image img {
+      max-width: 80%;
+      max-height: 80%;
+      object-fit: contain;
+    }
+    
+    .tile-content {
       padding: 1.5rem;
-      margin-top: 3rem;
-      font-size: 0.9rem;
+    }
+    
+    .tile-content h3 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: var(--dark-text);
+    }
+    
+    .tile-content p {
+      color: var(--neutral-gray);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin: 0;
+    }
+    
+    @media (max-width: 768px) {
+      .tiles-grid {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+      
+      .tile-image {
+        height: 160px;
+      }
     }
   </style>
 </head>
@@ -128,68 +108,132 @@
 
   <!-- Navbar -->
   <nav class="navbar">
-    <a href="../index.html" class="nav-logo">
-      <img src="../assets/img/logo.png" alt="Kriya Ltd">
-    </a>
-    <ul class="nav-menu">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../about.html">About</a></li>
-      <li><a href="substrates.html" class="active">Substrates</a></li>
-      <li><a href="biocontrol.html">Biocontrol</a></li>
-      <li><a href="biostimulants.html">Biostimulants</a></li>
-      <li><a href="home-garden.html">Home & Garden</a></li>
-      <li><a href="../technology/karyo.html">Technology</a></li>
-      <li><a href="../contract-manufacturing.html">Contract Manufacturing</a></li>
-      <li><a href="../contact.html">Contact</a></li>
-    </ul>
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../assets/img/logo.png" alt="Kriya Ltd">
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../about.html">About</a></li>
+
+        <!-- Products Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="substrates.html" class="nav-link active">
+            Products <span class="material+symbols-outlined">expand_more</span>
+          </a>
+          <div class="dropdown-menu products-menu">
+            <div class="dropdown-category">
+              <a href="biocontrol.html">Biocontrol</a>
+            </div>
+            <div class="dropdown-category">
+              <a href="biostimulants.html">Biostimulants</a>
+            </div>
+            <div class="dropdown-category">
+              <a href="substrates.html" class="active">Substrates</a>
+            </div>
+            <div class="dropdown-category">
+              <a href="home-garden.html">Home & Garden</a>
+            </div>
+          </div>
+        </li>
+
+        <!-- Technology Dropdown -->
+        <li class="nav-item dropdown">
+          <a href="../technology/karyo.html" class="nav-link">
+            Technology <span class="material+symbols-outlined">expand_more</span>
+          </a>
+          <div class="dropdown-menu">
+            <a href="../technology/karyo.html">Karyo</a>
+            <a href="../technology/wynn.html">Wynn</a>
+          </div>
+        </li>
+
+        <li><a href="../contract-manufacturing.html">Contract Manufacturing</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </div>
   </nav>
 
   <!-- Breadcrumb -->
-  <div class="breadcrumb">
-    <a href="../index.html">Home</a> > <a href="#">Products</a> > <span>Substrates</span>
-  </div>
+  <section class="breadcrumb container">
+    <a href="../index.html">Home</a> &gt;
+    <a href="#">Products</a> &gt;
+    <strong>Substrates</strong>
+  </section>
 
   <!-- Page Header -->
-  <div class="page-header">
-    <h1>Substrates</h1>
-    <p>Organic soil amendments and seed treatments that enrich soils and improve crop establishment.</p>
-  </div>
+  <section class="hero">
+    <div class="container">
+      <h1>Substrates</h1>
+      <p class="section-subtitle">Organic soil amendments and seed treatments that enrich soils and improve crop establishment.</p>
+    </div>
+  </section>
 
   <!-- Product Grid -->
-  <div class="product-grid">
-    <div class="product-card">
-      <img src="../assets/img/products/maxineem-packshot.jpg" alt="Maxineem">
-      <h3>Maxineem</h3>
-      <p>Neem cake substrate that improves soil fertility and suppresses nematodes.</p>
-      <a href="substrates/maxineem.html">View Product Details</a>
-    </div>
+  <section class="product-categories">
+    <div class="container">
+      <div class="tiles-grid">
+        <!-- Maxineem -->
+        <a href="substrates/maxineem.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/maxineem-packshot.jpg" alt="Maxineem">
+          </div>
+          <div class="tile-content">
+            <h3>Maxineem</h3>
+            <p>Neem cake substrate that improves soil fertility and suppresses nematodes.</p>
+          </div>
+        </a>
 
-    <div class="product-card">
-      <img src="../assets/img/products/kmix-packshot.jpg" alt="K-Mix">
-      <h3>K-Mix</h3>
-      <p>Karanja cake substrate providing soil nutrition and crop protection.</p>
-      <a href="substrates/kmix.html">View Product Details</a>
-    </div>
+        <!-- K-Mix -->
+        <a href="substrates/kmix.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/kmix-packshot.jpg" alt="K-Mix">
+          </div>
+          <div class="tile-content">
+            <h3>K-Mix</h3>
+            <p>Karanja cake substrate providing soil nutrition and crop protection.</p>
+          </div>
+        </a>
 
-    <div class="product-card">
-      <img src="../assets/img/products/mystica-packshot.jpg" alt="Mystica">
-      <h3>Mystica</h3>
-      <p>Wetting and spreading agent that enhances spray coverage and effectiveness.</p>
-      <a href="substrates/mystica.html">View Product Details</a>
-    </div>
+        <!-- Mystica -->
+        <a href="substrates/mystica.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/mystica-packshot.jpg" alt="Mystica">
+          </div>
+          <div class="tile-content">
+            <h3>Mystica</h3>
+            <p>Wetting and spreading agent that enhances spray coverage and effectiveness.</p>
+          </div>
+        </a>
 
-    <div class="product-card">
-      <img src="../assets/img/products/engrow-packshot.jpg" alt="Engrow">
-      <h3>Engrow</h3>
-      <p>Seed coating technology that supports early seedling vigor and establishment.</p>
-      <a href="substrates/engrow.html">View Product Details</a>
+        <!-- Engrow -->
+        <a href="substrates/engrow.html" class="tile">
+          <div class="tile-image">
+            <img src="../assets/img/products/engrow-packshot.jpg" alt="Engrow">
+          </div>
+          <div class="tile-content">
+            <h3>Engrow</h3>
+            <p>Seed coating technology that supports early seedling vigor and establishment.</p>
+          </div>
+        </a>
+      </div>
     </div>
-  </div>
+  </section>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>© Kriya Ltd 2025 | <a href="../about.html">About</a> | <a href="../contact.html">Contact</a></p>
+    <div class="container">
+      <p>© 2026 Kriya Ltd | <a href="../about.html">About</a> | <a href="substrates.html">Products</a> | <a href="../technology/karyo.html">Technology</a> | <a href="../contact.html">Contact</a></p>
+    </div>
   </footer>
 
+  <script src="../assets/js/script.js"></script>
 </body>
 </html>
