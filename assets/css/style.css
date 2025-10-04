@@ -1610,6 +1610,11 @@ p {
     color: var(--accent-gold);
 }
 
+.log-nav {
+    width: 50%;
+    height: 50%;
+}
+
 /* Tablet Responsive Design (1024px and below) */
 @media (max-width: 1024px) {
     .nav-menu {
