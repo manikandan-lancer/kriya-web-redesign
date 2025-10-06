@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize active navigation
     setActiveNavLink();
 
-    // Enhanced tooltip functionality - FIXED
+    // Enhanced tooltip functionality with fallback
     function setupTooltips() {
         const tooltipItems = document.querySelectorAll('.subcategory-item[data-tooltip]');
         
@@ -279,21 +279,82 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Ensure tooltips work on desktop
             if (window.innerWidth > 768) {
-                // Add a small delay for better UX
+                // Add manual tooltip as fallback
+                let tooltipElement = null;
                 let tooltipTimer;
                 
-                item.addEventListener('mouseenter', function() {
+                item.addEventListener('mouseenter', function(e) {
                     tooltipTimer = setTimeout(() => {
-                        // Tooltip will show via CSS :hover pseudo-element
-                    }, 100);
+                        createManualTooltip(this, e);
+                    }, 200);
                 });
                 
                 item.addEventListener('mouseleave', function() {
                     clearTimeout(tooltipTimer);
+                    removeManualTooltip();
                 });
+                
+                item.addEventListener('mousemove', function(e) {
+                    if (tooltipElement) {
+                        updateTooltipPosition(e);
+                    }
+                });
+                
+                function createManualTooltip(element, event) {
+                    // Remove existing tooltip
+                    removeManualTooltip();
+                    
+                    // Create new tooltip
+                    tooltipElement = document.createElement('div');
+                    tooltipElement.className = 'manual-tooltip';
+                    tooltipElement.textContent = element.getAttribute('data-tooltip');
+                    tooltipElement.style.cssText = `
+                        position: fixed;
+                        background: var(--primary-dark);
+                        color: var(--white);
+                        padding: 0.6rem 0.8rem;
+                        border-radius: 6px;
+                        font-size: 0.75rem;
+                        font-weight: 500;
+                        white-space: nowrap;
+                        z-index: 10050;
+                        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+                        border: 1px solid var(--border-light);
+                        pointer-events: none;
+                        opacity: 0;
+                        transition: opacity 0.2s ease;
+                    `;
+                    
+                    document.body.appendChild(tooltipElement);
+                    updateTooltipPosition(event);
+                    
+                    // Fade in
+                    setTimeout(() => {
+                        if (tooltipElement) {
+                            tooltipElement.style.opacity = '1';
+                        }
+                    }, 10);
+                }
+                
+                function updateTooltipPosition(event) {
+                    if (!tooltipElement) return;
+                    
+                    const x = event.clientX + 15;
+                    const y = event.clientY - 10;
+                    
+                    tooltipElement.style.left = x + 'px';
+                    tooltipElement.style.top = y + 'px';
+                }
+                
+                function removeManualTooltip() {
+                    if (tooltipElement) {
+                        tooltipElement.remove();
+                        tooltipElement = null;
+                    }
+                }
             }
             
-            // Disable tooltips on mobile by preventing default touch behavior
+            // Disable tooltips on mobile
             item.addEventListener('touchstart', function(e) {
                 if (window.innerWidth <= 768) {
                     e.preventDefault();
@@ -348,3 +409,28 @@ function formatProductName(name) {
 window.addEventListener('error', function(e) {
     console.error('JavaScript Error:', e.error);
 });
+
+// Add manual tooltip styles
+const manualTooltipStyles = `
+.manual-tooltip {
+    position: fixed !important;
+    z-index: 10050 !important;
+    background: var(--primary-dark) !important;
+    color: var(--white) !important;
+    padding: 0.6rem 0.8rem !important;
+    border-radius: 6px !important;
+    font-size: 0.75rem !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    border: 1px solid var(--border-light) !important;
+    pointer-events: none !important;
+    opacity: 0;
+    transition: opacity 0.2s ease !important;
+}
+`;
+
+// Inject manual tooltip styles
+const styleSheet = document.createElement('style');
+styleSheet.textContent = manualTooltipStyles;
+document.head.appendChild(styleSheet);

@@ -200,19 +200,20 @@ p {
     border: 1px solid var(--border-light);
     border-radius: 12px;
     padding: 1.5rem;
-    min-width: 400px;
-    max-width: 480px;
+    min-width: 450px;
+    max-width: 520px;
     opacity: 0;
     visibility: hidden;
     transform: translateY(-8px);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     z-index: 1001;
     box-shadow: 0 20px 40px rgba(26, 47, 26, 0.15);
+    overflow: visible !important;
 }
 
 .products-menu {
-    min-width: 420px;
-    max-width: 500px;
+    min-width: 480px;
+    max-width: 550px;
 }
 
 .dropdown-category {
@@ -263,15 +264,15 @@ p {
     border: 1px solid var(--border-light);
     border-radius: 12px;
     padding: 1.5rem;
-    min-width: 350px;
-    max-width: 420px;
+    min-width: 400px;
+    max-width: 450px;
     max-height: 500px;
     opacity: 0;
     visibility: hidden;
     transform: translateX(-8px);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 20px 40px rgba(26, 47, 26, 0.15);
-    overflow: hidden;
+    overflow: visible !important;
     display: flex;
     flex-direction: column;
     z-index: 1002;
@@ -282,7 +283,7 @@ p {
     flex-direction: column;
     gap: 0.75rem;
     overflow-y: auto;
-    padding-right: 0.75rem;
+    padding-right: 1rem;
     max-height: 420px;
 }
 
@@ -292,7 +293,7 @@ p {
     grid-template-columns: 1fr 1fr;
     gap: 0.75rem;
     max-height: 400px;
-    padding-right: 0.75rem;
+    padding-right: 1rem;
 }
 
 .subcategory-items.biostimulant-items {
@@ -300,7 +301,7 @@ p {
     flex-direction: column;
     gap: 0.75rem;
     max-height: 350px;
-    padding-right: 0.75rem;
+    padding-right: 1rem;
 }
 
 /* ===== SUBCATEGORY ITEMS ===== */
@@ -314,14 +315,15 @@ p {
     border-radius: 8px;
     border: 1px solid var(--border-light);
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    overflow: visible;
+    text-overflow: clip;
     background: var(--neutral-light);
     font-weight: 500;
     line-height: 1.4;
     min-height: 44px;
     display: flex;
     align-items: center;
+    max-width: 100%;
 }
 
 .subcategory-item:hover {
@@ -332,33 +334,33 @@ p {
     box-shadow: 0 4px 12px rgba(191, 155, 48, 0.15);
 }
 
-/* ===== PERFECT TOOLTIP IMPLEMENTATION - FIXED ===== */
+/* ===== PERFECT TOOLTIP IMPLEMENTATION - FIXED SPACING ===== */
 .subcategory-item[data-tooltip] {
     position: relative;
     cursor: pointer;
 }
 
-/* Desktop Tooltips - WORKING PERFECTLY */
-@media (min-width: 1025px) {
+/* Desktop Tooltips - FIXED SPACING */
+@media (min-width: 769px) {
     .subcategory-item[data-tooltip]:hover::before {
         content: attr(data-tooltip);
         position: absolute;
-        left: calc(100% + 12px);
+        left: calc(100% + 10px);
         top: 50%;
         transform: translateY(-50%);
         background: var(--primary-dark);
         color: var(--white);
-        padding: 0.75rem 1rem;
-        border-radius: 8px;
-        font-size: 0.8rem;
+        padding: 0.6rem 0.8rem;
+        border-radius: 6px;
+        font-size: 0.75rem;
         font-weight: 500;
         white-space: nowrap;
-        z-index: 1003;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        z-index: 1005;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         animation: tooltipFadeIn 0.2s ease-out;
         border: 1px solid var(--border-light);
-        max-width: 200px;
-        line-height: 1.4;
+        max-width: 180px;
+        line-height: 1.3;
         pointer-events: none;
     }
 
@@ -368,17 +370,22 @@ p {
         left: 100%;
         top: 50%;
         transform: translateY(-50%);
-        border: 6px solid transparent;
+        border: 5px solid transparent;
         border-right-color: var(--primary-dark);
-        z-index: 1004;
+        z-index: 1006;
         pointer-events: none;
+    }
+    
+    /* Specific adjustments for biocontrol grid */
+    .subcategory-items.biocontrol-items .subcategory-item {
+        max-width: 100%;
     }
 }
 
 @keyframes tooltipFadeIn {
     from {
         opacity: 0;
-        transform: translateY(-50%) translateX(-10px);
+        transform: translateY(-50%) translateX(-5px);
     }
     to {
         opacity: 1;
@@ -506,18 +513,18 @@ p {
     }
     
     .dropdown-menu {
-        min-width: 350px;
-        max-width: 420px;
+        min-width: 400px;
+        max-width: 480px;
     }
     
     .products-menu {
-        min-width: 380px;
-        max-width: 450px;
+        min-width: 430px;
+        max-width: 500px;
     }
     
     .subcategory-menu {
-        min-width: 320px;
-        max-width: 380px;
+        min-width: 350px;
+        max-width: 400px;
         max-height: 450px;
     }
     
@@ -538,8 +545,8 @@ p {
     /* Adjust tooltip position for tablet */
     .subcategory-item[data-tooltip]:hover::before {
         left: auto;
-        right: calc(100% + 12px);
-        max-width: 180px;
+        right: calc(100% + 10px);
+        max-width: 160px;
     }
     
     .subcategory-item[data-tooltip]:hover::after {
@@ -736,7 +743,7 @@ p {
         border-color: var(--primary-dark);
     }
     
-    /* Mobile Tooltip Display - Hidden by default, show on hover */
+    /* Mobile Tooltip Display - Hidden by default */
     .subcategory-item[data-tooltip] {
         display: flex;
         flex-direction: column;
@@ -748,35 +755,12 @@ p {
         position: relative;
     }
     
-    /* Hide tooltips by default on mobile, show only on active state */
-    .subcategory-item[data-tooltip]:active::before,
-    .subcategory-item[data-tooltip]:focus::before {
-        content: attr(data-tooltip);
-        font-size: 0.85rem;
-        opacity: 0.9;
-        font-style: normal;
-        color: var(--primary-green);
-        font-weight: 500;
-        background: rgba(255, 255, 255, 0.95);
-        padding: 0.75rem 1rem;
-        border-radius: 8px;
-        line-height: 1.4;
-        width: 100%;
-        text-align: left;
-        display: block !important;
-        margin-top: 0.5rem;
-        border: 1px solid var(--border-light);
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        z-index: 1002;
-        position: relative;
+    /* Disable tooltips on mobile */
+    .subcategory-item[data-tooltip]::before,
+    .subcategory-item[data-tooltip]::after {
+        display: none !important;
+        content: none !important;
     }
-    
-    .subcategory-item:hover::before {
-        background: rgba(255, 255, 255, 0.2);
-        color: var(--white);
-    }
-
-    
     
     /* Mobile dropdown indicators */
     .dropdown > .nav-link .material-symbols-outlined,
@@ -1991,4 +1975,22 @@ html {
     html {
         scroll-behavior: auto;
     }
+}
+
+/* Manual tooltip styles */
+.manual-tooltip {
+    position: fixed !important;
+    z-index: 10050 !important;
+    background: var(--primary-dark) !important;
+    color: var(--white) !important;
+    padding: 0.6rem 0.8rem !important;
+    border-radius: 6px !important;
+    font-size: 0.75rem !important;
+    font-weight: 500 !important;
+    white-space: nowrap !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    border: 1px solid var(--border-light) !important;
+    pointer-events: none !important;
+    opacity: 0;
+    transition: opacity 0.2s ease !important;
 }
