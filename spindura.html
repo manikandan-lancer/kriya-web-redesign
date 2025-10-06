@@ -40,7 +40,7 @@
     }
     
     /* Navbar Styles */
-    .navbar {
+    /* .navbar {
       background-color: #fff;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       position: fixed;
@@ -91,10 +91,10 @@
     .material-symbols-outlined {
       font-size: 18px;
       margin-left: 5px;
-    }
+    } */
     
     /* Dropdown Styles */
-    .nav-item.dropdown {
+    /* .nav-item.dropdown {
       position: relative;
     }
     
@@ -149,10 +149,10 @@
     .dropdown-category a.active {
       background-color: var(--light-green);
       color: var(--primary-green);
-    }
+    } */
     
     /* Hamburger Menu */
-    .hamburger {
+    /* .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
@@ -164,7 +164,7 @@
       background-color: var(--dark-text);
       margin: 3px 0;
       transition: 0.3s;
-    }
+    } */
     
     /* Breadcrumb */
     .breadcrumb {
@@ -393,31 +393,9 @@
       color: var(--dark-text);
     }
     
-    /* Footer */
-    .footer {
-      background: #f5f5f5;
-      padding: 30px 0;
-      text-align: center;
-      border-top: 1px solid #e0e0e0;
-    }
-    
-    .footer p {
-      color: var(--neutral-gray);
-      font-size: 14px;
-    }
-    
-    .footer a {
-      color: var(--primary-green);
-      text-decoration: none;
-    }
-    
-    .footer a:hover {
-      text-decoration: underline;
-    }
-    
     /* Responsive */
     @media (max-width: 768px) {
-      .nav-menu {
+      /* .nav-menu {
         position: fixed;
         left: -100%;
         top: 70px;
@@ -454,10 +432,6 @@
         transform: translateY(-8px) rotate(-45deg);
       }
       
-      .products-grid {
-        grid-template-columns: 1fr;
-      }
-      
       .dropdown-menu {
         position: static;
         opacity: 1;
@@ -465,12 +439,16 @@
         transform: none;
         box-shadow: none;
         display: none;
-      }
-      
-      .nav-item.dropdown:hover .dropdown-menu {
-        display: block;
-      }
-      
+        }
+        
+        .nav-item.dropdown:hover .dropdown-menu {
+          display: block;
+          } */
+          
+          .products-grid {
+            grid-template-columns: 1fr;
+          }
+          
       .products-menu {
         flex-direction: column;
         min-width: auto;
@@ -501,105 +479,105 @@
 
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="nav-container">
-      <a href="index.html" class="nav-logo">
-        <img src="assets/img/logo.png" alt="Kriya Ltd" style="width: 15%; height: 15%;">
-      </a>
-      
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a href="index.html" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item">
-          <a href="about.html" class="nav-link">About</a>
-        </li>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/img/logo.png" alt="Kriya Ltd" style="width: 25%; height: 25%;">
+            </a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                
+		<!-- Updated Products Dropdown -->
+<li class="nav-item dropdown">
+    <a class="nav-link">Products <span class="material-symbols-outlined">expand_more</span></a>
+    <div class="dropdown-menu products-menu">
+        <div class="dropdown-category">
+            <a href="biocontrol.html">Biocontrol <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
+                <div class="subcategory-items">
+                    <a href="ecoza.html" class="subcategory-item" data-tooltip="Azadirachtin">Ecoza</a>
+                    <a href="margoshine.html" class="subcategory-item" data-tooltip="Neem Oil">Margoshine</a>
+                    <a href="kguard.html" class="subcategory-item" data-tooltip="Karanjin">K-Guard</a>
+                    <a href="weedx.html" class="subcategory-item" data-tooltip="MCT">WeedX</a>
+                    <a href="admira.html" class="subcategory-item" data-tooltip="Essential Oil">Admira</a>
+                    <a href="spindura.html" class="subcategory-item" data-tooltip="Spinosad">Spindura</a>
+                    <a href="margospin.html" class="subcategory-item" data-tooltip="Neem Oil + Spinosad">MargoSpin</a>
+                    <a href="mycova.html" class="subcategory-item" data-tooltip="Beauveria bassian">Mycova</a>
+                    <a href="rexora.html" class="subcategory-item" data-tooltip="Metarhizium anisopliae">Rexora</a>
+                    <a href="biota.html" class="subcategory-item" data-tooltip="Trichoderma viride">Biota (V/H)</a>
+                    <a href="seira.html" class="subcategory-item" data-tooltip="Verticillium lecanii">Seira</a>
+                    <a href="encilo.html" class="subcategory-item" data-tooltip="Paecilomyces fumosoroseus">EnCilo</a>
+                    <a href="neuvita.html" class="subcategory-item" data-tooltip="Ampelomyces quisqualis">Neuvita</a>
+                </div>
+            </div>
+        </div>
         
-        <!-- Updated Products Dropdown -->
-        <li class="nav-item dropdown">
-          <a class="nav-link">Products <span class="material-symbols-outlined">expand_more</span></a>
-          <div class="dropdown-menu products-menu">
-            <div class="dropdown-category">
-              <a href="biocontrol.html" class="active">Biocontrol <span class="material-symbols-outlined">chevron_right</span></a>
-              <div class="subcategory-menu">
+        <div class="dropdown-category">
+            <a href="biostimulants.html">Biostimulants <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
                 <div class="subcategory-items">
-                  <a href="ecoza.html" class="subcategory-item" data-tooltip="Azadirachtin">Ecoza</a>
-                  <a href="margoshine.html" class="subcategory-item" data-tooltip="Neem Oil">Margoshine</a>
-                  <a href="kguard.html" class="subcategory-item" data-tooltip="Karanjin">K-Guard</a>
-                  <a href="weedx.html" class="subcategory-item" data-tooltip="MCT">WeedX</a>
-                  <a href="admira.html" class="subcategory-item" data-tooltip="Essential Oil">Admira</a>
-                  <a href="spindura.html" class="subcategory-item active" data-tooltip="Spinosad">Spindura</a>
-                  <a href="margospin.html" class="subcategory-item" data-tooltip="Neem Oil + Spinosad">MargoSpin</a>
-                  <a href="mycova.html" class="subcategory-item" data-tooltip="Beauveria bassian">Mycova</a>
-                  <a href="rexora.html" class="subcategory-item" data-tooltip="Metarhizium anisopliae">Rexora</a>
-                  <a href="biota.html" class="subcategory-item" data-tooltip="Trichoderma viride">Biota (V/H)</a>
-                  <a href="seira.html" class="subcategory-item" data-tooltip="Verticillium lecanii">Seira</a>
-                  <a href="encilo.html" class="subcategory-item" data-tooltip="Paecilomyces fumosoroseus">EnCilo</a>
-                  <a href="neuvita.html" class="subcategory-item" data-tooltip="Ampelomyces quisqualis">Neuvita</a>
+                    <a href="igreen.html" class="subcategory-item" data-tooltip="Microbial Consortium">IGreen</a>
+                    <a href="zenita.html" class="subcategory-item" data-tooltip="Neem Limonoids based PGP">Zenita</a>
+                    <a href="cropsia.html" class="subcategory-item" data-tooltip="Plant Extract based PGP">Cropsia</a>
+                    <a href="blooma.html" class="subcategory-item" data-tooltip="Seaweed based PGP">Blooma</a>
+                    <a href="enrhize.html" class="subcategory-item" data-tooltip="Arbuscular Mycorrhizal">Enrhize</a>
+                    <a href="orgocare.html" class="subcategory-item" data-tooltip="Plant based Stress Management">Orgocare</a>
+                    <a href="envicta.html" class="subcategory-item" data-tooltip="Humic based PGP">Envicta</a>
                 </div>
-              </div>
             </div>
-            
-            <div class="dropdown-category">
-              <a href="biostimulants.html">Biostimulants <span class="material-symbols-outlined">chevron_right</span></a>
-              <div class="subcategory-menu">
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="substrates.html">Substrates <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
                 <div class="subcategory-items">
-                  <a href="igreen.html" class="subcategory-item" data-tooltip="Microbial Consortium">IGreen</a>
-                  <a href="zenita.html" class="subcategory-item" data-tooltip="Neem Limonoids based PGP">Zenita</a>
-                  <a href="cropsia.html" class="subcategory-item" data-tooltip="Plant Extract based PGP">Cropsia</a>
-                  <a href="blooma.html" class="subcategory-item" data-tooltip="Seaweed based PGP">Blooma</a>
-                  <a href="enrhize.html" class="subcategory-item" data-tooltip="Arbuscular Mycorrhizal">Enrhize</a>
-                  <a href="orgocare.html" class="subcategory-item" data-tooltip="Plant based Stress Management">Orgocare</a>
-                  <a href="envicta.html" class="subcategory-item" data-tooltip="Humic based PGP">Envicta</a>
+                    <a href="maxineem.html" class="subcategory-item" data-tooltip="Neem Cake">Maxineem</a>
+                    <a href="kmix.html" class="subcategory-item" data-tooltip="Karanja Cake">K-Mix</a>
+                    <a href="mystica.html" class="subcategory-item" data-tooltip="Wetting & Spreading Agents">Mystica</a>
+                    <a href="engrow.html" class="subcategory-item" data-tooltip="Seed Coating">Engrow</a>
                 </div>
-              </div>
             </div>
-            
-            <div class="dropdown-category">
-              <a href="substrates.html">Substrates <span class="material-symbols-outlined">chevron_right</span></a>
-              <div class="subcategory-menu">
-                <div class="subcategory-items">
-                  <a href="maxineem.html" class="subcategory-item" data-tooltip="Neem Cake">Maxineem</a>
-                  <a href="kmix.html" class="subcategory-item" data-tooltip="Karanja Cake">K-Mix</a>
-                  <a href="mystica.html" class="subcategory-item" data-tooltip="Wetting & Spreading Agents">Mystica</a>
-                  <a href="engrow.html" class="subcategory-item" data-tooltip="Seed Coating">Engrow</a>
-                </div>
-              </div>
-            </div>
-            
-            <div class="dropdown-category">
-              <a href="home-garden.html">Home & Garden</a>
-            </div>
-          </div>
-        </li>
-
-        <li class="nav-item dropdown">
-          <a class="nav-link">Technology <span class="material-symbols-outlined">expand_more</span></a>
-          <div class="dropdown-menu technology-menu">
-            <div class="dropdown-category">
-              <a href="karyo.html" class="subcategory-item" data-tooltip="Advanced Delievery Platform">Karyo</a>
-            </div>
-            
-            <div class="dropdown-category">
-              <a href="wynn.html" class="subcategory-item" data-tooltip="Microbial Platform">Wynn</a> 
-            </div>
-          </div>
-        </li>
-
-        <li class="nav-item">
-          <a href="contract-manufacturing.html" class="nav-link">Contract Manufacturing</a>
-        </li>
-        <li class="nav-item">
-          <a href="contact.html" class="nav-link">Contact</a>
-        </li>
-      </ul>
-
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="home-garden.html">Home & Garden</a>
+        </div>
     </div>
-  </nav>
+</li>
+
+<li class="nav-item dropdown">
+    <a class="nav-link">Technology <span class="material-symbols-outlined">expand_more</span></a>
+    <div class="dropdown-menu technology-menu">
+        <div class="dropdown-category">
+            <a href="karyo.html" class="subcategory-item" data-tooltip="Advanced Delievery Platform">Karyo</a>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="wynn.html" class="subcategory-item" data-tooltip="Microbial Platform">Wynn</a> 
+        </div>
+    </div>
+</li>
+
+                <li class="nav-item">
+                    <a href="contract-manufacturing.html" class="nav-link">Contract Manufacturing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
   <!-- Breadcrumb -->
   <section class="breadcrumb container">
@@ -854,21 +832,6 @@
     </div>
   </footer>
 
-  <script>
-    // Mobile menu toggle
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
-
-    hamburger.addEventListener("click", () => {
-      hamburger.classList.toggle("active");
-      navMenu.classList.toggle("active");
-    });
-
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll(".nav-menu a").forEach(n => n.addEventListener("click", () => {
-      hamburger.classList.remove("active");
-      navMenu.classList.remove("active");
-    }));
-  </script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
