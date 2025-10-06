@@ -6,10 +6,10 @@
   <title>Rexora | Biocontrol | Kriya Ltd</title>
   
   <!-- Styles -->
-   <link rel="icon" href="assets/img/logo.jpg">
+  <link rel="icon" href="assets/img/logo.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
   
   <style>
     :root {
@@ -38,21 +38,6 @@
       margin: 0 auto;
       padding: 0 20px;
     }
-    
-    /* Hamburger Menu */
-    /* .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-    
-    .hamburger .bar {
-      width: 25px;
-      height: 3px;
-      background-color: var(--dark-text);
-      margin: 3px 0;
-      transition: 0.3s;
-    } */
     
     /* Breadcrumb */
     .breadcrumb {
@@ -179,87 +164,142 @@
       background: #3d8b40;
     }
     
-    /* Footer */
-    /* .footer {
-      background: #f5f5f5;
-      padding: 30px 0;
+    /* Rexora Product Details Section */
+    .rexora-details {
+      padding: 60px 0;
+      background: #f9fdf8;
+      margin: 40px 0;
+    }
+    
+    .rexora-details h2 {
       text-align: center;
-      border-top: 1px solid #e0e0e0;
+      color: #2c5f2d;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      font-family: 'Cormorant Garamond', serif;
     }
     
-    .footer p {
-      color: var(--neutral-gray);
-      font-size: 14px;
+    .rexora-content {
+      max-width: 800px;
+      margin: 0 auto;
     }
     
-    .footer a {
+    .rexora-line {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 25px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      border-left: 4px solid #4CAF50;
+    }
+    
+    .rexora-line .material-symbols-outlined {
+      color: #4CAF50;
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    
+    /* Product Specifications Table */
+    .specs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .specs-table th {
+      background-color: var(--primary-green);
+      color: white;
+      padding: 12px 15px;
+      text-align: left;
+    }
+    
+    .specs-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .specs-table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    
+    .specs-table tr:hover {
+      background-color: var(--light-green);
+    }
+    
+    /* Benefits Section */
+    .benefits-section {
+      padding: 60px 0;
+      background: white;
+    }
+    
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .benefit-card {
+      text-align: center;
+      padding: 30px 20px;
+      background: #f9fdf8;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+    }
+    
+    .benefit-card .material-symbols-outlined {
+      font-size: 3rem;
       color: var(--primary-green);
-      text-decoration: none;
+      margin-bottom: 15px;
     }
     
-    .footer a:hover {
-      text-decoration: underline;
-    } */
+    .benefit-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: var(--dark-text);
+    }
+    
+    /* Application Guidelines */
+    .application-section {
+      padding: 60px 0;
+      background: #f9fdf8;
+    }
+    
+    .application-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
     
     /* Responsive */
     @media (max-width: 768px) {
-      /* .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .rexora-line {
         flex-direction: column;
-        background-color: white;
-        width: 100%;
         text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
-        padding: 20px 0;
+        gap: 10px;
       }
       
-      .nav-menu.active {
-        left: 0;
+      .rexora-line .material-symbols-outlined {
+        align-self: center;
       }
       
-      .nav-menu li {
-        margin: 15px 0;
-      }
-      
-      .hamburger {
-        display: flex;
-      }
-      
-      .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-      }
-      
-      .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-      }
-      
-      .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-      }
-      
-      .dropdown-menu {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
-        display: none;
-      }
-      
-      .nav-item.dropdown:hover .dropdown-menu {
+      .specs-table {
         display: block;
-        } */
-        
-        .products-grid {
-          grid-template-columns: 1fr;
-        }
+        overflow-x: auto;
+      }
       
-      .products-menu {
-        flex-direction: column;
-        min-width: auto;
+      .benefits-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -296,8 +336,8 @@
                     <a href="admira.html" class="subcategory-item" data-tooltip="Essential Oil">Admira</a>
                     <a href="spindura.html" class="subcategory-item" data-tooltip="Spinosad">Spindura</a>
                     <a href="margospin.html" class="subcategory-item" data-tooltip="Neem Oil + Spinosad">MargoSpin</a>
-                    <a href="mycova.html" class="subcategory-item" data-tooltip="Beauveria bassian">Mycova</a>
-                    <a href="rexora.html" class="subcategory-item" data-tooltip="Metarhizium anisopliae">Rexora</a>
+                    <a href="mycova.html" class="subcategory-item" data-tooltip="Beauveria bassiana">Mycova</a>
+                    <a href="rexora.html" class="subcategory-item active" data-tooltip="Metarhizium anisopliae">Rexora</a>
                     <a href="biota.html" class="subcategory-item" data-tooltip="Trichoderma viride">Biota (V/H)</a>
                     <a href="seira.html" class="subcategory-item" data-tooltip="Verticillium lecanii">Seira</a>
                     <a href="encilo.html" class="subcategory-item" data-tooltip="Paecilomyces fumosoroseus">EnCilo</a>
@@ -380,7 +420,7 @@
     <div class="container">
       <h1>Rexora Products</h1>
       <p class="section-subtitle">
-        Advanced Metarhizium anisopliae-based bioinsecticides for effective control of soil-dwelling pests and sucking insects.
+        Advanced Metarhizium anisopliae-based bioinsecticides for effective control of soil-dwelling and foliar insect pests in agriculture.
       </p>
     </div>
   </section>
@@ -388,59 +428,246 @@
   <!-- Rexora Products Grid -->
   <section class="container">
     <div class="products-grid">
-      <!-- Rexora Standard -->
+      <!-- Rexora EC -->
       <div class="product-card">
         <div class="product-image">
-          <img src="../../assets/img/products/rexora-packshot.jpg" alt="Rexora Standard">
+          <img src="../../assets/img/products/rexora-packshot.jpg" alt="Rexora EC">
         </div>
         <div class="product-content">
-          <span class="product-badge">Rexora Standard</span>
+          <span class="product-badge">Emulsifiable Concentrate</span>
+          <h3 class="product-title">Rexora EC</h3>
+          <div class="product-spec">Metarhizium anisopliae 1.15% EC</div>
+          <p class="product-description">Advanced emulsifiable concentrate formulation of Metarhizium anisopliae for superior control of soil pests and foliar insects with excellent spreading and persistence.</p>
+          <a href="#rexora-ec-specs" class="btn">View Specifications</a>
+        </div>
+      </div>
+
+      <!-- Rexora WP -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="../../assets/img/products/rexora-packshot.jpg" alt="Rexora WP">
+        </div>
+        <div class="product-content">
+          <span class="product-badge">Wettable Powder</span>
           <h3 class="product-title">Rexora WP</h3>
-          <div class="product-spec">Metarhizium anisopliae 1.0% WP</div>
-          <p class="product-description">Wettable powder formulation effective against white grubs, termites, and soil-dwelling insects through natural fungal infection.</p>
-          <!-- <a href="rexora-wp.html" class="btn">View Product Details</a> -->
+          <div class="product-spec">Metarhizium anisopliae 1.15% WP</div>
+          <p class="product-description">Wettable powder formulation offering extended soil persistence and stability for long-term control of soil-dwelling pests and white grubs.</p>
+          <a href="#rexora-wp-specs" class="btn">View Specifications</a>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Rexora Plus -->
-      <div class="product-card">
-        <div class="product-image">
-          <img src="../../assets/img/products/rexora-packshot.jpg" alt="Rexora Plus">
+  <!-- Rexora Product Details Section -->
+  <section class="rexora-details">
+    <div class="container">
+      <h2>Rexora Product Details</h2>
+      <div class="rexora-content">
+        <div class="rexora-line">
+          <span class="material-symbols-outlined">eco</span>
+          <p>Rexora is a premium bioinsecticide based on Metarhizium anisopliae, a versatile entomopathogenic fungus effective against a wide range of soil-dwelling and foliar insect pests.</p>
         </div>
-        <div class="product-content">
-          <span class="product-badge">Rexora Plus</span>
-          <h3 class="product-title">Rexora Plus</h3>
-          <div class="product-spec">Metarhizium anisopliae 1.5% WP</div>
-          <p class="product-description">Enhanced formulation with higher spore viability for superior control of resistant soil pests and sucking insects.</p>
-          <!-- <a href="rexora-plus.html" class="btn">View Product Details</a> -->
+        
+        <div class="rexora-line">
+          <span class="material-symbols-outlined">science</span>
+          <p>Our specialized formulations ensure high viability and persistence of fungal spores, providing reliable pest control through natural infection processes in both soil and foliar environments.</p>
+        </div>
+        
+        <div class="rexora-line">
+          <span class="material-symbols-outlined">pest_control</span>
+          <p>Rexora targets pests including white grubs, termites, root weevils, locusts, and various soil-dwelling insects through fungal infection and colonization.</p>
+        </div>
+        
+        <div class="rexora-line">
+          <span class="material-symbols-outlined">settings</span>
+          <p>The fungus infects pests by attaching to their cuticle, germinating, and penetrating the insect body, eventually causing death while producing new infectious spores.</p>
+        </div>
+        
+        <div class="rexora-line">
+          <span class="material-symbols-outlined">public</span>
+          <p>Rexora is completely safe for beneficial organisms, earthworms, and the environment, making it ideal for sustainable agriculture and integrated pest management programs.</p>
         </div>
       </div>
+      
+      <!-- Product Specifications Tables -->
+      <h3 style="text-align: center; margin: 50px 0 20px; font-family: 'Cormorant Garamond', serif;" id="specifications">Product Specifications</h3>
+      
+      <!-- Rexora EC Specifications -->
+      <h4 id="rexora-ec-specs" style="margin: 30px 0 15px; color: var(--primary-green);">Rexora EC Specifications</h4>
+      <table class="specs-table">
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Specification</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Active Ingredient</td>
+            <td>Metarhizium anisopliae 1.15% w/w</td>
+          </tr>
+          <tr>
+            <td>Formulation</td>
+            <td>Emulsifiable Concentrate (EC)</td>
+          </tr>
+          <tr>
+            <td>Spore Count</td>
+            <td>≥ 2 x 10⁸ CFU/g</td>
+          </tr>
+          <tr>
+            <td>Color</td>
+            <td>Dark Brown</td>
+          </tr>
+          <tr>
+            <td>Target Pests</td>
+            <td>White Grubs, Termites, Root Weevils, Soil Pests</td>
+          </tr>
+          <tr>
+            <td>Recommended Crops</td>
+            <td>Sugarcane, Cotton, Cereals, Vegetables, Turf</td>
+          </tr>
+          <tr>
+            <td>Dosage</td>
+            <td>2.5-3.5 ml per liter of water</td>
+          </tr>
+          <tr>
+            <td>Soil Application</td>
+            <td>5-10 liters per acre in irrigation water</td>
+          </tr>
+          <tr>
+            <td>Shelf Life</td>
+            <td>12 months from date of manufacture</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      <!-- Rexora WP Specifications -->
+      <h4 id="rexora-wp-specs" style="margin: 30px 0 15px; color: var(--primary-green);">Rexora WP Specifications</h4>
+      <table class="specs-table">
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Specification</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Active Ingredient</td>
+            <td>Metarhizium anisopliae 1.15% w/w</td>
+          </tr>
+          <tr>
+            <td>Formulation</td>
+            <td>Wettable Powder (WP)</td>
+          </tr>
+          <tr>
+            <td>Spore Count</td>
+            <td>≥ 2 x 10⁸ CFU/g</td>
+          </tr>
+          <tr>
+            <td>Color</td>
+            <td>Greenish Brown</td>
+          </tr>
+          <tr>
+            <td>Target Pests</td>
+            <td>Locusts, Grasshoppers, Soil Insects, White Grubs</td>
+          </tr>
+          <tr>
+            <td>Recommended Crops</td>
+            <td>Cereals, Pulses, Oilseeds, Pastures, Forests</td>
+          </tr>
+          <tr>
+            <td>Dosage</td>
+            <td>3.0-4.0 g per liter of water</td>
+          </tr>
+          <tr>
+            <td>Soil Application</td>
+            <td>2-4 kg per acre mixed with organic manure</td>
+          </tr>
+          <tr>
+            <td>Shelf Life</td>
+            <td>18 months from date of manufacture</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-      <!-- Rexora Pro -->
-      <div class="product-card">
-        <div class="product-image">
-          <img src="../../assets/img/products/rexora-packshot.jpg" alt="Rexora Pro">
+  <!-- Benefits Section -->
+  <section class="benefits-section">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 20px; font-family: 'Cormorant Garamond', serif;">Key Benefits of Rexora</h2>
+      <p style="text-align: center; color: var(--neutral-gray); max-width: 800px; margin: 0 auto 40px;">
+        Rexora offers multiple advantages for sustainable pest management in soil and foliar environments
+      </p>
+      
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <span class="material-symbols-outlined">psychology</span>
+          <h3>Broad Spectrum</h3>
+          <p>Effective against wide range of soil-dwelling and foliar insect pests</p>
         </div>
-        <div class="product-content">
-          <span class="product-badge">Rexora Pro</span>
-          <h3 class="product-title">Rexora Pro</h3>
-          <div class="product-spec">Metarhizium anisopliae 2.0% SC</div>
-          <p class="product-description">Suspension concentrate with improved soil persistence and enhanced root zone protection against soil-borne pests.</p>
-          <!-- <a href="rexora-pro.html" class="btn">View Product Details</a> -->
+        
+        <div class="benefit-card">
+          <span class="material-symbols-outlined">verified_user</span>
+          <h3>Soil Persistence</h3>
+          <p>Long-lasting activity in soil environment, providing season-long protection</p>
+        </div>
+        
+        <div class="benefit-card">
+          <span class="material-symbols-outlined">speed</span>
+          <h3>Self-Perpetuating</h3>
+          <p>Creates secondary cycles of infection, establishing natural control</p>
+        </div>
+        
+        <div class="benefit-card">
+          <span class="material-symbols-outlined">water_drop</span>
+          <h3>Dual Application</h3>
+          <p>Suitable for both soil drenching and foliar spray applications</p>
+        </div>
+        
+        <div class="benefit-card">
+          <span class="material-symbols-outlined">agriculture</span>
+          <h3>Organic Certified</h3>
+          <p>Approved for use in organic farming systems worldwide</p>
+        </div>
+        
+        <div class="benefit-card">
+          <span class="material-symbols-outlined">trending_down</span>
+          <h3>Resistance Management</h3>
+          <p>Unique mode of action prevents development of pest resistance</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Rexora Organic -->
-      <div class="product-card">
-        <div class="product-image">
-          <img src="../../assets/img/products/rexora-packshot.jpg" alt="Rexora Organic">
+  <!-- Application Guidelines -->
+  <section class="application-section">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 40px; font-family: 'Cormorant Garamond', serif;">Application Guidelines</h2>
+      <div class="application-content">
+        <div class="rexora-line">
+          <span class="material-symbols-outlined">tips_and_updates</span>
+          <p><strong>Dosage:</strong> Use 2.5-3.5 ml per liter for Rexora EC and 3.0-4.0 g per liter for Rexora WP depending on pest intensity and soil type.</p>
         </div>
-        <div class="product-content">
-          <span class="product-badge">Rexora Organic</span>
-          <h3 class="product-title">Rexora Organic</h3>
-          <div class="product-spec">Metarhizium anisopliae 0.5%</div>
-          <p class="product-description">OMRI-listed organic formulation suitable for certified organic farming with excellent soil compatibility.</p>
-          <!-- <a href="rexora-organic.html" class="btn">View Product Details</a> -->
+        
+        <div class="rexora-line">
+          <span class="material-symbols-outlined">schedule</span>
+          <p><strong>Timing:</strong> Apply during early morning or late evening. For soil application, apply before pest infestation or at first signs of damage.</p>
+        </div>
+        
+        <div class="rexora-line">
+          <span class="material-symbols-outlined">water_drop</span>
+          <p><strong>Application Method:</strong> For soil pests, apply as drenching in root zone. For foliar pests, ensure thorough coverage of affected plant parts.</p>
+        </div>
+        
+        <div class="rexora-line">
+          <span class="material-symbols-outlined">warning</span>
+          <p><strong>Precautions:</strong> Avoid mixing with fungicides. Maintain adequate soil moisture for optimal fungal activity and persistence.</p>
+        </div>
+        
+        <div class="rexora-line">
+          <span class="material-symbols-outlined">rotate_right</span>
+          <p><strong>Rotation:</strong> Can be used in rotation with other biopesticides and integrated with cultural practices for comprehensive pest management.</p>
         </div>
       </div>
     </div>

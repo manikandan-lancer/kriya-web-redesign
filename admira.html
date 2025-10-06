@@ -6,10 +6,10 @@
   <title>Admira | Biocontrol | Kriya Ltd</title>
   
   <!-- Styles -->
-   <link rel="icon" href="assets/img/logo.jpg">
+  <link rel="icon" href="assets/img/logo.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
   
   <style>
     :root {
@@ -38,133 +38,6 @@
       margin: 0 auto;
       padding: 0 20px;
     }
-    
-    /* Navbar Styles */
-    /* .navbar {
-      background-color: #fff;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 1000;
-    }
-    
-    .nav-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 0;
-    }
-    
-    .nav-logo img {
-      height: 40px;
-    }
-    
-    .nav-menu {
-      display: flex;
-      list-style: none;
-    }
-    
-    .nav-menu li {
-      margin-left: 30px;
-      position: relative;
-    }
-    
-    .nav-menu a {
-      text-decoration: none;
-      color: var(--dark-text);
-      font-weight: 500;
-      transition: color 0.3s;
-      display: flex;
-      align-items: center;
-    }
-    
-    .nav-menu a:hover {
-      color: var(--primary-green);
-    }
-    
-    .nav-menu a.active {
-      color: var(--primary-green);
-      font-weight: 600;
-    }
-    
-    .material-symbols-outlined {
-      font-size: 18px;
-      margin-left: 5px;
-    } */
-    
-    /* Dropdown Styles */
-    /* .nav-item.dropdown {
-      position: relative;
-    }
-    
-    .dropdown-menu {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background: white;
-      min-width: 200px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      border-radius: 5px;
-      opacity: 0;
-      visibility: hidden;
-      transform: translateY(10px);
-      transition: all 0.3s ease;
-      z-index: 1000;
-    }
-    
-    .dropdown-menu a {
-      display: block;
-      padding: 10px 15px;
-      border-bottom: 1px solid #f0f0f0;
-    }
-    
-    .dropdown-menu a:last-child {
-      border-bottom: none;
-    }
-    
-    .dropdown-menu a:hover {
-      background-color: var(--light-green);
-    }
-    
-    .nav-item.dropdown:hover .dropdown-menu {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
-    
-    .products-menu {
-      display: flex;
-      min-width: 400px;
-    }
-    
-    .dropdown-category {
-      flex: 1;
-    }
-    
-    .dropdown-category a {
-      font-weight: 500;
-    }
-    
-    .dropdown-category a.active {
-      background-color: var(--light-green);
-      color: var(--primary-green);
-    } */
-    
-    /* Hamburger Menu */
-    /* .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-    }
-    
-    .hamburger .bar {
-      width: 25px;
-      height: 3px;
-      background-color: var(--dark-text);
-      margin: 3px 0;
-      transition: 0.3s;
-    } */
     
     /* Breadcrumb */
     .breadcrumb {
@@ -291,87 +164,59 @@
       background: #3d8b40;
     }
     
-    /* Footer */
-    /* .footer {
-      background: #f5f5f5;
-      padding: 30px 0;
+    /* Admira Product Details Section */
+    .admira-details {
+      padding: 60px 0;
+      background: #f9fdf8;
+      margin: 40px 0;
+    }
+    
+    .admira-details h2 {
       text-align: center;
-      border-top: 1px solid #e0e0e0;
+      color: #2c5f2d;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      font-family: 'Cormorant Garamond', serif;
     }
     
-    .footer p {
-      color: var(--neutral-gray);
-      font-size: 14px;
+    .admira-content {
+      max-width: 800px;
+      margin: 0 auto;
     }
     
-    .footer a {
-      color: var(--primary-green);
-      text-decoration: none;
+    .admira-line {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 25px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      border-left: 4px solid #4CAF50;
     }
     
-    .footer a:hover {
-      text-decoration: underline;
-    } */
+    .admira-line .material-symbols-outlined {
+      color: #4CAF50;
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
     
     /* Responsive */
     @media (max-width: 768px) {
-      /* .nav-menu {
-        position: fixed;
-        left: -100%;
-        top: 70px;
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .admira-line {
         flex-direction: column;
-        background-color: white;
-        width: 100%;
         text-align: center;
-        transition: 0.3s;
-        box-shadow: 0 10px 27px rgba(0,0,0,0.05);
-        padding: 20px 0;
+        gap: 10px;
       }
       
-      .nav-menu.active {
-        left: 0;
-      }
-      
-      .nav-menu li {
-        margin: 15px 0;
-      }
-      
-      .hamburger {
-        display: flex;
-      }
-      
-      .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-      }
-      
-      .hamburger.active .bar:nth-child(1) {
-        transform: translateY(8px) rotate(45deg);
-      }
-      
-      .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-8px) rotate(-45deg);
-      }
-      
-      .dropdown-menu {
-        position: static;
-        opacity: 1;
-        visibility: visible;
-        transform: none;
-        box-shadow: none;
-        display: none;
-        }
-        
-      .nav-item.dropdown:hover .dropdown-menu {
-        display: block;
-      } */
-        
-        .products-grid {
-          grid-template-columns: 1fr;
-        }
-      
-      .products-menu {
-        flex-direction: column;
-        min-width: auto;
+      .admira-line .material-symbols-outlined {
+        align-self: center;
       }
     }
   </style>
@@ -405,7 +250,7 @@
                     <a href="margoshine.html" class="subcategory-item" data-tooltip="Neem Oil">Margoshine</a>
                     <a href="kguard.html" class="subcategory-item" data-tooltip="Karanjin">K-Guard</a>
                     <a href="weedx.html" class="subcategory-item" data-tooltip="MCT">WeedX</a>
-                    <a href="admira.html" class="subcategory-item" data-tooltip="Essential Oil">Admira</a>
+                    <a href="admira.html" class="subcategory-item active" data-tooltip="Essential Oil">Admira</a>
                     <a href="spindura.html" class="subcategory-item" data-tooltip="Spinosad">Spindura</a>
                     <a href="margospin.html" class="subcategory-item" data-tooltip="Neem Oil + Spinosad">MargoSpin</a>
                     <a href="mycova.html" class="subcategory-item" data-tooltip="Beauveria bassian">Mycova</a>
@@ -492,7 +337,7 @@
     <div class="container">
       <h1>Admira Products</h1>
       <p class="section-subtitle">
-        Advanced pyrethrin-based botanical insecticides for fast-acting pest control with minimal environmental impact.
+        Advanced essential oil-based biopesticides for effective and natural pest control in agriculture.
       </p>
     </div>
   </section>
@@ -500,59 +345,92 @@
   <!-- Admira Products Grid -->
   <section class="container">
     <div class="products-grid">
-      <!-- Admira Standard -->
+      <!-- Adyme Product -->
       <div class="product-card">
         <div class="product-image">
-          <img src="../../assets/img/products/admira-packshot.jpg" alt="Admira Standard">
+          <img src="../../assets/img/products/admira-packshot.jpg" alt="Adyme">
         </div>
         <div class="product-content">
-          <span class="product-badge">Admira Standard</span>
-          <h3 class="product-title">Admira EC</h3>
-          <div class="product-spec">Pyrethrins 5.0% EC</div>
-          <p class="product-description">Fast-acting botanical insecticide derived from chrysanthemum flowers, effective against a wide range of flying and crawling insects.</p>
-          <a href="admira-ec.html" class="btn">View Product Details</a>
+          <span class="product-badge">Adyme Series</span>
+          <h3 class="product-title">Adyme</h3>
+          <div class="product-spec">Botanical Extract Formulation</div>
+          <p class="product-description">Advanced botanical extract formulation for controlling fungal diseases and enhancing plant natural defense mechanisms.</p>
+          <a href="adyne.html" class="btn">View Product Details</a>
         </div>
       </div>
 
-      <!-- Admira Plus -->
+      <!-- Adrlic Product -->
       <div class="product-card">
         <div class="product-image">
-          <img src="../../assets/img/products/admira-packshot.jpg" alt="Admira Plus">
+          <img src="../../assets/img/products/admira-packshot.jpg" alt="Adrlic">
         </div>
         <div class="product-content">
-          <span class="product-badge">Admira Plus</span>
-          <h3 class="product-title">Admira Plus</h3>
-          <div class="product-spec">Pyrethrins 10.0% WSP</div>
-          <p class="product-description">Concentrated water-soluble powder with enhanced knockdown effect for rapid pest control in commercial agriculture.</p>
-          <a href="admira-plus.html" class="btn">View Product Details</a>
+          <span class="product-badge">Adrlic Series</span>
+          <h3 class="product-title">Adrlic</h3>
+          <div class="product-spec">Essential Oil Concentrate</div>
+          <p class="product-description">Concentrated essential oil formulation for broad-spectrum insect control with repellent and antifeedant properties.</p>
+          <a href="adrlic.html" class="btn">View Product Details</a>
         </div>
       </div>
 
-      <!-- Admira Pro -->
+      <!-- Adove Product -->
       <div class="product-card">
         <div class="product-image">
-          <img src="../../assets/img/products/admira-packshot.jpg" alt="Admira Pro">
+          <img src="../../assets/img/products/admira-packshot.jpg" alt="Adove">
         </div>
         <div class="product-content">
-          <span class="product-badge">Admira Pro</span>
-          <h3 class="product-title">Admira Pro</h3>
-          <div class="product-spec">Pyrethrins 2.5% with PBO</div>
-          <p class="product-description">Professional formulation with piperonyl butoxide for enhanced efficacy and resistance management in challenging pest situations.</p>
-          <a href="admira-pro.html" class="btn">View Product Details</a>
+          <span class="product-badge">Adove Series</span>
+          <h3 class="product-title">Adove</h3>
+          <div class="product-spec">Plant Extract Solution</div>
+          <p class="product-description">Multi-purpose plant extract solution for managing sucking pests and promoting plant health through natural compounds.</p>
+          <a href="adove.html" class="btn">View Product Details</a>
         </div>
       </div>
 
-      <!-- Admira Organic -->
+      <!-- Admon Product -->
       <div class="product-card">
         <div class="product-image">
-          <img src="../../assets/img/products/admira-packshot.jpg" alt="Admira Organic">
+          <img src="../../assets/img/products/admira-packshot.jpg" alt="Admon">
         </div>
         <div class="product-content">
-          <span class="product-badge">Admira Organic</span>
-          <h3 class="product-title">Admira Organic</h3>
-          <div class="product-spec">Pyrethrins 1.4%</div>
-          <p class="product-description">OMRI-listed organic formulation suitable for certified organic production with quick breakdown and minimal residue.</p>
-          <a href="admira-organic.html" class="btn">View Product Details</a>
+          <span class="product-badge">Admon Series</span>
+          <h3 class="product-title">Admon</h3>
+          <div class="product-spec">Botanical Oil Blend</div>
+          <p class="product-description">Specialized botanical oil blend for controlling mites, scales, and other hard-to-manage pests in various crops.</p>
+          <a href="admon.html" class="btn">View Product Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admira Product Details Section -->
+  <section class="admira-details">
+    <div class="container">
+      <h2>Admira Product Details</h2>
+      <div class="admira-content">
+        <div class="admira-line">
+          <span class="material-symbols-outlined">eco</span>
+          <p>Admira is a premium essential oil-based biopesticide using carefully selected botanical extracts for natural pest and disease control.</p>
+        </div>
+        
+        <div class="admira-line">
+          <span class="material-symbols-outlined">science</span>
+          <p>It is available in multiple specialized formulations targeting different pest groups and crop protection needs.</p>
+        </div>
+        
+        <div class="admira-line">
+          <span class="material-symbols-outlined">pest_control</span>
+          <p>The product targets pests such as aphids, whiteflies, thrips, mites, and fungal diseases through multiple modes of action.</p>
+        </div>
+        
+        <div class="admira-line">
+          <span class="material-symbols-outlined">settings</span>
+          <p>Its mode of action includes repellency, antifeedancy, growth disruption, and direct toxicity against target pests.</p>
+        </div>
+        
+        <div class="admira-line">
+          <span class="material-symbols-outlined">public</span>
+          <p>Admira is an eco-friendly, organic-certifiable option suitable for integrated pest management programs worldwide.</p>
         </div>
       </div>
     </div>

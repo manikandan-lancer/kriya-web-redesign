@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Encilo | Biocontrol | Kriya Ltd</title>
+  <title>EnCilo | Biocontrol | Kriya Ltd</title>
   
   <!-- Styles -->
-   <link rel="icon" href="assets/img/logo.jpg">
+  <link rel="icon" href="assets/img/logo.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/style.css">
   
   <style>
     :root {
@@ -39,8 +38,120 @@
       padding: 0 20px;
     }
     
+    /* Navbar Styles */
+    .navbar {
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+    
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+    
+    .nav-logo img {
+      height: 40px;
+    }
+    
+    .nav-menu {
+      display: flex;
+      list-style: none;
+    }
+    
+    .nav-menu li {
+      margin-left: 30px;
+      position: relative;
+    }
+    
+    .nav-menu a {
+      text-decoration: none;
+      color: var(--dark-text);
+      font-weight: 500;
+      transition: color 0.3s;
+      display: flex;
+      align-items: center;
+    }
+    
+    .nav-menu a:hover {
+      color: var(--primary-green);
+    }
+    
+    .nav-menu a.active {
+      color: var(--primary-green);
+      font-weight: 600;
+    }
+    
+    .material-symbols-outlined {
+      font-size: 18px;
+      margin-left: 5px;
+    }
+    
+    /* Dropdown Styles */
+    .nav-item.dropdown {
+      position: relative;
+    }
+    
+    .dropdown-menu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      min-width: 200px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      border-radius: 5px;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+    
+    .dropdown-menu a {
+      display: block;
+      padding: 10px 15px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .dropdown-menu a:last-child {
+      border-bottom: none;
+    }
+    
+    .dropdown-menu a:hover {
+      background-color: var(--light-green);
+    }
+    
+    .nav-item.dropdown:hover .dropdown-menu {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .products-menu {
+      display: flex;
+      min-width: 400px;
+    }
+    
+    .dropdown-category {
+      flex: 1;
+    }
+    
+    .dropdown-category a {
+      font-weight: 500;
+    }
+    
+    .dropdown-category a.active {
+      background-color: var(--light-green);
+      color: var(--primary-green);
+    }
+    
     /* Hamburger Menu */
-    /* .hamburger {
+    .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
@@ -52,7 +163,7 @@
       background-color: var(--dark-text);
       margin: 3px 0;
       transition: 0.3s;
-    } */
+    }
     
     /* Breadcrumb */
     .breadcrumb {
@@ -179,8 +290,138 @@
       background: #3d8b40;
     }
     
+    /* EnCilo Product Details Section */
+    .encilo-details {
+      padding: 60px 0;
+      background: #f9fdf8;
+      margin: 40px 0;
+    }
+    
+    .encilo-details h2 {
+      text-align: center;
+      color: #2c5f2d;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    
+    .encilo-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .encilo-line {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 25px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      border-left: 4px solid #4CAF50;
+    }
+    
+    .encilo-line .material-symbols-outlined {
+      color: #4CAF50;
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    
+    /* Application Guide */
+    .application-guide {
+      padding: 60px 0;
+      background: #fff;
+    }
+    
+    .application-guide h2 {
+      text-align: center;
+      color: #2c5f2d;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    
+    .application-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    }
+    
+    .application-table th {
+      background-color: var(--primary-green);
+      color: white;
+      padding: 15px;
+      text-align: left;
+    }
+    
+    .application-table td {
+      padding: 15px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .application-table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    
+    .application-table tr:hover {
+      background-color: var(--light-green);
+    }
+    
+    /* Features Section */
+    .features-section {
+      padding: 60px 0;
+      background: #f8f9fa;
+    }
+    
+    .features-section h2 {
+      text-align: center;
+      color: #2c5f2d;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    
+    .feature-card {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--primary-green);
+      margin-bottom: 20px;
+    }
+    
+    .feature-card h3 {
+      margin-bottom: 15px;
+      color: var(--dark-text);
+    }
+    
+    .feature-card p {
+      color: var(--neutral-gray);
+      font-size: 14px;
+    }
+    
     /* Footer */
-    /* .footer {
+    .footer {
       background: #f5f5f5;
       padding: 30px 0;
       text-align: center;
@@ -199,11 +440,11 @@
     
     .footer a:hover {
       text-decoration: underline;
-    } */
+    }
     
     /* Responsive */
     @media (max-width: 768px) {
-      /* .nav-menu {
+      .nav-menu {
         position: fixed;
         left: -100%;
         top: 70px;
@@ -247,19 +488,38 @@
         transform: none;
         box-shadow: none;
         display: none;
-        }
+      }
         
-        .nav-item.dropdown:hover .dropdown-menu {
-          display: block;
-          } */
+      .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+      }
           
-          .products-grid {
-            grid-template-columns: 1fr;
-          }
-          
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+      
       .products-menu {
         flex-direction: column;
         min-width: auto;
+      }
+      
+      .encilo-line {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+      
+      .encilo-line .material-symbols-outlined {
+        align-self: center;
+      }
+      
+      .application-table {
+        display: block;
+        overflow-x: auto;
+      }
+      
+      .features-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -268,229 +528,303 @@
 
   <!-- Navbar -->
   <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="assets/img/logo.png" alt="Kriya Ltd" style="width: 25%; height: 25%;">
-            </a>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/img/logo.png" alt="Kriya Ltd">
+      </a>
+      
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About</a>
+        </li>
+        
+        <!-- Products Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link">Products <span class="material-symbols-outlined">expand_more</span></a>
+          <div class="dropdown-menu products-menu">
+            <div class="dropdown-category">
+              <a href="biocontrol.html" class="active">Biocontrol <span class="material-symbols-outlined">chevron_right</span></a>
+              <div class="subcategory-menu">
+                <div class="subcategory-items">
+                  <a href="ecoza.html" class="subcategory-item">Ecoza</a>
+                  <a href="margoshine.html" class="subcategory-item">Margoshine</a>
+                  <a href="kguard.html" class="subcategory-item">K-Guard</a>
+                  <a href="weedx.html" class="subcategory-item">WeedX</a>
+                  <a href="admira.html" class="subcategory-item">Admira</a>
+                  <a href="spindura.html" class="subcategory-item">Spindura</a>
+                  <a href="margospin.html" class="subcategory-item">MargoSpin</a>
+                  <a href="mycova.html" class="subcategory-item">Mycova</a>
+                  <a href="rexora.html" class="subcategory-item">Rexora</a>
+                  <a href="biota.html" class="subcategory-item">Biota (V/H)</a>
+                  <a href="seira.html" class="subcategory-item">Seira</a>
+                  <a href="encilo.html" class="subcategory-item active">EnCilo</a>
+                  <a href="neuvita.html" class="subcategory-item">Neuvita</a>
+                </div>
+              </div>
+            </div>
             
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">About</a>
-                </li>
-                
-		<!-- Updated Products Dropdown -->
-<li class="nav-item dropdown">
-    <a class="nav-link">Products <span class="material-symbols-outlined">expand_more</span></a>
-    <div class="dropdown-menu products-menu">
-        <div class="dropdown-category">
-            <a href="biocontrol.html">Biocontrol <span class="material-symbols-outlined">chevron_right</span></a>
-            <div class="subcategory-menu">
+            <div class="dropdown-category">
+              <a href="biostimulants.html">Biostimulants <span class="material-symbols-outlined">chevron_right</span></a>
+              <div class="subcategory-menu">
                 <div class="subcategory-items">
-                    <a href="ecoza.html" class="subcategory-item" data-tooltip="Azadirachtin">Ecoza</a>
-                    <a href="margoshine.html" class="subcategory-item" data-tooltip="Neem Oil">Margoshine</a>
-                    <a href="kguard.html" class="subcategory-item" data-tooltip="Karanjin">K-Guard</a>
-                    <a href="weedx.html" class="subcategory-item" data-tooltip="MCT">WeedX</a>
-                    <a href="admira.html" class="subcategory-item" data-tooltip="Essential Oil">Admira</a>
-                    <a href="spindura.html" class="subcategory-item" data-tooltip="Spinosad">Spindura</a>
-                    <a href="margospin.html" class="subcategory-item" data-tooltip="Neem Oil + Spinosad">MargoSpin</a>
-                    <a href="mycova.html" class="subcategory-item" data-tooltip="Beauveria bassian">Mycova</a>
-                    <a href="rexora.html" class="subcategory-item" data-tooltip="Metarhizium anisopliae">Rexora</a>
-                    <a href="biota.html" class="subcategory-item" data-tooltip="Trichoderma viride">Biota (V/H)</a>
-                    <a href="seira.html" class="subcategory-item" data-tooltip="Verticillium lecanii">Seira</a>
-                    <a href="encilo.html" class="subcategory-item" data-tooltip="Paecilomyces fumosoroseus">Encilo</a>
-                    <a href="neuvita.html" class="subcategory-item" data-tooltip="Ampelomyces quisqualis">Neuvita</a>
+                  <a href="igreen.html" class="subcategory-item">IGreen</a>
+                  <a href="zenita.html" class="subcategory-item">Zenita</a>
+                  <a href="cropsia.html" class="subcategory-item">Cropsia</a>
+                  <a href="blooma.html" class="subcategory-item">Blooma</a>
+                  <a href="enrhize.html" class="subcategory-item">Enrhize</a>
+                  <a href="orgocare.html" class="subcategory-item">Orgocare</a>
+                  <a href="envicta.html" class="subcategory-item">Envicta</a>
                 </div>
+              </div>
             </div>
-        </div>
-        
-        <div class="dropdown-category">
-            <a href="biostimulants.html">Biostimulants <span class="material-symbols-outlined">chevron_right</span></a>
-            <div class="subcategory-menu">
+            
+            <div class="dropdown-category">
+              <a href="substrates.html">Substrates <span class="material-symbols-outlined">chevron_right</span></a>
+              <div class="subcategory-menu">
                 <div class="subcategory-items">
-                    <a href="igreen.html" class="subcategory-item" data-tooltip="Microbial Consortium">IGreen</a>
-                    <a href="zenita.html" class="subcategory-item" data-tooltip="Neem Limonoids based PGP">Zenita</a>
-                    <a href="cropsia.html" class="subcategory-item" data-tooltip="Plant Extract based PGP">Cropsia</a>
-                    <a href="blooma.html" class="subcategory-item" data-tooltip="Seaweed based PGP">Blooma</a>
-                    <a href="enrhize.html" class="subcategory-item" data-tooltip="Arbuscular Mycorrhizal">Enrhize</a>
-                    <a href="orgocare.html" class="subcategory-item" data-tooltip="Plant based Stress Management">Orgocare</a>
-                    <a href="envicta.html" class="subcategory-item" data-tooltip="Humic based PGP">Envicta</a>
+                  <a href="maxineem.html" class="subcategory-item">Maxineem</a>
+                  <a href="kmix.html" class="subcategory-item">K-Mix</a>
+                  <a href="mystica.html" class="subcategory-item">Mystica</a>
+                  <a href="engrow.html" class="subcategory-item">Engrow</a>
                 </div>
+              </div>
             </div>
-        </div>
-        
-        <div class="dropdown-category">
-            <a href="substrates.html">Substrates <span class="material-symbols-outlined">chevron_right</span></a>
-            <div class="subcategory-menu">
-                <div class="subcategory-items">
-                    <a href="maxineem.html" class="subcategory-item" data-tooltip="Neem Cake">Maxineem</a>
-                    <a href="kmix.html" class="subcategory-item" data-tooltip="Karanja Cake">K-Mix</a>
-                    <a href="mystica.html" class="subcategory-item" data-tooltip="Wetting & Spreading Agents">Mystica</a>
-                    <a href="engrow.html" class="subcategory-item" data-tooltip="Seed Coating">Engrow</a>
-                </div>
+            
+            <div class="dropdown-category">
+              <a href="home-garden.html">Home & Garden</a>
             </div>
-        </div>
-        
-        <div class="dropdown-category">
-            <a href="home-garden.html">Home & Garden</a>
-        </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link">Technology <span class="material-symbols-outlined">expand_more</span></a>
+          <div class="dropdown-menu technology-menu">
+            <div class="dropdown-category">
+              <a href="karyo.html" class="subcategory-item">Karyo</a>
+            </div>
+            
+            <div class="dropdown-category">
+              <a href="wynn.html" class="subcategory-item">Wynn</a> 
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="contract-manufacturing.html" class="nav-link">Contract Manufacturing</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </div>
-</li>
-
-<li class="nav-item dropdown">
-    <a class="nav-link">Technology <span class="material-symbols-outlined">expand_more</span></a>
-    <div class="dropdown-menu technology-menu">
-        <div class="dropdown-category">
-            <a href="karyo.html" class="subcategory-item" data-tooltip="Advanced Delievery Platform">Karyo</a>
-        </div>
-        
-        <div class="dropdown-category">
-            <a href="wynn.html" class="subcategory-item" data-tooltip="Microbial Platform">Wynn</a> 
-        </div>
-    </div>
-</li>
-
-                <li class="nav-item">
-                    <a href="contract-manufacturing.html" class="nav-link">Contract Manufacturing</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </li>
-            </ul>
-
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+  </nav>
 
   <!-- Breadcrumb -->
   <section class="breadcrumb container">
-    <a href="../../index.html">Home</a> &gt;
-    <a href="../biocontrol.html">Biocontrol</a> &gt;
-    <strong>Encilo</strong>
+    <a href="index.html">Home</a> &gt;
+    <a href="biocontrol.html">Biocontrol</a> &gt;
+    <strong>EnCilo</strong>
   </section>
 
   <!-- Page Header -->
   <section class="hero">
     <div class="container">
-      <h1>Encilo Products</h1>
+      <h1>EnCilo Products</h1>
       <p class="section-subtitle">
-        Advanced Paecilomyces fumosoroseus-based bioinsecticides for effective management of whiteflies, aphids, and other sucking pests.
+        Advanced Paecilomyces fumosoroseus formulations for effective biological control of whiteflies, aphids, and other sucking pests.
       </p>
     </div>
   </section>
 
-  <!-- Encilo Products Grid -->
+  <!-- EnCilo Products Grid -->
   <section class="container">
     <div class="products-grid">
-      <!-- Encilo Standard -->
+      <!-- EnCilo EC -->
       <div class="product-card">
         <div class="product-image">
-          <img src="../../assets/img/products/encilo-packshot.jpg" alt="Encilo Standard">
+          <img src="assets/img/products/encilo-packshot.jpg" alt="EnCilo EC">
         </div>
         <div class="product-content">
-          <span class="product-badge">Encilo Standard</span>
-          <h3 class="product-title">Encilo WP</h3>
-          <div class="product-spec">Paecilomyces fumosoroseus 1.0% WP</div>
-          <p class="product-description">Wettable powder formulation effective against whiteflies, aphids, and thrips through natural fungal infection.</p>
-          <!-- <a href="encilo-wp.html" class="btn">View Product Details</a> -->
+          <span class="product-badge">EnCilo EC</span>
+          <h3 class="product-title">EnCilo EC</h3>
+          <div class="product-spec">Paecilomyces fumosoroseus 1.5%</div>
+          <p class="product-description">Emulsifiable concentrate formulation of Paecilomyces fumosoroseus for superior control of whiteflies, aphids, and thrips in various crops.</p>
+          <a href="encilo-ec.html" class="btn">View Product Details</a>
         </div>
       </div>
 
-      <!-- Encilo Plus -->
+      <!-- EnCilo WP -->
       <div class="product-card">
         <div class="product-image">
-          <img src="../../assets/img/products/encilo-packshot.jpg" alt="Encilo Plus">
+          <img src="assets/img/products/encilo-packshot.jpg" alt="EnCilo WP">
         </div>
         <div class="product-content">
-          <span class="product-badge">Encilo Plus</span>
-          <h3 class="product-title">Encilo Plus</h3>
+          <span class="product-badge">EnCilo WP</span>
+          <h3 class="product-title">EnCilo WP</h3>
           <div class="product-spec">Paecilomyces fumosoroseus 1.5% WP</div>
-          <p class="product-description">Enhanced formulation with higher spore viability for superior control of resistant whitefly populations.</p>
-          <!-- <a href="encilo-plus.html" class="btn">View Product Details</a> -->
+          <p class="product-description">Wettable powder formulation offering excellent dispersion and stability for effective pest management in greenhouse and field conditions.</p>
+          <a href="encilo-wp.html" class="btn">View Product Details</a>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Encilo Pro -->
-      <div class="product-card">
-        <div class="product-image">
-          <img src="../../assets/img/products/encilo-packshot.jpg" alt="Encilo Pro">
+  <!-- EnCilo Product Details Section -->
+  <section class="encilo-details">
+    <div class="container">
+      <h2>EnCilo Product Details</h2>
+      <div class="encilo-content">
+        <div class="encilo-line">
+          <span class="material-symbols-outlined">eco</span>
+          <p>EnCilo is a powerful bioinsecticide containing Paecilomyces fumosoroseus, an entomopathogenic fungus highly effective against whiteflies and other sucking pests.</p>
         </div>
-        <div class="product-content">
-          <span class="product-badge">Encilo Pro</span>
-          <h3 class="product-title">Encilo Pro</h3>
-          <div class="product-spec">Paecilomyces fumosoroseus 2.0% SC</div>
-          <p class="product-description">Suspension concentrate with improved adhesion and extended residual activity for greenhouse applications.</p>
-          <!-- <a href="encilo-pro.html" class="btn">View Product Details</a> -->
+        
+        <div class="encilo-line">
+          <span class="material-symbols-outlined">science</span>
+          <p>Available in both EC and WP formulations, EnCilo provides flexible application options for different agricultural systems and pest management strategies.</p>
+        </div>
+        
+        <div class="encilo-line">
+          <span class="material-symbols-outlined">pest_control</span>
+          <p>Highly effective against whiteflies, aphids, thrips, spider mites, and mealybugs in vegetables, fruits, ornamentals, and greenhouse crops.</p>
+        </div>
+        
+        <div class="encilo-line">
+          <span class="material-symbols-outlined">settings</span>
+          <p>Mode of action includes spore germination on insect cuticle, penetration through the integument, and growth inside the insect body leading to mortality.</p>
+        </div>
+        
+        <div class="encilo-line">
+          <span class="material-symbols-outlined">public</span>
+          <p>EnCilo is an eco-friendly, organic-certifiable solution that's safe for beneficial insects, pollinators, and the environment.</p>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Encilo Organic -->
-      <div class="product-card">
-        <div class="product-image">
-          <img src="../../assets/img/products/encilo-packshot.jpg" alt="Encilo Organic">
+  <!-- Features Section -->
+  <section class="features-section">
+    <div class="container">
+      <h2>Key Features of EnCilo</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <span class="material-symbols-outlined">verified</span>
+          </div>
+          <h3>High Efficacy</h3>
+          <p>Proven effectiveness against resistant whitefly populations and other difficult-to-control sucking pests.</p>
         </div>
-        <div class="product-content">
-          <span class="product-badge">Encilo Organic</span>
-          <h3 class="product-title">Encilo Organic</h3>
-          <div class="product-spec">Paecilomyces fumosoroseus 0.5%</div>
-          <p class="product-description">OMRI-listed organic formulation suitable for certified organic farming with excellent environmental safety.</p>
-          <!-- <a href="encilo-organic.html" class="btn">View Product Details</a> -->
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <span class="material-symbols-outlined">safety_check</span>
+          </div>
+          <h3>Environmentally Safe</h3>
+          <p>Non-toxic to beneficial insects, pollinators, and mammals. Safe for use in organic farming systems.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <span class="material-symbols-outlined">psychiatry</span>
+          </div>
+          <h3>Multiple Action</h3>
+          <p>Acts through contact, ingestion, and secondary infection, providing comprehensive pest control.</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">
+            <span class="material-symbols-outlined">agriculture</span>
+          </div>
+          <h3>Crop Safety</h3>
+          <p>Safe for use on a wide range of crops including vegetables, fruits, ornamentals, and field crops.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- Application Guide -->
+  <section class="application-guide">
+    <div class="container">
+      <h2>EnCilo Application Guide</h2>
+      <table class="application-table">
+        <thead>
+          <tr>
+            <th>Crop</th>
+            <th>Target Pest</th>
+            <th>Dosage (per acre)</th>
+            <th>Application Interval</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Tomato, Cucumber</td>
+            <td>Whiteflies, Aphids</td>
+            <td>500-750 ml/500-750g</td>
+            <td>7-10 days</td>
+          </tr>
+          <tr>
+            <td>Cotton, Soybean</td>
+            <td>Whiteflies, Thrips</td>
+            <td>750-1000 ml/750-1000g</td>
+            <td>10-14 days</td>
+          </tr>
+          <tr>
+            <td>Ornamentals</td>
+            <td>Whiteflies, Mealybugs</td>
+            <td>500-750 ml/500-750g</td>
+            <td>7-10 days</td>
+          </tr>
+          <tr>
+            <td>Greenhouse crops</td>
+            <td>Whiteflies, Spider mites</td>
+            <td>750-1000 ml/750-1000g</td>
+            <td>7 days</td>
+          </tr>
+          <tr>
+            <td>Fruit crops</td>
+            <td>Aphids, Thrips</td>
+            <td>500-750 ml/500-750g</td>
+            <td>10-14 days</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="text-align: center; margin-top: 20px; color: var(--neutral-gray); font-size: 14px;">
+        Note: Apply during early morning or late evening for best results. Maintain adequate humidity for optimal fungal activity.
+      </p>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="about.html">About</a>
-                    <a href="biocontrol.html">Products</a>
-                    <a href="karyo.html">Technology</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                
-                <div class="footer-contact">
-                    <a href="mailto:info@kriya.ltd">info@kriya.ltd</a>
-                    <a href="https://wa.me/916385848466">+91 6385848466</a>
-                </div>
-                
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/company/108402158/" aria-label="LinkedIn">
-                        <span class="material-symbols-outlined">person</span>
-                    </a>
-                    <a href="https://x.com/kriyabiosys" aria-label="Twitter">
-                        <span class="material-symbols-outlined">chat</span>
-                    </a>
-                    <a href="https://www.instagram.com/kriyabiosys/" aria-label="Instagram">
-                        <span class="material-symbols-outlined">photo_camera</span>
-                    </a>
-                    <a href="https://www.youtube.com/@kriyabiosys" aria-label="YouTube">
-                        <span class="material-symbols-outlined">play_circle</span>
-                    </a>
-                    <a href="https://www.facebook.com/kriyabiosys" aria-label="Facebook">
-                        <span class="material-symbols-outlined">thumb_up</span>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="footer-disclaimer">
-                <p>For usage/dosage information, please refer to product documentation. Always follow label instructions and local regulations.</p>
-            </div>
-            
-            <div class="footer-legal">
-                <p>© Kriya Ltd 2025 | <a href="#">Privacy Policy</a> | <a href="#">Responsible Use</a></p>
-            </div>
-        </div>
-    </footer>
+    <div class="container">
+      <p>&copy; 2023 Kriya Ltd. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
+    </div>
+  </footer>
 
-  <script src="assets/js/script.js"></script>
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll(".nav-link").forEach(n => n.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }));
+  </script>
 </body>
 </html>
