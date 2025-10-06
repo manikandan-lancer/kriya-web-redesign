@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EnCilo EC | Paecilomyces fumosoroseus Bioinsecticide | Kriya Ltd</title>
+    <link rel="icon" href="assets/img/logo.jpg">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #4CAF50;
+            --light-green: #E8F5E9;
+            --neutral-gray: #666;
+            --dark-text: #333;
+            --light-bg: #f9f9f9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, #2c5f2d, #4CAF50);
+            color: white;
+            padding: 60px 0 40px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 25px;
+            opacity: 0.9;
+            color: white;
+        }
+        
+        .badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+            color: white;
+        }
+        
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+            color: white;
+        }
+        
+        /* Overview Section */
+        .overview {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .overview h2 {
+            color: #2c5f2d;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            text-align: center;
+            border-bottom: 2px solid #e8f4e3;
+            padding-bottom: 15px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .overview-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .overview-content p {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        /* Main Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .content-section h2 {
+            color: #2c5f2d;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            text-align: center;
+            border-bottom: 2px solid #e8f4e3;
+            padding-bottom: 15px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .feature-card {
+            background: #f9fdf8;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #4CAF50;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h3 {
+            color: #2c5f2d;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .feature-card h3 i {
+            color: #4CAF50;
+            font-size: 1.5rem;
+        }
+        
+        .feature-card p {
+            color: var(--neutral-gray);
+        }
+        
+        /* Target Pests Section */
+        .pests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .pest-card {
+            background: #f9fdf8;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #e8f4e3;
+        }
+        
+        .pest-card h4 {
+            color: #2c5f2d;
+            margin-bottom: 10px;
+        }
+        
+        .pest-card p {
+            color: var(--neutral-gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Dosage Section */
+        .dosage-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .dosage-table th, .dosage-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e8f4e3;
+        }
+        
+        .dosage-table th {
+            background-color: #f1f8e9;
+            color: #2c5f2d;
+            font-weight: 600;
+        }
+        
+        .dosage-table tr:hover {
+            background-color: #f9fdf8;
+        }
+        
+        .variant {
+            font-weight: 600;
+            color: #2c5f2d;
+        }
+        
+        /* Mode of Action Section */
+        .mode-of-action {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .mode-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .mode-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .mode-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .mode-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mode-image .caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: var(--neutral-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Benefits Section */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .benefit-card {
+            background: #f9fdf8;
+            padding: 25px;
+            border-radius: 10px;
+            border-top: 4px solid #4CAF50;
+        }
+        
+        .benefit-card h4 {
+            color: #2c5f2d;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .benefit-card h4 i {
+            color: #4CAF50;
+        }
+        
+        .benefit-card p {
+            color: var(--neutral-gray);
+        }
+        
+        /* Application Methods */
+        .methods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .method-card {
+            background: #f9fdf8;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #e8f4e3;
+        }
+        
+        .method-card h4 {
+            color: #2c5f2d;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .method-card h4 i {
+            color: #4CAF50;
+            font-size: 1.5rem;
+        }
+        
+        .method-card p {
+            color: var(--neutral-gray);
+        }
+        
+        /* EC Specific Features */
+        .ec-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .ec-feature-card {
+            background: #f9fdf8;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #e8f4e3;
+        }
+        
+        .ec-feature-card h4 {
+            color: #2c5f2d;
+            margin-bottom: 10px;
+        }
+        
+        .ec-feature-card p {
+            color: var(--neutral-gray);
+            font-size: 0.95rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(to right, #2c5f2d, #4CAF50);
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .cta-section h2 {
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+            border: none;
+            color: white;
+        }
+        
+        .cta-section p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            color: white;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #2c5f2d;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid white;
+            margin: 0 10px;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: white;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: #2c5f2d;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c5f2d;
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 10px;
+        }
+        
+        .footer-links a {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-contact a {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .footer-social a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .footer-disclaimer {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .footer-legal {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .footer-legal a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pests-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .methods-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .ec-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .mode-of-action {
+                flex-direction: column;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px auto;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/img/logo.png" alt="Kriya Ltd" style="width: 25%; height: 25%;">
+            </a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                
+                <!-- Updated Products Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link">Products <span class="material-symbols-outlined">expand_more</span></a>
+                    <div class="dropdown-menu products-menu">
+                        <div class="dropdown-category">
+                            <a href="biocontrol.html">Biocontrol <span class="material-symbols-outlined">chevron_right</span></a>
+                            <div class="subcategory-menu">
+                                <div class="subcategory-items">
+                                    <a href="ecoza.html" class="subcategory-item" data-tooltip="Azadirachtin">Ecoza</a>
+                                    <a href="margoshine.html" class="subcategory-item" data-tooltip="Neem Oil">Margoshine</a>
+                                    <a href="kguard.html" class="subcategory-item" data-tooltip="Karanjin">K-Guard</a>
+                                    <a href="weedx.html" class="subcategory-item" data-tooltip="MCT">WeedX</a>
+                                    <a href="admira.html" class="subcategory-item" data-tooltip="Essential Oil">Admira</a>
+                                    <a href="spindura.html" class="subcategory-item" data-tooltip="Spinosad">Spindura</a>
+                                    <a href="margospin.html" class="subcategory-item" data-tooltip="Neem Oil + Spinosad">MargoSpin</a>
+                                    <a href="mycova.html" class="subcategory-item" data-tooltip="Beauveria bassian">Mycova</a>
+                                    <a href="rexora.html" class="subcategory-item" data-tooltip="Metarhizium anisopliae">Rexora</a>
+                                    <a href="biota.html" class="subcategory-item" data-tooltip="Trichoderma viride">Biota (V/H)</a>
+                                    <a href="seira.html" class="subcategory-item" data-tooltip="Verticillium lecanii">Seira</a>
+                                    <a href="encilo.html" class="subcategory-item" data-tooltip="Paecilomyces fumosoroseus">EnCilo</a>
+                                    <a href="neuvita.html" class="subcategory-item" data-tooltip="Ampelomyces quisqualis">Neuvita</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dropdown-category">
+                            <a href="biostimulants.html">Biostimulants <span class="material-symbols-outlined">chevron_right</span></a>
+                            <div class="subcategory-menu">
+                                <div class="subcategory-items">
+                                    <a href="igreen.html" class="subcategory-item" data-tooltip="Microbial Consortium">IGreen</a>
+                                    <a href="zenita.html" class="subcategory-item" data-tooltip="Neem Limonoids based PGP">Zenita</a>
+                                    <a href="cropsia.html" class="subcategory-item" data-tooltip="Plant Extract based PGP">Cropsia</a>
+                                    <a href="blooma.html" class="subcategory-item" data-tooltip="Seaweed based PGP">Blooma</a>
+                                    <a href="enrhize.html" class="subcategory-item" data-tooltip="Arbuscular Mycorrhizal">Enrhize</a>
+                                    <a href="orgocare.html" class="subcategory-item" data-tooltip="Plant based Stress Management">Orgocare</a>
+                                    <a href="envicta.html" class="subcategory-item" data-tooltip="Humic based PGP">Envicta</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dropdown-category">
+                            <a href="substrates.html">Substrates <span class="material-symbols-outlined">chevron_right</span></a>
+                            <div class="subcategory-menu">
+                                <div class="subcategory-items">
+                                    <a href="maxineem.html" class="subcategory-item" data-tooltip="Neem Cake">Maxineem</a>
+                                    <a href="kmix.html" class="subcategory-item" data-tooltip="Karanja Cake">K-Mix</a>
+                                    <a href="mystica.html" class="subcategory-item" data-tooltip="Wetting & Spreading Agents">Mystica</a>
+                                    <a href="engrow.html" class="subcategory-item" data-tooltip="Seed Coating">Engrow</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dropdown-category">
+                            <a href="home-garden.html">Home & Garden</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link">Technology <span class="material-symbols-outlined">expand_more</span></a>
+                    <div class="dropdown-menu technology-menu">
+                        <div class="dropdown-category">
+                            <a href="karyo.html" class="subcategory-item" data-tooltip="Advanced Delievery Platform">Karyo</a>
+                        </div>
+                        
+                        <div class="dropdown-category">
+                            <a href="wynn.html" class="subcategory-item" data-tooltip="Microbial Platform">Wynn</a> 
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a href="contract-manufacturing.html" class="nav-link">Contract Manufacturing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <header>
+        <div class="container">
+            <div class="logo">EN<span style="color: #FFD700;">CILO EC</span></div>
+            <h1 style="color: white;">Paecilomyces fumosoroseus Bioinsecticide</h1>
+            <p class="tagline">Advanced emulsifiable concentrate for superior whitefly and aphid control</p>
+            
+            <div class="badges">
+                <span class="badge">1x10^9 CFU/ml</span>
+                <span class="badge">Emulsifiable Concentrate</span>
+                <span class="badge">Whitefly specialist</span>
+                <span class="badge">Organic certified</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Overview Section -->
+        <section class="overview">
+            <h2>Product Overview</h2>
+            <div class="overview-content">
+                <p>EnCilo EC is a premium emulsifiable concentrate formulation containing Paecilomyces fumosoroseus, a highly effective entomopathogenic fungus specifically targeting whiteflies, aphids, and other sucking pests. This advanced EC formulation ensures excellent dispersion, easy handling, and superior performance in various agricultural systems.</p>
+                <p>Paecilomyces fumosoroseus in EnCilo EC exhibits exceptional pathogenicity against whiteflies and demonstrates broad-spectrum activity against other sucking pests. The fungus works through multiple infection mechanisms, providing comprehensive pest control while maintaining environmental safety and compatibility with beneficial insects.</p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="content-section">
+            <h2>Key Features</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3><i class="fas fa-vial"></i> EC Formulation</h3>
+                    <p>Emulsifiable concentrate ensures easy mixing, excellent dispersion, and uniform application in water-based systems.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-bug"></i> Whitefly Specialist</h3>
+                    <p>Exceptionally effective against all whitefly species, including Bemisia tabaci and Trialeurodes vaporariorum.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-syringe"></i> Multiple Infection Routes</h3>
+                    <p>Infects pests through contact, ingestion, and secondary transmission for comprehensive control.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-recycle"></i> Self-Perpetuating Control</h3>
+                    <p>Creates ongoing infection cycles through spore production on dead insects.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-certificate"></i> Environmental Safety</h3>
+                    <p>Safe for beneficial insects, pollinators, and non-target organisms when used as directed.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- EC Specific Features -->
+        <section class="content-section">
+            <h2>EC Formulation Advantages</h2>
+            
+            <div class="ec-features">
+                <div class="ec-feature-card">
+                    <h4>Easy Mixing</h4>
+                    <p>Forms stable emulsion in water without sedimentation or clogging issues.</p>
+                </div>
+                
+                <div class="ec-feature-card">
+                    <h4>Enhanced Coverage</h4>
+                    <p>Superior spreading and coverage on plant surfaces and pest habitats.</p>
+                </div>
+                
+                <div class="ec-feature-card">
+                    <h4>Rapid Action</h4>
+                    <p>Quick establishment and infection of target pests for immediate control.</p>
+                </div>
+                
+                <div class="ec-feature-card">
+                    <h4>Equipment Friendly</h4>
+                    <p>Compatible with various application equipment including sprayers and foggers.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Target Pests Section -->
+        <section class="content-section">
+            <h2>Target Pests</h2>
+            
+            <div class="pests-grid">
+                <div class="pest-card">
+                    <h4>Whiteflies</h4>
+                    <p>Highly effective against all whitefly species including silverleaf and greenhouse whiteflies.</p>
+                </div>
+                
+                <div class="pest-card">
+                    <h4>Aphids</h4>
+                    <p>Excellent control of various aphid species including green peach and cotton aphids.</p>
+                </div>
+                
+                <div class="pest-card">
+                    <h4>Thrips</h4>
+                    <p>Effective management of thrips infestations in vegetables and ornamentals.</p>
+                </div>
+                
+                <div class="pest-card">
+                    <h4>Spider Mites</h4>
+                    <p>Controls two-spotted spider mites and other mite species in various crops.</p>
+                </div>
+                
+                <div class="pest-card">
+                    <h4>Mealybugs</h4>
+                    <p>Manages various mealybug species in fruits and greenhouse crops.</p>
+                </div>
+                
+                <div class="pest-card">
+                    <h4>Scale Insects</h4>
+                    <p>Effective against soft scale insects in orchards and ornamental plants.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Dosage Section -->
+        <section class="content-section">
+            <h2>Recommended Dosage</h2>
+            
+            <table class="dosage-table">
+                <tr>
+                    <th>Crop Type</th>
+                    <th>Dosage per Acre</th>
+                    <th>Water Volume</th>
+                </tr>
+                <tr>
+                    <td class="variant">Vegetables</td>
+                    <td>500-750 ml / acre</td>
+                    <td>200-400 liters water</td>
+                </tr>
+                <tr>
+                    <td class="variant">Fruits</td>
+                    <td>750-1000 ml / acre</td>
+                    <td>400-600 liters water</td>
+                </tr>
+                <tr>
+                    <td class="variant">Cotton</td>
+                    <td>500-750 ml / acre</td>
+                    <td>200-300 liters water</td>
+                </tr>
+                <tr>
+                    <td class="variant">Ornamentals</td>
+                    <td>750-1000 ml / acre</td>
+                    <td>300-500 liters water</td>
+                </tr>
+                <tr>
+                    <td class="variant">Greenhouse</td>
+                    <td>2-3 ml / liter water</td>
+                    <td>Spray to runoff point</td>
+                </tr>
+            </table>
+            
+            <div style="margin-top: 20px; padding: 15px; background: #f1f8e9; border-radius: 8px;">
+                <p><strong>Application Guidelines:</strong> Shake well before use. Prepare emulsion in clean water and use within 4-6 hours. Apply during evening hours or cloudy conditions. Ensure thorough coverage of both leaf surfaces, especially the undersides where whiteflies congregate. Repeat applications at 7-10 day intervals based on pest pressure. Avoid application during peak sunlight hours.</p>
+            </div>
+        </section>
+        
+        <!-- Mode of Action Section -->
+        <section class="content-section">
+            <h2>Mode of Action</h2>
+            
+            <div class="mode-of-action">
+                <div class="mode-text">
+                    <p>EnCilo EC employs sophisticated biological mechanisms that make Paecilomyces fumosoroseus highly effective against whiteflies and other sucking pests:</p>
+                    
+                    <p><strong>Contact Infection:</strong> Fungal spores come into direct contact with target insects, germinate on the cuticle, and penetrate the insect body through enzymatic action and mechanical pressure.</p>
+                    
+                    <p><strong>Cuticle Penetration:</strong> Produces cuticle-degrading enzymes (chitinases, proteases, lipases) that break down the insect's protective outer layer, allowing fungal hyphae to enter the body cavity.</p>
+                    
+                    <p><strong>Internal Colonization:</strong> Once inside the insect, the fungus proliferates throughout the body, consuming internal tissues and nutrients, leading to insect mortality within 3-7 days.</p>
+                    
+                    <p><strong>Multiple Infection Points:</strong> Infects pests through direct contact, ingestion of contaminated plant material, and secondary transmission from infected insects.</p>
+                    
+                    <p><strong>Sporulation and Secondary Cycle:</strong> After the insect dies, the fungus grows out through the cuticle and produces new spores that can infect additional pests, creating a self-sustaining control cycle.</p>
+                    
+                    <p><strong>Broad Temperature Tolerance:</strong> Effective across a wide temperature range (15-35°C), making it suitable for various climatic conditions.</p>
+                </div>
+                
+                <div class="mode-image">
+                    <img src="https://images.unsplash.com/photo-1614732414444-096e5f1122d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Paecilomyces fumosoroseus Mode of Action">
+                    <div class="caption">Paecilomyces fumosoroseus - Highly effective against whiteflies and sucking pests</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Application Methods Section -->
+        <section class="content-section">
+            <h2>Application Methods</h2>
+            
+            <div class="methods-grid">
+                <div class="method-card">
+                    <h4><i class="fas fa-spray-can"></i> Foliar Spray</h4>
+                    <p>Apply as foliar spray with thorough coverage of both leaf surfaces, especially undersides.</p>
+                </div>
+                
+                <div class="method-card">
+                    <h4><i class="fas fa-tint"></i> Soil Drench</h4>
+                    <p>Apply as soil drench for pests with soil-dwelling stages or for systemic protection.</p>
+                </div>
+                
+                <div class="method-card">
+                    <h4><i class="fas fa-cloud"></i> Fogging</h4>
+                    <p>Use in greenhouse fogging systems for uniform distribution in protected cultivation.</p>
+                </div>
+                
+                <div class="method-card">
+                    <h4><i class="fas fa-tractor"></i> Drip Irrigation</h4>
+                    <p>Apply through drip system for root zone protection against soil-borne pest stages.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Benefits Section -->
+        <section class="content-section">
+            <h2>Key Benefits</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h4><i class="fas fa-chart-line"></i> Superior Whitefly Control</h4>
+                    <p>Provides 85-95% control of whitefly populations within 7-10 days of application.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4><i class="fas fa-tree"></i> Environmental Safety</h4>
+                    <p>Safe for beneficial insects, pollinators, and non-target organisms when used as directed.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4><i class="fas fa-leaf"></i> Resistance Management</h4>
+                    <p>Provides alternative mode of action to manage insecticide resistance development.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4><i class="fas fa-recycle"></i> Sustainable Solution</h4>
+                    <p>Reduces chemical pesticide usage and supports eco-friendly agricultural practices.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>Ready to Use EnCilo EC?</h2>
+            <p>Contact us for pricing, distribution opportunities, or technical support</p>
+            <a href="#" class="btn">Contact Sales</a>
+            <a href="#" class="btn btn-outline">Download Brochure</a>
+        </section>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="about.html">About</a>
+                    <a href="biocontrol.html">Products</a>
+                    <a href="karyo.html">Technology</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="footer-contact">
+                    <a href="mailto:info@kriya.ltd">info@kriya.ltd</a>
+                    <a href="https://wa.me/916385848466">+91 6385848466</a>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/108402158/" aria-label="LinkedIn">
+                        <span class="material-symbols-outlined">person</span>
+                    </a>
+                    <a href="https://x.com/kriyabiosys" aria-label="Twitter">
+                        <span class="material-symbols-outlined">chat</span>
+                    </a>
+                    <a href="https://www.instagram.com/kriyabiosys/" aria-label="Instagram">
+                        <span class="material-symbols-outlined">photo_camera</span>
+                    </a>
+                    <a href="https://www.youtube.com/@kriyabiosys" aria-label="YouTube">
+                        <span class="material-symbols-outlined">play_circle</span>
+                    </a>
+                    <a href="https://www.facebook.com/kriyabiosys" aria-label="Facebook">
+                        <span class="material-symbols-outlined">thumb_up</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-disclaimer">
+                <p>For usage/dosage information, please refer to product documentation. Always follow label instructions and local regulations.</p>
+            </div>
+            
+            <div class="footer-legal">
+                <p>© Kriya Ltd 2025 | <a href="#">Privacy Policy</a> | <a href="#">Responsible Use</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
