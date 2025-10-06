@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Spindra | Biocontrol | Kriya Ltd</title>
+  <title>Spindura | Biocontrol | Kriya Ltd</title>
   
   <!-- Styles -->
-   <link rel="icon" href="assets/img/logo.jpg">
+  <link rel="icon" href="assets/img/logo.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
   
   <style>
     :root {
@@ -40,7 +40,7 @@
     }
     
     /* Navbar Styles */
-    /* .navbar {
+    .navbar {
       background-color: #fff;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       position: fixed;
@@ -91,10 +91,10 @@
     .material-symbols-outlined {
       font-size: 18px;
       margin-left: 5px;
-    } */
+    }
     
     /* Dropdown Styles */
-    /* .nav-item.dropdown {
+    .nav-item.dropdown {
       position: relative;
     }
     
@@ -149,10 +149,10 @@
     .dropdown-category a.active {
       background-color: var(--light-green);
       color: var(--primary-green);
-    } */
+    }
     
     /* Hamburger Menu */
-    /* .hamburger {
+    .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
@@ -164,7 +164,7 @@
       background-color: var(--dark-text);
       margin: 3px 0;
       transition: 0.3s;
-    } */
+    }
     
     /* Breadcrumb */
     .breadcrumb {
@@ -291,8 +291,110 @@
       background: #3d8b40;
     }
     
+    /* Spindura Product Details Section */
+    .spindura-details {
+      padding: 60px 0;
+      background: #f9fdf8;
+      margin: 40px 0;
+    }
+    
+    .spindura-details h2 {
+      text-align: center;
+      color: #2c5f2d;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    
+    .spindura-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .spindura-line {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 25px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      border-left: 4px solid #4CAF50;
+    }
+    
+    .spindura-line .material-symbols-outlined {
+      color: #4CAF50;
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    
+    /* Product Specifications Table */
+    .specs-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 30px 0;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    
+    .specs-table th {
+      background-color: var(--primary-green);
+      color: white;
+      padding: 12px 15px;
+      text-align: left;
+    }
+    
+    .specs-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .specs-table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+    
+    .specs-table tr:hover {
+      background-color: var(--light-green);
+    }
+    
+    /* Spinosad Benefits Section */
+    .benefits-section {
+      padding: 60px 0;
+      background: white;
+    }
+    
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    
+    .benefit-card {
+      text-align: center;
+      padding: 30px 20px;
+      background: #f9fdf8;
+      border-radius: 8px;
+      border: 1px solid #e0e0e0;
+    }
+    
+    .benefit-card .material-symbols-outlined {
+      font-size: 3rem;
+      color: var(--primary-green);
+      margin-bottom: 15px;
+    }
+    
+    .benefit-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+      color: var(--dark-text);
+    }
+    
     /* Footer */
-    /* .footer {
+    .footer {
       background: #f5f5f5;
       padding: 30px 0;
       text-align: center;
@@ -311,11 +413,11 @@
     
     .footer a:hover {
       text-decoration: underline;
-    } */
+    }
     
     /* Responsive */
     @media (max-width: 768px) {
-      /* .nav-menu {
+      .nav-menu {
         position: fixed;
         left: -100%;
         top: 70px;
@@ -352,6 +454,10 @@
         transform: translateY(-8px) rotate(-45deg);
       }
       
+      .products-grid {
+        grid-template-columns: 1fr;
+      }
+      
       .dropdown-menu {
         position: static;
         opacity: 1;
@@ -363,15 +469,30 @@
       
       .nav-item.dropdown:hover .dropdown-menu {
         display: block;
-        } */
-        
-        .products-grid {
-          grid-template-columns: 1fr;
-        }
-        
+      }
+      
       .products-menu {
         flex-direction: column;
         min-width: auto;
+      }
+      
+      .spindura-line {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+      
+      .spindura-line .material-symbols-outlined {
+        align-self: center;
+      }
+      
+      .specs-table {
+        display: block;
+        overflow-x: auto;
+      }
+      
+      .benefits-grid {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -380,213 +501,374 @@
 
   <!-- Navbar -->
   <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">
-                <img src="assets/img/logo.png" alt="Kriya Ltd" style="width: 25%; height: 25%;">
-            </a>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/img/logo.png" alt="Kriya Ltd" style="width: 15%; height: 15%;">
+      </a>
+      
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">About</a>
+        </li>
+        
+        <!-- Updated Products Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link">Products <span class="material-symbols-outlined">expand_more</span></a>
+          <div class="dropdown-menu products-menu">
+            <div class="dropdown-category">
+              <a href="biocontrol.html" class="active">Biocontrol <span class="material-symbols-outlined">chevron_right</span></a>
+              <div class="subcategory-menu">
+                <div class="subcategory-items">
+                  <a href="ecoza.html" class="subcategory-item" data-tooltip="Azadirachtin">Ecoza</a>
+                  <a href="margoshine.html" class="subcategory-item" data-tooltip="Neem Oil">Margoshine</a>
+                  <a href="kguard.html" class="subcategory-item" data-tooltip="Karanjin">K-Guard</a>
+                  <a href="weedx.html" class="subcategory-item" data-tooltip="MCT">WeedX</a>
+                  <a href="admira.html" class="subcategory-item" data-tooltip="Essential Oil">Admira</a>
+                  <a href="spindura.html" class="subcategory-item active" data-tooltip="Spinosad">Spindura</a>
+                  <a href="margospin.html" class="subcategory-item" data-tooltip="Neem Oil + Spinosad">MargoSpin</a>
+                  <a href="mycova.html" class="subcategory-item" data-tooltip="Beauveria bassian">Mycova</a>
+                  <a href="rexora.html" class="subcategory-item" data-tooltip="Metarhizium anisopliae">Rexora</a>
+                  <a href="biota.html" class="subcategory-item" data-tooltip="Trichoderma viride">Biota (V/H)</a>
+                  <a href="seira.html" class="subcategory-item" data-tooltip="Verticillium lecanii">Seira</a>
+                  <a href="encilo.html" class="subcategory-item" data-tooltip="Paecilomyces fumosoroseus">EnCilo</a>
+                  <a href="neuvita.html" class="subcategory-item" data-tooltip="Ampelomyces quisqualis">Neuvita</a>
+                </div>
+              </div>
+            </div>
             
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="about.html" class="nav-link">About</a>
-                </li>
-                
-		<!-- Updated Products Dropdown -->
-<li class="nav-item dropdown">
-    <a class="nav-link">Products <span class="material-symbols-outlined">expand_more</span></a>
-    <div class="dropdown-menu products-menu">
-        <div class="dropdown-category">
-            <a href="biocontrol.html">Biocontrol <span class="material-symbols-outlined">chevron_right</span></a>
-            <div class="subcategory-menu">
+            <div class="dropdown-category">
+              <a href="biostimulants.html">Biostimulants <span class="material-symbols-outlined">chevron_right</span></a>
+              <div class="subcategory-menu">
                 <div class="subcategory-items">
-                    <a href="ecoza.html" class="subcategory-item" data-tooltip="Azadirachtin">Ecoza</a>
-                    <a href="margoshine.html" class="subcategory-item" data-tooltip="Neem Oil">Margoshine</a>
-                    <a href="kguard.html" class="subcategory-item" data-tooltip="Karanjin">K-Guard</a>
-                    <a href="weedx.html" class="subcategory-item" data-tooltip="MCT">WeedX</a>
-                    <a href="admira.html" class="subcategory-item" data-tooltip="Essential Oil">Admira</a>
-                    <a href="spindura.html" class="subcategory-item" data-tooltip="Spinosad">Spindura</a>
-                    <a href="margospin.html" class="subcategory-item" data-tooltip="Neem Oil + Spinosad">MargoSpin</a>
-                    <a href="mycova.html" class="subcategory-item" data-tooltip="Beauveria bassian">Mycova</a>
-                    <a href="rexora.html" class="subcategory-item" data-tooltip="Metarhizium anisopliae">Rexora</a>
-                    <a href="biota.html" class="subcategory-item" data-tooltip="Trichoderma viride">Biota (V/H)</a>
-                    <a href="seira.html" class="subcategory-item" data-tooltip="Verticillium lecanii">Seira</a>
-                    <a href="encilo.html" class="subcategory-item" data-tooltip="Paecilomyces fumosoroseus">EnCilo</a>
-                    <a href="neuvita.html" class="subcategory-item" data-tooltip="Ampelomyces quisqualis">Neuvita</a>
+                  <a href="igreen.html" class="subcategory-item" data-tooltip="Microbial Consortium">IGreen</a>
+                  <a href="zenita.html" class="subcategory-item" data-tooltip="Neem Limonoids based PGP">Zenita</a>
+                  <a href="cropsia.html" class="subcategory-item" data-tooltip="Plant Extract based PGP">Cropsia</a>
+                  <a href="blooma.html" class="subcategory-item" data-tooltip="Seaweed based PGP">Blooma</a>
+                  <a href="enrhize.html" class="subcategory-item" data-tooltip="Arbuscular Mycorrhizal">Enrhize</a>
+                  <a href="orgocare.html" class="subcategory-item" data-tooltip="Plant based Stress Management">Orgocare</a>
+                  <a href="envicta.html" class="subcategory-item" data-tooltip="Humic based PGP">Envicta</a>
                 </div>
+              </div>
             </div>
-        </div>
-        
-        <div class="dropdown-category">
-            <a href="biostimulants.html">Biostimulants <span class="material-symbols-outlined">chevron_right</span></a>
-            <div class="subcategory-menu">
+            
+            <div class="dropdown-category">
+              <a href="substrates.html">Substrates <span class="material-symbols-outlined">chevron_right</span></a>
+              <div class="subcategory-menu">
                 <div class="subcategory-items">
-                    <a href="igreen.html" class="subcategory-item" data-tooltip="Microbial Consortium">IGreen</a>
-                    <a href="zenita.html" class="subcategory-item" data-tooltip="Neem Limonoids based PGP">Zenita</a>
-                    <a href="cropsia.html" class="subcategory-item" data-tooltip="Plant Extract based PGP">Cropsia</a>
-                    <a href="blooma.html" class="subcategory-item" data-tooltip="Seaweed based PGP">Blooma</a>
-                    <a href="enrhize.html" class="subcategory-item" data-tooltip="Arbuscular Mycorrhizal">Enrhize</a>
-                    <a href="orgocare.html" class="subcategory-item" data-tooltip="Plant based Stress Management">Orgocare</a>
-                    <a href="envicta.html" class="subcategory-item" data-tooltip="Humic based PGP">Envicta</a>
+                  <a href="maxineem.html" class="subcategory-item" data-tooltip="Neem Cake">Maxineem</a>
+                  <a href="kmix.html" class="subcategory-item" data-tooltip="Karanja Cake">K-Mix</a>
+                  <a href="mystica.html" class="subcategory-item" data-tooltip="Wetting & Spreading Agents">Mystica</a>
+                  <a href="engrow.html" class="subcategory-item" data-tooltip="Seed Coating">Engrow</a>
                 </div>
+              </div>
             </div>
-        </div>
-        
-        <div class="dropdown-category">
-            <a href="substrates.html">Substrates <span class="material-symbols-outlined">chevron_right</span></a>
-            <div class="subcategory-menu">
-                <div class="subcategory-items">
-                    <a href="maxineem.html" class="subcategory-item" data-tooltip="Neem Cake">Maxineem</a>
-                    <a href="kmix.html" class="subcategory-item" data-tooltip="Karanja Cake">K-Mix</a>
-                    <a href="mystica.html" class="subcategory-item" data-tooltip="Wetting & Spreading Agents">Mystica</a>
-                    <a href="engrow.html" class="subcategory-item" data-tooltip="Seed Coating">Engrow</a>
-                </div>
+            
+            <div class="dropdown-category">
+              <a href="home-garden.html">Home & Garden</a>
             </div>
-        </div>
-        
-        <div class="dropdown-category">
-            <a href="home-garden.html">Home & Garden</a>
-        </div>
+          </div>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link">Technology <span class="material-symbols-outlined">expand_more</span></a>
+          <div class="dropdown-menu technology-menu">
+            <div class="dropdown-category">
+              <a href="karyo.html" class="subcategory-item" data-tooltip="Advanced Delievery Platform">Karyo</a>
+            </div>
+            
+            <div class="dropdown-category">
+              <a href="wynn.html" class="subcategory-item" data-tooltip="Microbial Platform">Wynn</a> 
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a href="contract-manufacturing.html" class="nav-link">Contract Manufacturing</a>
+        </li>
+        <li class="nav-item">
+          <a href="contact.html" class="nav-link">Contact</a>
+        </li>
+      </ul>
+
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </div>
-</li>
-
-<li class="nav-item dropdown">
-    <a class="nav-link">Technology <span class="material-symbols-outlined">expand_more</span></a>
-    <div class="dropdown-menu technology-menu">
-        <div class="dropdown-category">
-            <a href="karyo.html" class="subcategory-item" data-tooltip="Advanced Delievery Platform">Karyo</a>
-        </div>
-        
-        <div class="dropdown-category">
-            <a href="wynn.html" class="subcategory-item" data-tooltip="Microbial Platform">Wynn</a> 
-        </div>
-    </div>
-</li>
-
-                <li class="nav-item">
-                    <a href="contract-manufacturing.html" class="nav-link">Contract Manufacturing</a>
-                </li>
-                <li class="nav-item">
-                    <a href="contact.html" class="nav-link">Contact</a>
-                </li>
-            </ul>
-
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+  </nav>
 
   <!-- Breadcrumb -->
   <section class="breadcrumb container">
-    <a href="../../index.html">Home</a> &gt;
-    <a href="../biocontrol.html">Biocontrol</a> &gt;
-    <strong>Spindra</strong>
+    <a href="index.html">Home</a> &gt;
+    <a href="biocontrol.html">Biocontrol</a> &gt;
+    <strong>Spindura</strong>
   </section>
 
   <!-- Page Header -->
   <section class="hero">
     <div class="container">
-      <h1>Spindra Products</h1>
+      <h1>Spindura Products</h1>
       <p class="section-subtitle">
-        Advanced spinosad-based biological insecticides for effective and selective pest control in sensitive crops.
+        Advanced spinosad-based biopesticides for effective control of lepidopteran pests and other insects in agriculture.
       </p>
     </div>
   </section>
 
-  <!-- Spindra Products Grid -->
+  <!-- Spindura Products Grid -->
   <section class="container">
     <div class="products-grid">
-      <!-- Spindra RIX -->
+      <!-- Spindura Pro -->
       <div class="product-card">
         <div class="product-image">
-          <img src="../../assets/img/products/spindra-packshot.jpg" alt="Spindra Standard">
+          <img src="assets/img/products/spindura-packshot.jpg" alt="Spindura Pro">
         </div>
         <div class="product-content">
-          <span class="product-badge">Spindra RIX</span>
-          <h3 class="product-title">Spindra RIX</h3>
+          <span class="product-badge">Premium</span>
+          <h3 class="product-title">Spindura Pro</h3>
+          <div class="product-spec">Spinosad 45% SC</div>
+          <p class="product-description">High-concentration spinosad formulation for superior control of resistant lepidopteran pests in high-value crops.</p>
+          <a href="spindura-pro.html" class="btn">View Product Details</a>
+        </div>
+      </div>
+
+      <!-- Spindura Rix -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="assets/img/products/spindura-packshot.jpg" alt="Spindura Rix">
+        </div>
+        <div class="product-content">
+          <span class="product-badge">Concentrated</span>
+          <h3 class="product-title">Spindura Rix</h3>
+          <div class="product-spec">Spinosad 11.7% SC</div>
+          <p class="product-description">Concentrated spinosad suspension concentrate for broad-spectrum insect control with extended residual activity.</p>
+          <a href="spindura-rix.html" class="btn">View Product Details</a>
+        </div>
+      </div>
+
+      <!-- Spindura Plus -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="assets/img/products/spindura-packshot.jpg" alt="Spindura Plus">
+        </div>
+        <div class="product-content">
+          <span class="product-badge">Enhanced</span>
+          <h3 class="product-title">Spindura Plus</h3>
           <div class="product-spec">Spinosad 2.5% SC</div>
-          <p class="product-description">A versatile biological insecticide effective against thrips, caterpillars, and leaf miners while being safe for beneficial insects.</p>
-          <a href="spindra-sc.html" class="btn">View Product Details</a>
+          <p class="product-description">Enhanced formulation with improved rainfastness and spreading for better coverage and pest control efficacy.</p>
+          <a href="spindura-plus.html" class="btn">View Product Details</a>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Spindra Plus -->
-      <div class="product-card">
-        <div class="product-image">
-          <img src="../../assets/img/products/spindra-packshot.jpg" alt="Spindra Plus">
+  <!-- Spindura Product Details Section -->
+  <section class="spindura-details">
+    <div class="container">
+      <h2>Spindura Product Details</h2>
+      <div class="spindura-content">
+        <div class="spindura-line">
+          <span class="material-symbols-outlined">eco</span>
+          <p>Spindura is a premium biopesticide based on spinosad, a naturally occurring compound derived from soil bacteria Saccharopolyspora spinosa.</p>
         </div>
-        <div class="product-content">
-          <span class="product-badge">Spindra Plus</span>
-          <h3 class="product-title">Spindra Plus</h3>
-          <div class="product-spec">Spinosad 12.0% WSP</div>
-          <p class="product-description">Concentrated water-soluble powder for enhanced pest control in high-value crops and challenging pest conditions.</p>
-          <a href="spindra-plus.html" class="btn">View Product Details</a>
+        
+        <div class="spindura-line">
+          <span class="material-symbols-outlined">science</span>
+          <p>Our spinosad formulations are developed through advanced fermentation technology to ensure consistent quality and efficacy against target pests.</p>
+        </div>
+        
+        <div class="spindura-line">
+          <span class="material-symbols-outlined">pest_control</span>
+          <p>Spindura effectively controls lepidopteran pests, thrips, leafminers, and other insects through unique neurotoxic action.</p>
+        </div>
+        
+        <div class="spindura-line">
+          <span class="material-symbols-outlined">settings</span>
+          <p>Its mode of action involves activation of nicotinic acetylcholine receptors, causing rapid excitation of the insect nervous system.</p>
+        </div>
+        
+        <div class="spindura-line">
+          <span class="material-symbols-outlined">public</span>
+          <p>Spindura is biodegradable, has minimal impact on beneficial insects, and is approved for use in organic farming systems.</p>
         </div>
       </div>
+      
+      <!-- Product Specifications Table -->
+      <h3 style="text-align: center; margin: 50px 0 20px; font-family: 'Cormorant Garamond', serif;">Product Specifications</h3>
+      <table class="specs-table">
+        <thead>
+          <tr>
+            <th>Parameter</th>
+            <th>Spindura Pro</th>
+            <th>Spindura Rix</th>
+            <th>Spindura Plus</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Active Ingredient</td>
+            <td>Spinosad 45%</td>
+            <td>Spinosad 11.7%</td>
+            <td>Spinosad 2.5%</td>
+          </tr>
+          <tr>
+            <td>Formulation</td>
+            <td>Suspension Concentrate (SC)</td>
+            <td>Suspension Concentrate (SC)</td>
+            <td>Suspension Concentrate (SC)</td>
+          </tr>
+          <tr>
+            <td>Color</td>
+            <td>Light Beige</td>
+            <td>Light Beige</td>
+            <td>Light Beige</td>
+          </tr>
+          <tr>
+            <td>Odor</td>
+            <td>Characteristic</td>
+            <td>Characteristic</td>
+            <td>Characteristic</td>
+          </tr>
+          <tr>
+            <td>Target Pests</td>
+            <td>Helicoverpa, Spodoptera, Plutella</td>
+            <td>Thrips, Leafminers, Fruit Borers</td>
+            <td>Caterpillars, Beet Armyworm</td>
+          </tr>
+          <tr>
+            <td>Recommended Crops</td>
+            <td>Cotton, Vegetables, Fruits</td>
+            <td>Fruits, Vegetables, Ornamentals</td>
+            <td>Cereals, Pulses, Vegetables</td>
+          </tr>
+          <tr>
+            <td>Dosage</td>
+            <td>0.3-0.5 ml per liter</td>
+            <td>0.5-1.0 ml per liter</td>
+            <td>1.0-2.0 ml per liter</td>
+          </tr>
+          <tr>
+            <td>PHI (Days)</td>
+            <td>3-5</td>
+            <td>3-5</td>
+            <td>1-3</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-      <!-- Spindra Pro -->
-      <div class="product-card">
-        <div class="product-image">
-          <img src="../../assets/img/products/spindra-packshot.jpg" alt="Spindra Pro">
+  <!-- Benefits Section -->
+  <section class="benefits-section">
+    <div class="container">
+      <h2 style="text-align: center; margin-bottom: 20px; font-family: 'Cormorant Garamond', serif;">Key Benefits of Spindura</h2>
+      <p style="text-align: center; color: var(--neutral-gray); max-width: 800px; margin: 0 auto 40px;">
+        Spindura offers multiple advantages for modern integrated pest management programs
+      </p>
+      
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <span class="material-symbols-outlined">psychology</span>
+          <h3>Unique Mode of Action</h3>
+          <p>Acts on nicotinic acetylcholine receptors, different from conventional insecticides</p>
         </div>
-        <div class="product-content">
-          <span class="product-badge">Spindra Pro</span>
-          <h3 class="product-title">Spindra Pro</h3>
-          <div class="product-spec">Spinosad 1.8%</div>
-          <p class="product-description">Professional formulation with enhanced rainfastness and UV protection for extended residual control in field conditions.</p>
-          <a href="spindra-pro.html" class="btn">View Product Details</a>
+        
+        <div class="benefit-card">
+          <span class="material-symbols-outlined">verified_user</span>
+          <h3>Safe for Beneficials</h3>
+          <p>Minimal impact on pollinators and natural enemies when used as directed</p>
+        </div>
+        
+        <div class="benefit-card">
+          <span class="material-symbols-outlined">speed</span>
+          <h3>Fast Acting</h3>
+          <p>Provides quick knockdown and feeding cessation within hours of application</p>
+        </div>
+        
+        <div class="benefit-card">
+          <span class="material-symbols-outlined">water_drop</span>
+          <h3>Rainfast</h3>
+          <p>Excellent rainfastness properties ensure efficacy even after rainfall</p>
+        </div>
+        
+        <div class="benefit-card">
+          <span class="material-symbols-outlined">agriculture</span>
+          <h3>Organic Certified</h3>
+          <p>Approved for use in organic farming systems worldwide</p>
+        </div>
+        
+        <div class="benefit-card">
+          <span class="material-symbols-outlined">trending_down</span>
+          <h3>Resistance Management</h3>
+          <p>Ideal for rotation in resistance management programs</p>
         </div>
       </div>
+    </div>
+  </section>
 
   <!-- Footer -->
   <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-links">
-                    <a href="about.html">About</a>
-                    <a href="biocontrol.html">Products</a>
-                    <a href="karyo.html">Technology</a>
-                    <a href="contact.html">Contact</a>
-                </div>
-                
-                <div class="footer-contact">
-                    <a href="mailto:info@kriya.ltd">info@kriya.ltd</a>
-                    <a href="https://wa.me/916385848466">+91 6385848466</a>
-                </div>
-                
-                <div class="footer-social">
-                    <a href="https://www.linkedin.com/company/108402158/" aria-label="LinkedIn">
-                        <span class="material-symbols-outlined">person</span>
-                    </a>
-                    <a href="https://x.com/kriyabiosys" aria-label="Twitter">
-                        <span class="material-symbols-outlined">chat</span>
-                    </a>
-                    <a href="https://www.instagram.com/kriyabiosys/" aria-label="Instagram">
-                        <span class="material-symbols-outlined">photo_camera</span>
-                    </a>
-                    <a href="https://www.youtube.com/@kriyabiosys" aria-label="YouTube">
-                        <span class="material-symbols-outlined">play_circle</span>
-                    </a>
-                    <a href="https://www.facebook.com/kriyabiosys" aria-label="Facebook">
-                        <span class="material-symbols-outlined">thumb_up</span>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="footer-disclaimer">
-                <p>For usage/dosage information, please refer to product documentation. Always follow label instructions and local regulations.</p>
-            </div>
-            
-            <div class="footer-legal">
-                <p>© Kriya Ltd 2025 | <a href="#">Privacy Policy</a> | <a href="#">Responsible Use</a></p>
-            </div>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="biocontrol.html">Products</a>
+          <a href="karyo.html">Technology</a>
+          <a href="contact.html">Contact</a>
         </div>
-    </footer>
+        
+        <div class="footer-contact">
+          <a href="mailto:info@kriya.ltd">info@kriya.ltd</a>
+          <a href="https://wa.me/916385848466">+91 6385848466</a>
+        </div>
+        
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/108402158/" aria-label="LinkedIn">
+            <span class="material-symbols-outlined">person</span>
+          </a>
+          <a href="https://x.com/kriyabiosys" aria-label="Twitter">
+            <span class="material-symbols-outlined">chat</span>
+          </a>
+          <a href="https://www.instagram.com/kriyabiosys/" aria-label="Instagram">
+            <span class="material-symbols-outlined">photo_camera</span>
+          </a>
+          <a href="https://www.youtube.com/@kriyabiosys" aria-label="YouTube">
+            <span class="material-symbols-outlined">play_circle</span>
+          </a>
+          <a href="https://www.facebook.com/kriyabiosys" aria-label="Facebook">
+            <span class="material-symbols-outlined">thumb_up</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-disclaimer">
+        <p>For usage/dosage information, please refer to product documentation. Always follow label instructions and local regulations.</p>
+      </div>
+      
+      <div class="footer-legal">
+        <p>© Kriya Ltd 2025 | <a href="#">Privacy Policy</a> | <a href="#">Responsible Use</a></p>
+      </div>
+    </div>
+  </footer>
 
-  <script src="assets/js/script.js"></script>
+  <script>
+    // Mobile menu toggle
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+
+    hamburger.addEventListener("click", () => {
+      hamburger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    });
+
+    // Close mobile menu when clicking on a link
+    document.querySelectorAll(".nav-menu a").forEach(n => n.addEventListener("click", () => {
+      hamburger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }));
+  </script>
 </body>
 </html>

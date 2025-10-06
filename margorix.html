@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MargoRix | Neem + Azadirachtin Biopesticide | Kriya Ltd</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green:#4CAF50;
+            --light-green:#E8F5E9;
+            --neutral-gray:#666;
+            --dark-text:#333;
+            --light-bg:#f9f9f9;
+        }
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'Inter',sans-serif;line-height:1.6;color:var(--dark-text);background-color:#fff;}
+        .container{max-width:1200px;margin:0 auto;padding:0 20px;}
+
+        header{
+            background:linear-gradient(to right,#2c5f2d,#4CAF50);
+            color:#fff;
+            padding:60px 0 40px;
+            text-align:center;
+            border-radius:0 0 20px 20px;
+            margin-bottom:40px;
+            box-shadow:0 4px 12px rgba(0,0,0,.1);
+        }
+        .logo{font-size:2.5rem;font-weight:bold;margin-bottom:10px;font-family:'Cormorant Garamond',serif;}
+        h1{font-size:2.5rem;margin-bottom:15px;font-weight:600;}
+        .tagline{font-size:1.2rem;max-width:700px;margin:0 auto 25px;opacity:.9;}
+        .badges{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:20px;}
+        .badge{background:rgba(255,255,255,.2);padding:8px 16px;border-radius:20px;font-size:.9rem;backdrop-filter:blur(5px);}
+
+        .overview,.content-section{background:#fff;border-radius:15px;padding:40px;margin-bottom:40px;box-shadow:0 4px 15px rgba(0,0,0,.08);}
+        .overview h2,.content-section h2{color:#2c5f2d;margin-bottom:25px;font-size:1.8rem;text-align:center;border-bottom:2px solid #e8f4e3;padding-bottom:15px;font-family:'Cormorant Garamond',serif;}
+        .overview-content{max-width:900px;margin:0 auto;font-size:1.1rem;line-height:1.8;}
+        .overview-content p{text-align:center;margin-bottom:20px;}
+
+        .features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:25px;}
+        .feature-card{background:#f9fdf8;padding:25px;border-radius:12px;border-left:4px solid #4CAF50;transition:transform .3s;}
+        .feature-card:hover{transform:translateY(-5px);}
+        .feature-card h3{color:#2c5f2d;margin-bottom:15px;display:flex;align-items:center;gap:10px;}
+        .feature-card i{color:#4CAF50;font-size:1.5rem;}
+        .feature-card p{color:var(--neutral-gray);}
+
+        .azadirachtin-benefits{background:#f1f8e9;border-radius:15px;padding:40px;margin-bottom:40px;}
+        .azadirachtin-benefits h2{color:#2c5f2d;margin-bottom:30px;font-size:1.8rem;text-align:center;border-bottom:2px solid #c8e6c9;padding-bottom:15px;font-family:'Cormorant Garamond',serif;}
+        .benefits-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+        .benefit-item{background:#fff;padding:20px;border-radius:10px;text-align:center;box-shadow:0 3px 10px rgba(0,0,0,.08);}
+        .benefit-item i{font-size:2rem;color:#4CAF50;margin-bottom:15px;}
+        .benefit-item h4{color:#2c5f2d;margin-bottom:10px;}
+
+        .dosage-table{width:100%;border-collapse:collapse;margin-top:20px;}
+        .dosage-table th,.dosage-table td{padding:15px;text-align:left;border-bottom:1px solid #e8f4e3;}
+        .dosage-table th{background:#f1f8e9;color:#2c5f2d;font-weight:600;}
+        .dosage-table tr:hover{background:#f9fdf8;}
+        .variant{font-weight:600;color:#2c5f2d;}
+
+        .mode-of-action{display:flex;flex-wrap:wrap;gap:40px;align-items:center;}
+        .mode-text{flex:1;min-width:300px;}
+        .mode-text p{margin-bottom:20px;font-size:1.1rem;}
+        .mode-image{flex:1;min-width:300px;text-align:center;}
+        .mode-image img{max-width:100%;border-radius:10px;box-shadow:0 5px 15px rgba(0,0,0,.1);}
+        .mode-image .caption{margin-top:10px;font-style:italic;color:var(--neutral-gray);font-size:.9rem;}
+
+        .pests-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}
+        .pest-card{background:#f9fdf8;padding:20px;border-radius:10px;border-left:4px solid #4CAF50;}
+        .pest-card h4{color:#2c5f2d;margin-bottom:10px;display:flex;align-items:center;gap:10px;}
+        .pest-card i{color:#4CAF50;}
+
+        .cta-section{background:linear-gradient(to right,#2c5f2d,#4CAF50);color:#fff;padding:50px 0;text-align:center;border-radius:15px;margin-bottom:40px;}
+        .cta-section h2{margin-bottom:20px;font-size:2.2rem;color:#fff;border:none;}
+        .cta-section p{max-width:600px;margin:0 auto 30px;font-size:1.1rem;opacity:.9;}
+        .btn{display:inline-block;background:#fff;color:#2c5f2d;padding:12px 30px;border-radius:30px;text-decoration:none;font-weight:600;transition:all .3s;border:2px solid #fff;margin:0 10px;}
+        .btn:hover{background:transparent;color:#fff;}
+        .btn-outline{background:transparent;color:#fff;border:2px solid #fff;}
+        .btn-outline:hover{background:#fff;color:#2c5f2d;}
+
+        footer{background:#2c5f2d;color:#fff;padding:40px 0 20px;text-align:center;border-radius:20px 20px 0 0;}
+        .footer-content{display:flex;justify-content:space-between;flex-wrap:wrap;margin-bottom:30px;}
+        .footer-section{flex:1;min-width:250px;margin-bottom:20px;}
+        .footer-section h3{margin-bottom:20px;font-size:1.3rem;border-bottom:1px solid rgba(255,255,255,.2);padding-bottom:10px;}
+        .footer-links a,.footer-contact a{display:block;color:rgba(255,255,255,.8);text-decoration:none;margin-bottom:10px;transition:color .3s;}
+        .footer-links a:hover{color:#fff;}
+        .footer-social{display:flex;justify-content:center;gap:15px;margin-top:20px;}
+        .footer-social a{display:inline-flex;align-items:center;justify-content:center;width:40px;height:40px;background:rgba(255,255,255,.1);border-radius:50%;color:#fff;text-decoration:none;transition:background .3s;}
+        .footer-social a:hover{background:rgba(255,255,255,.2);}
+        .footer-disclaimer{border-top:1px solid rgba(255,255,255,.2);padding-top:20px;margin-top:20px;font-size:.9rem;opacity:.8;}
+        .footer-legal{margin-top:20px;font-size:.9rem;opacity:.8;}
+        .footer-legal a{color:#fff;text-decoration:none;}
+
+        @media(max-width:768px){
+            h1{font-size:2rem;}
+            .features-grid{grid-template-columns:1fr;}
+            .mode-of-action{flex-direction:column;}
+            .footer-content{flex-direction:column;text-align:center;}
+            .btn{display:block;margin:10px auto;max-width:250px;}
+        }
+    </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <div class="logo">MARGORIX</div>
+    <h1>Advanced Neem + Azadirachtin Biopesticide</h1>
+    <p class="tagline">Dual-mode botanical formulation for rapid, eco-friendly pest suppression and crop safety</p>
+    <div class="badges">
+      <span class="badge">Neem + Azadirachtin Blend</span>
+      <span class="badge">Broad Spectrum</span>
+      <span class="badge">IGR Action</span>
+      <span class="badge">Organic Certified</span>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+  <section class="overview">
+    <h2>Product Overview</h2>
+    <div class="overview-content">
+      <p>MargoRix is an innovative dual-action biopesticide combining the proven efficacy of neem oil with standardized azadirachtin extracts. This synergy provides superior control of sucking and chewing pests while maintaining excellent crop safety.</p>
+      <p>Its balanced formulation delivers quick knockdown through neem’s limonoids and prolonged protection via azadirachtin’s hormonal disruption, making MargoRix ideal for Integrated Pest Management (IPM) and residue-free agriculture.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Key Features</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <h3><i class="fas fa-flask"></i> Dual Mode Technology</h3>
+        <p>Combines neem oil’s repellency with azadirachtin’s hormonal interference for enhanced pest control.</p>
+      </div>
+      <div class="feature-card">
+        <h3><i class="fas fa-leaf"></i> Eco-Safe Formulation</h3>
+        <p>Derived entirely from botanical sources and suitable for organic cultivation.</p>
+      </div>
+      <div class="feature-card">
+        <h3><i class="fas fa-shield-virus"></i> Long Residual Protection</h3>
+        <p>Provides sustained activity for up to 10 days after spray under field conditions.</p>
+      </div>
+      <div class="feature-card">
+        <h3><i class="fas fa-seedling"></i> Crop Compatibility</h3>
+        <p>Safe on vegetables, fruits, ornamentals, and plantation crops with no phytotoxic effects.</p>
+      </div>
+      <div class="feature-card">
+        <h3><i class="fas fa-bug-slash"></i> Resistance Management</h3>
+        <p>Multiple modes of action reduce the risk of pest resistance development.</p>
+      </div>
+      <div class="feature-card">
+        <h3><i class="fas fa-recycle"></i> Biodegradable</h3>
+        <p>Fully biodegradable and environmentally friendly with no soil or water residues.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="azadirachtin-benefits">
+    <h2>Benefits of Neem + Azadirachtin</h2>
+    <div class="benefits-grid">
+      <div class="benefit-item">
+        <i class="fas fa-ban"></i>
+        <h4>Antifeedant</h4>
+        <p>Stops insect feeding immediately after contact or ingestion.</p>
+      </div>
+      <div class="benefit-item">
+        <i class="fas fa-bug"></i>
+        <h4>Repellent</h4>
+        <p>Prevents pest colonization on treated plants.</p>
+      </div>
+      <div class="benefit-item">
+        <i class="fas fa-sync-alt"></i>
+        <h4>Growth Disruption</h4>
+        <p>Inhibits molting and metamorphosis of larval stages.</p>
+      </div>
+      <div class="benefit-item">
+        <i class="fas fa-egg"></i>
+        <h4>Oviposition Blocker</h4>
+        <p>Prevents egg laying and reduces population build-up.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Recommended Dosage</h2>
+    <table class="dosage-table">
+      <tr><th>Crop Category</th><th>Dosage per Acre</th><th>Dilution Ratio</th></tr>
+      <tr><td class="variant">Vegetables & Fruits</td><td>100 – 150 ml / acre</td><td>0.5 – 0.75 ml per litre</td></tr>
+      <tr><td class="variant">Field Crops</td><td>120 – 160 ml / acre</td><td>0.6 – 0.8 ml per litre</td></tr>
+      <tr><td class="variant">Horticultural Crops</td><td>80 – 120 ml / acre</td><td>0.4 – 0.6 ml per litre</td></tr>
+      <tr><td class="variant">Preventive Spray</td><td>60 – 80 ml / acre</td><td>0.3 – 0.4 ml per litre</td></tr>
+    </table>
+    <div style="margin-top:20px;padding:15px;background:#f1f8e9;border-radius:8px;">
+      <p><strong>Application Guidelines:</strong> Apply as foliar spray ensuring uniform coverage on leaf surfaces. Repeat spray every 10–15 days based on infestation level. Compatible with most biocontrol and organic inputs. Avoid mixing with alkaline products.</p>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Target Pests</h2>
+    <div class="pests-grid">
+      <div class="pest-card"><h4><i class="fas fa-bug"></i> Sucking Pests</h4><p>Aphids, Thrips, Whiteflies, Mealybugs, Leafhoppers.</p></div>
+      <div class="pest-card"><h4><i class="fas fa-caterpillar"></i> Chewing Pests</h4><p>Spodoptera, Helicoverpa, Diamondback Moth, Beet Armyworm.</p></div>
+      <div class="pest-card"><h4><i class="fas fa-spider"></i> Mites & Others</h4><p>Red Spider Mites, Gall Midges, Stem Borers, Fruit Borers.</p></div>
+    </div>
+  </section>
+
+  <section class="content-section">
+    <h2>Mode of Action</h2>
+    <div class="mode-of-action">
+      <div class="mode-text">
+        <p>MargoRix operates through a synergistic mechanism combining contact and systemic effects. Neem oil acts as a surface repellent and respiratory inhibitor, while Azadirachtin functions as an Insect Growth Regulator (IGR) and feeding deterrent.</p>
+        <p>Upon exposure, insects stop feeding and lose the ability to molt or reproduce. This multi-level  disruption halts pest cycles effectively without harming pollinators or beneficial arthropods.</p>
+        <p>Its botanical dual system makes MargoRix an ideal fit for residue-free, sustainable agriculture and export-compliant crop programs.</p>
+      </div>
+      <div class="mode-image">
+        <img src="https://images.unsplash.com/photo-1589137291210-1c9f2ffcdf3e?auto=format&fit=crop&w=1000&q=80" alt="Neem + Azadirachtin Mode of Action">
+        <div class="caption">Mode of Action: Combined neem oil and azadirachtin pathways</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Interested in MargoRix?</h2>
+    <p>Contact us for product details, pricing, or technical support.</p>
+    <a href="#" class="btn">Contact Sales</a>
+    <a href="#" class="btn btn-outline">Download Brochure</a>
+  </section>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <div class="footer-links">
+          <a href="#">Home</a><a href="#">About Us</a><a href="#">All Products</a><a href="#">Technology</a><a href="#">Contact</a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Info</h3>
+        <div class="footer-contact">
+          <a href="mailto:info@kriya.ltd">info@kriya.ltd</a>
+          <a href="tel:+916385848466">+91 6385848466</a>
+        </div>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Other Products</h3>
+        <div class="footer-links">
+          <a href="#">Ecoza</a><a href="#">K-Guard</a><a href="#">Margoshine</a><a href="#">Spindura</a><a href="#">Mycova</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-disclaimer">
+      <p>For usage/dosage information, please refer to product documentation. Always follow label instructions and local regulations.</p>
+    </div>
+    <div class="footer-legal">
+      <p>© Kriya Ltd 2025 | <a href="#">Privacy Policy</a> | <a href="#">Responsible Use</a></p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
