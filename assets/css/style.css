@@ -422,12 +422,24 @@ p {
     transform: translateX(3px);
 }
 
-/* ===== TECHNOLOGY MENU FIXES - PROPERLY SHOW KARYO & WYNN ===== */
+/* ===== TECHNOLOGY MENU FIXES - PROPER SPACING ===== */
+.technology-menu .dropdown-menu {
+    min-width: 280px;
+    max-width: 320px;
+    padding: 1.25rem;
+}
+
 .technology-menu .dropdown-category {
     background: transparent !important;
     border: none !important;
-    margin: 0 0 0.5rem 0 !important;
-    padding: 0.5rem 0 !important;
+    margin: 0 0 0.75rem 0 !important;
+    padding: 0.75rem 0 !important;
+    border-bottom: 1px solid var(--border-light) !important;
+}
+
+.technology-menu .dropdown-category:last-child {
+    border-bottom: none !important;
+    margin-bottom: 0 !important;
 }
 
 .technology-menu .dropdown-category:hover {
@@ -435,14 +447,16 @@ p {
 }
 
 .technology-menu .dropdown-category > a {
-    padding: 0.75rem 1rem !important;
-    margin: -0.75rem -1rem !important;
+    padding: 0.875rem 1rem !important;
+    margin: -0.875rem -1rem !important;
     background: transparent !important;
     display: flex !important;
+    border-radius: 6px;
 }
 
 .technology-menu .dropdown-category > a:hover {
     background: var(--accent-cream) !important;
+    color: var(--accent-gold);
 }
 
 .technology-menu .subcategory-menu {
@@ -452,10 +466,11 @@ p {
     transform: none !important;
     box-shadow: none !important;
     border: none !important;
-    padding: 0 !important;
+    padding: 0.5rem 0 0 1rem !important;
     margin: 0 !important;
     min-width: auto !important;
     max-width: none !important;
+    max-height: none !important;
 }
 
 .technology-menu .subcategory-items {
@@ -473,6 +488,16 @@ p {
     margin: 0 !important;
     width: 100% !important;
     min-width: auto !important;
+    max-width: none !important;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.technology-menu .subcategory-item:hover {
+    background: var(--accent-cream) !important;
+    border-color: var(--accent-gold) !important;
+    color: var(--accent-gold) !important;
+    transform: translateX(5px) !important;
 }
 
 /* ===== TABLET RESPONSIVE (1024px and below) ===== */
@@ -514,6 +539,13 @@ p {
         font-size: 0.88rem;
         padding: 0.5rem 0.7rem;
         max-width: 160px;
+    }
+    
+    /* Technology menu tablet */
+    .technology-menu .dropdown-menu {
+        min-width: 260px;
+        max-width: 300px;
+        padding: 1rem;
     }
 }
 
@@ -695,7 +727,13 @@ p {
         max-width: none !important;
     }
     
-    /* FIX TECHNOLOGY MENU FOR MOBILE - SHOW KARYO & WYNN */
+    /* TECHNOLOGY MENU MOBILE - PROPER SPACING */
+    .technology-menu .dropdown-menu {
+        min-width: auto !important;
+        max-width: none !important;
+        padding: 0 !important;
+    }
+    
     .technology-menu .dropdown-category {
         display: block !important;
         padding: 0.75rem 0 !important;
