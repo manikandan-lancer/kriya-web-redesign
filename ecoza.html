@@ -291,6 +291,45 @@
       background: #3d8b40;
     }
     
+    /* Ecoza Product Details Section */
+    .ecoza-details {
+      padding: 60px 0;
+      background: #f9fdf8;
+      margin: 40px 0;
+    }
+    
+    .ecoza-details h2 {
+      text-align: center;
+      color: #2c5f2d;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      font-family: 'Cormorant Garamond', serif;
+    }
+    
+    .ecoza-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    .ecoza-line {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 25px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      border-left: 4px solid #4CAF50;
+    }
+    
+    .ecoza-line .material-symbols-outlined {
+      color: #4CAF50;
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    
     /* Footer */
     /* .footer {
       background: #f5f5f5;
@@ -372,6 +411,16 @@
       .products-menu {
         flex-direction: column;
         min-width: auto;
+      }
+      
+      .ecoza-line {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+      }
+      
+      .ecoza-line .material-symbols-outlined {
+        align-self: center;
       }
     }
   </style>
@@ -510,7 +559,7 @@
           <h3 class="product-title">Ecoza Max</h3>
           <div class="product-spec">Azadirachtin 3.0%</div>
           <p class="product-description">A versatile neem-based biopesticide effective against a wide range of pests including aphids, whiteflies, and caterpillars.</p>
-          <!-- <a href="ecoza-max.html" class="btn">View Product Details</a> -->
+          <a href="ecozamax.html" class="btn">View Product Details</a>
         </div>
       </div>
 
@@ -524,7 +573,7 @@
           <h3 class="product-title">Ecoza Rix</h3>
           <div class="product-spec">Azadirachtin 12.0% WSP</div>
           <p class="product-description">Concentrated formula for enhanced pest control in high-value crops and challenging pest conditions.</p>
-          <!-- <a href="ecoza-rix.html" class="btn">View Product Details</a> -->
+           <a href="ecozarix.html" class="btn">View Product Details</a> 
         </div>
       </div>
 
@@ -538,7 +587,7 @@
           <h3 class="product-title">Ecoza Ace</h3>
           <div class="product-spec">Azadirachtin 1.2%</div>
           <p class="product-description">Enhanced formulation with synergistic botanical extracts for broader spectrum pest control.</p>
-          <!-- <a href="ecoza-ace.html" class="btn">View Product Details</a> -->
+          <a href="ecoza-ace.html" class="btn">View Product Details</a> 
         </div>
       </div>
 
@@ -552,7 +601,40 @@
           <h3 class="product-title">Ecoza Pro</h3>
           <div class="product-spec">Azadirachtin 0.3%</div>
           <p class="product-description">Low-dosage formulation suitable for IPM programs, providing consistent pest control with eco-safety.</p>
-          <!-- <a href="ecoza-pro.html" class="btn">View Product Details</a> -->
+           <a href="ecoza-pro.html" class="btn">View Product Details</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ecoza Product Details Section -->
+  <section class="ecoza-details">
+    <div class="container">
+      <h2>Ecoza Product Details</h2>
+      <div class="ecoza-content">
+        <div class="ecoza-line">
+          <span class="material-symbols-outlined">eco</span>
+          <p>Ecoza is a premium neem-based biopesticide using standardized azadirachtin for broad-spectrum control of sucking and chewing pests.</p>
+        </div>
+        
+        <div class="ecoza-line">
+          <span class="material-symbols-outlined">science</span>
+          <p>It is available in multiple strengths and formulations like EC and WSP, with azadirachtin concentrations ranging from 0.3% to 12.0%.</p>
+        </div>
+        
+        <div class="ecoza-line">
+          <span class="material-symbols-outlined">pest_control</span>
+          <p>The product targets pests such as aphids, whiteflies, thrips, mealybugs, and caterpillars.</p>
+        </div>
+        
+        <div class="ecoza-line">
+          <span class="material-symbols-outlined">settings</span>
+          <p>Its mode of action includes insect growth regulation and antifeedant effects.</p>
+        </div>
+        
+        <div class="ecoza-line">
+          <span class="material-symbols-outlined">public</span>
+          <p>Ecoza is an eco-friendly, organic-certifiable option suitable for integrated pest management programs worldwide.</p>
         </div>
       </div>
     </div>

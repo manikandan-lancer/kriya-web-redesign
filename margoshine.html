@@ -4,19 +4,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Margoshine | Biocontrol | Kriya Ltd</title>
-  
+
   <!-- Styles -->
-  <link rel="icon" href="../assets/img/logo.jpg">
+  <link rel="icon" href="assets/img/logo.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/style.css">
-  
+
   <style>
     :root {
       --primary-green: #4CAF50;
+      --light-green: #E8F5E9;
       --neutral-gray: #666;
       --dark-text: #333;
+      --light-bg: #f9f9f9;
     }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Inter', sans-serif;
@@ -25,12 +29,25 @@
       background-color: #fff;
     }
 
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
     .breadcrumb {
       margin-top: 90px;
       padding: 1rem 0;
       font-size: 0.95rem;
       color: var(--neutral-gray);
     }
+
+    .breadcrumb a {
+      color: var(--neutral-gray);
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover { text-decoration: underline; }
 
     .hero {
       padding: 3rem 0 2rem;
@@ -41,6 +58,7 @@
       font-size: 2.5rem;
       margin-bottom: 1rem;
       font-family: 'Cormorant Garamond', serif;
+      color: var(--dark-text);
     }
 
     .section-subtitle {
@@ -52,54 +70,62 @@
 
     .products-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
       gap: 30px;
       padding: 40px 0 80px;
     }
 
     .product-card {
       background: #fff;
-      border-radius: 10px;
+      border-radius: 8px;
       overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
       transition: transform 0.3s, box-shadow 0.3s;
       border: 1px solid #f0f0f0;
-      text-align: center;
     }
 
     .product-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
 
     .product-image {
-      height: 220px;
-      background: #f8f9fa;
+      height: 200px;
+      background-color: #f8f8f8;
       display: flex;
       align-items: center;
       justify-content: center;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #f0f0f0;
     }
 
     .product-image img {
       max-width: 80%;
       max-height: 80%;
-      object-fit: contain;
     }
 
-    .product-content {
-      padding: 25px 20px;
+    .product-content { padding: 25px; }
+
+    .product-badge {
+      display: inline-block;
+      background: #f5f5f5;
+      color: var(--primary-green);
+      padding: 4px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      border: 1px solid #e0e0e0;
     }
 
     .product-title {
-      font-size: 1.25rem;
+      font-size: 20px;
       font-weight: 600;
-      margin-bottom: 0.5rem;
+      margin-bottom: 5px;
       color: var(--dark-text);
     }
 
     .product-spec {
-      font-size: 0.9rem;
+      font-size: 14px;
       color: var(--primary-green);
       font-weight: 600;
       margin-bottom: 15px;
@@ -107,7 +133,7 @@
 
     .product-description {
       color: var(--neutral-gray);
-      font-size: 0.95rem;
+      font-size: 15px;
       margin-bottom: 20px;
     }
 
@@ -120,51 +146,89 @@
       text-decoration: none;
       font-weight: 500;
       transition: background 0.3s;
+      font-size: 14px;
     }
 
-    .btn:hover {
-      background: #3d8b40;
+    .btn:hover { background: #3d8b40; }
+
+    .ecoza-details {
+      padding: 60px 0;
+      background: #f9fdf8;
+      margin: 40px 0;
+    }
+
+    .ecoza-details h2 {
+      text-align: center;
+      color: #2c5f2d;
+      margin-bottom: 40px;
+      font-size: 2rem;
+      font-family: 'Cormorant Garamond', serif;
+    }
+
+    .ecoza-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .ecoza-line {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 25px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+      border-left: 4px solid #4CAF50;
+    }
+
+    .ecoza-line .material-symbols-outlined {
+      color: #4CAF50;
+      font-size: 1.8rem;
+      flex-shrink: 0;
+      margin-top: 2px;
     }
 
     @media (max-width: 768px) {
-      .products-grid {
-        grid-template-columns: 1fr;
-      }
+      .products-grid { grid-template-columns: 1fr; }
+      .ecoza-line { flex-direction: column; text-align: center; }
     }
   </style>
 </head>
+
 <body>
 
   <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-container">
-      <a href="../index.html" class="nav-logo">
-        <img src="../assets/img/logo.png" alt="Kriya Ltd" style="width: 15%; height: 15%;">
+      <a href="index.html" class="nav-logo">
+        <img src="assets/img/logo.png" alt="Kriya Ltd" style="width: 15%; height: 15%;">
       </a>
       <ul class="nav-menu">
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../about.html">About</a></li>
-        <li><a href="../products/biocontrol.html" class="active">Products</a></li>
-        <li><a href="../technology/karyo.html">Technology</a></li>
-        <li><a href="../contract-manufacturing.html">Contract Manufacturing</a></li>
-        <li><a href="../contact.html">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="biocontrol.html" class="active">Biocontrol</a></li>
+        <li><a href="biostimulants.html">Biostimulants</a></li>
+        <li><a href="substrates.html">Substrates</a></li>
+        <li><a href="home-garden.html">Home & Garden</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- Breadcrumb -->
   <section class="breadcrumb container">
-    <a href="../index.html">Home</a> &gt;
-    <a href="../products/biocontrol.html">Biocontrol</a> &gt;
+    <a href="../../index.html">Home</a> &gt;
+    <a href="../biocontrol.html">Biocontrol</a> &gt;
     <strong>Margoshine</strong>
   </section>
 
   <!-- Page Header -->
   <section class="hero">
     <div class="container">
-      <h1>Margoshine Variants</h1>
+      <h1>Margoshine Products</h1>
       <p class="section-subtitle">
-        Neem oil–based biocontrol formulations designed for superior pest control and enhanced plant vitality.
+        Neem oil–based natural insecticide for sustainable pest control and crop protection.
       </p>
     </div>
   </section>
@@ -173,46 +237,123 @@
   <section class="container">
     <div class="products-grid">
 
-      <!-- Margoshine 70% -->
+      <!-- Margoshine Classic -->
       <div class="product-card">
         <div class="product-image">
-          <img src="../assets/img/products/margoshine-packshot.jpg" alt="Margoshine 70%">
+          <img src="../../assets/img/products/margoshine-packshot.jpg" alt="Margoshine Classic">
         </div>
         <div class="product-content">
-          <h3 class="product-title">Margoshine 70%</h3>
-          <div class="product-spec">Neem Oil 70% EC</div>
-          <p class="product-description">
-            High-purity neem oil formulation that provides broad-spectrum control against soft-bodied pests while improving plant health and leaf shine.
-          </p>
-          <a href="margoshine-70.html" class="btn">View Product Details</a>
+          <span class="product-badge">Margoshine</span>
+          <h3 class="product-title">Margoshine Classic</h3>
+          <div class="product-spec">Neem Oil 85%</div>
+          <p class="product-description">Cold-pressed neem oil formulation providing multi-mode pest deterrence and leaf shine improvement.</p>
+          <a href="margoshine-classic.html" class="btn">View Product Details</a>
         </div>
       </div>
 
-      <!-- MargoRix -->
+      <!-- Margoshine Plus -->
       <div class="product-card">
         <div class="product-image">
-          <img src="../assets/img/products/margorix-packshot.jpg" alt="MargoRix">
+          <img src="../../assets/img/products/margoshine-packshot.jpg" alt="Margoshine Plus">
         </div>
         <div class="product-content">
-          <h3 class="product-title">MargoRix</h3>
-          <div class="product-spec">Neem + Karanja Blend</div>
-          <p class="product-description">
-            A unique combination of neem and karanja oils offering enhanced pest repellency, antifeedant action, and improved environmental resilience.
-          </p>
-          <a href="margorix.html" class="btn">View Product Details</a>
+          <span class="product-badge">Margoshine</span>
+          <h3 class="product-title">Margoshine Plus</h3>
+          <div class="product-spec">Neem Oil 95%</div>
+          <p class="product-description">Enhanced neem oil formulation for improved pest repellence, ideal for horticultural and field crops.</p>
+          <a href="margoshine-plus.html" class="btn">View Product Details</a>
+        </div>
+      </div>
+
+      <!-- Margoshine EC -->
+      <div class="product-card">
+        <div class="product-image">
+          <img src="../../assets/img/products/margoshine-packshot.jpg" alt="Margoshine EC">
+        </div>
+        <div class="product-content">
+          <span class="product-badge">Margoshine</span>
+          <h3 class="product-title">Margoshine EC</h3>
+          <div class="product-spec">Neem Oil 10,000 ppm EC</div>
+          <p class="product-description">Emulsifiable concentrate offering superior spreading, quick knockdown, and long-lasting crop protection.</p>
+          <a href="margoshine-ec.html" class="btn">View Product Details</a>
         </div>
       </div>
 
     </div>
   </section>
 
+  <!-- Margoshine Details -->
+  <section class="ecoza-details">
+    <div class="container">
+      <h2>About Margoshine</h2>
+      <div class="ecoza-content">
+        <div class="ecoza-line">
+          <span class="material-symbols-outlined">eco</span>
+          <p>Margoshine is a 100% botanical neem oil formulation known for its insect-repelling, antifeedant, and oviposition deterrent properties.</p>
+        </div>
+
+        <div class="ecoza-line">
+          <span class="material-symbols-outlined">science</span>
+          <p>Cold-pressed extraction ensures high-quality limonoid retention—particularly azadirachtin, salannin, and nimbin—for maximum efficacy.</p>
+        </div>
+
+        <div class="ecoza-line">
+          <span class="material-symbols-outlined">pest_control</span>
+          <p>Effective against aphids, whiteflies, mites, mealybugs, leafminers, and soft-bodied insects in fruits, vegetables, and ornamentals.</p>
+        </div>
+
+        <div class="ecoza-line">
+          <span class="material-symbols-outlined">public</span>
+          <p>Being biodegradable and residue-free, Margoshine supports sustainable agriculture and integrated pest management (IPM) programs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>© 2026 Kriya Ltd | <a href="../about.html">About</a> | <a href="../products/biocontrol.html">Products</a> | <a href="../technology/karyo.html">Technology</a> | <a href="../contact.html">Contact</a></p>
+      <div class="footer-content">
+        <div class="footer-links">
+          <a href="about.html">About</a>
+          <a href="biocontrol.html">Products</a>
+          <a href="karyo.html">Technology</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-contact">
+          <a href="mailto:info@kriya.ltd">info@kriya.ltd</a>
+          <a href="https://wa.me/916385848466">+91 6385848466</a>
+        </div>
+
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/108402158/"><span class="material-symbols-outlined">person</span></a>
+          <a href="https://x.com/kriyabiosys"><span class="material-symbols-outlined">chat</span></a>
+          <a href="https://www.instagram.com/kriyabiosys/"><span class="material-symbols-outlined">photo_camera</span></a>
+          <a href="https://www.youtube.com/@kriyabiosys"><span class="material-symbols-outlined">play_circle</span></a>
+          <a href="https://www.facebook.com/kriyabiosys"><span class="material-symbols-outlined">thumb_up</span></a>
+        </div>
+      </div>
+
+      <div class="footer-disclaimer">
+        <p>For usage/dosage information, please refer to product documentation. Always follow label instructions and local regulations.</p>
+      </div>
+
+      <div class="footer-legal">
+        <p>© Kriya Ltd 2025 | <a href="#">Privacy Policy</a> | <a href="#">Responsible Use</a></p>
+      </div>
     </div>
   </footer>
 
-  <script src="../assets/js/script.js"></script>
+  <script>
+    const hamburger = document.querySelector(".hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    if (hamburger) {
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+      });
+    }
+  </script>
 </body>
 </html>

@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Rix | Botanical Fungicide | Kriya Ltd</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #4CAF50;
+            --light-green: #E8F5E9;
+            --neutral-gray: #666;
+            --dark-text: #333;
+            --light-bg: #f9f9f9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, #2c5f2d, #4CAF50);
+            color: white;
+            padding: 60px 0 40px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 25px;
+            opacity: 0.9;
+        }
+        
+        .badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+        
+        /* Overview Section */
+        .overview {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .overview h2 {
+            color: #2c5f2d;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            text-align: center;
+            border-bottom: 2px solid #e8f4e3;
+            padding-bottom: 15px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .overview-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .overview-content p {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        /* Main Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .content-section h2 {
+            color: #2c5f2d;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            text-align: center;
+            border-bottom: 2px solid #e8f4e3;
+            padding-bottom: 15px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .feature-card {
+            background: #f9fdf8;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #4CAF50;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h3 {
+            color: #2c5f2d;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .feature-card h3 i {
+            color: #4CAF50;
+            font-size: 1.5rem;
+        }
+        
+        .feature-card p {
+            color: var(--neutral-gray);
+        }
+        
+        /* Active Ingredients Section */
+        .active-ingredients {
+            background: #f1f8e9;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .active-ingredients h2 {
+            color: #2c5f2d;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            text-align: center;
+            border-bottom: 2px solid #c8e6c9;
+            padding-bottom: 15px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .ingredients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .ingredient-item {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+        }
+        
+        .ingredient-item i {
+            font-size: 2rem;
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+        
+        .ingredient-item h4 {
+            color: #2c5f2d;
+            margin-bottom: 10px;
+        }
+        
+        /* Dosage Section */
+        .dosage-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .dosage-table th, .dosage-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e8f4e3;
+        }
+        
+        .dosage-table th {
+            background-color: #f1f8e9;
+            color: #2c5f2d;
+            font-weight: 600;
+        }
+        
+        .dosage-table tr:hover {
+            background-color: #f9fdf8;
+        }
+        
+        .variant {
+            font-weight: 600;
+            color: #2c5f2d;
+        }
+        
+        /* Mode of Action Section */
+        .mode-of-action {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .mode-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .mode-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .mode-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .mode-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mode-image .caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: var(--neutral-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Target Diseases Section */
+        .diseases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .disease-card {
+            background: #f9fdf8;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .disease-card h4 {
+            color: #2c5f2d;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .disease-card h4 i {
+            color: #4CAF50;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(to right, #2c5f2d, #4CAF50);
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .cta-section h2 {
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+            border: none;
+            color: white;
+        }
+        
+        .cta-section p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #2c5f2d;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid white;
+            margin: 0 10px;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: white;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: #2c5f2d;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c5f2d;
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 10px;
+        }
+        
+        .footer-links a {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-contact a {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .footer-social a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .footer-disclaimer {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .footer-legal {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .footer-legal a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .mode-of-action {
+                flex-direction: column;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px auto;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">K-<span style="color: #FFD700;">RIX</span></div>
+            <h1>Botanical Fungicide with Dual Action</h1>
+            <p class="tagline">Advanced plant-based formulation for effective fungal disease control</p>
+            
+            <div class="badges">
+                <span class="badge">Botanical Origin</span>
+                <span class="badge">Dual Action</span>
+                <span class="badge">Broad-Spectrum</span>
+                <span class="badge">Organic Certified</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Overview Section -->
+        <section class="overview">
+            <h2>Product Overview</h2>
+            <div class="overview-content">
+                <p>K-Rix is a premium botanical fungicide formulated with a synergistic blend of plant extracts known for their antifungal properties. This innovative product provides both protective and curative action against a wide range of fungal diseases affecting various crops.</p>
+                <p>With its unique dual-action mechanism, K-Rix disrupts fungal cell membranes while stimulating the plant's natural defense systems, offering comprehensive disease management that is safe for beneficial microorganisms and the environment.</p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="content-section">
+            <h2>Key Features</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3><i class="fas fa-leaf"></i> Botanical Formulation</h3>
+                    <p>Derived from carefully selected plant extracts with proven antifungal activity.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-shield-alt"></i> Dual Action</h3>
+                    <p>Provides both protective and curative action against fungal pathogens.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-biohazard"></i> Broad Spectrum</h3>
+                    <p>Effective against a wide range of fungal diseases including powdery mildew, rust, and blight.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-certificate"></i> Organic Compliance</h3>
+                    <p>Certified for organic farming with no harmful residues or waiting period.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-recycle"></i> Environmentally Safe</h3>
+                    <p>Biodegradable formulation that preserves beneficial soil microorganisms.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Active Ingredients Section -->
+        <section class="active-ingredients">
+            <h2>Active Ingredients</h2>
+            
+            <div class="ingredients-grid">
+                <div class="ingredient-item">
+                    <i class="fas fa-flask"></i>
+                    <h4>Plant Extracts Blend</h4>
+                    <p>Proprietary combination of antifungal botanical extracts</p>
+                </div>
+                
+                <div class="ingredient-item">
+                    <i class="fas fa-seedling"></i>
+                    <h4>Systemic Action</h4>
+                    <p>Rapid absorption and translocation within plant tissues</p>
+                </div>
+                
+                <div class="ingredient-item">
+                    <i class="fas fa-shield-virus"></i>
+                    <h4>Resistance Management</h4>
+                    <p>Multi-site action minimizes resistance development</p>
+                </div>
+                
+                <div class="ingredient-item">
+                    <i class="fas fa-hand-holding-water"></i>
+                    <h4>Rainfast</h4>
+                    <p>Quick absorption provides protection even after rainfall</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Dosage Section -->
+        <section class="content-section">
+            <h2>Recommended Dosage</h2>
+            
+            <table class="dosage-table">
+                <tr>
+                    <th>Crop Category</th>
+                    <th>Dosage per Acre</th>
+                    <th>Application Interval</th>
+                </tr>
+                <tr>
+                    <td class="variant">Vegetables & Fruits</td>
+                    <td>400 ml - 600 ml / acre</td>
+                    <td>10-14 days</td>
+                </tr>
+                <tr>
+                    <td class="variant">Field Crops</td>
+                    <td>500 ml - 700 ml / acre</td>
+                    <td>12-15 days</td>
+                </tr>
+                <tr>
+                    <td class="variant">High Disease Pressure</td>
+                    <td>600 ml - 800 ml / acre</td>
+                    <td>7-10 days</td>
+                </tr>
+                <tr>
+                    <td class="variant">Preventive Application</td>
+                    <td>300 ml - 500 ml / acre</td>
+                    <td>14-21 days</td>
+                </tr>
+            </table>
+            
+            <div style="margin-top: 20px; padding: 15px; background: #f1f8e9; border-radius: 8px;">
+                <p><strong>Application Guidelines:</strong> Apply as foliar spray with thorough coverage of all plant parts. For best results, apply at first sign of disease or as a preventive measure. Use higher rates and shorter intervals under high disease pressure. Compatible with most organic inputs.</p>
+            </div>
+        </section>
+        
+        <!-- Target Diseases Section -->
+        <section class="content-section">
+            <h2>Target Diseases</h2>
+            
+            <div class="diseases-grid">
+                <div class="disease-card">
+                    <h4><i class="fas fa-fungus"></i> Powdery Mildew</h4>
+                    <p>Effective against powdery mildew in cucurbits, grapes, and various vegetables.</p>
+                </div>
+                
+                <div class="disease-card">
+                    <h4><i class="fas fa-bacteria"></i> Downy Mildew</h4>
+                    <p>Controls downy mildew in grapes, cucurbits, and other susceptible crops.</p>
+                </div>
+                
+                <div class="disease-card">
+                    <h4><i class="fas fa-virus"></i> Rust Diseases</h4>
+                    <p>Manages various rust diseases in cereals, pulses, and horticultural crops.</p>
+                </div>
+                
+                <div class="disease-card">
+                    <h4><i class="fas fa-leaf"></i> Leaf Spot & Blight</h4>
+                    <p>Controls early and late blight, leaf spot, and other foliar diseases.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Mode of Action Section -->
+        <section class="content-section">
+            <h2>Mode of Action</h2>
+            
+            <div class="mode-of-action">
+                <div class="mode-text">
+                    <p>K-Rix employs a sophisticated dual-action mechanism that makes it highly effective against fungal pathogens. The formulation contains specific plant compounds that disrupt fungal cell membranes, leading to leakage of cellular contents and eventual death of the pathogen.</p>
+                    
+                    <p>Simultaneously, K-Rix stimulates the plant's natural defense mechanisms, enhancing the production of phytoalexins and other defense-related compounds. This systemic acquired resistance provides long-lasting protection against subsequent infections.</p>
+                    
+                    <p>This unique combination of direct antifungal activity and plant defense induction ensures comprehensive disease control while minimizing the risk of resistance development, making K-Rix an invaluable tool in sustainable crop protection programs.</p>
+                </div>
+                
+                <div class="mode-image">
+                    <img src="https://images.unsplash.com/photo-1597848212624-e6d4bd66d381?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Healthy crops protected from fungal diseases">
+                    <div class="caption">Healthy crops protected with K-Rix botanical fungicide</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>Ready to Use K-Rix?</h2>
+            <p>Contact us for pricing, distribution opportunities, or technical support</p>
+            <a href="#" class="btn">Contact Sales</a>
+            <a href="#" class="btn btn-outline">Download Brochure</a>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="#">Home</a>
+                        <a href="#">About Us</a>
+                        <a href="#">All Products</a>
+                        <a href="#">Technology</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="footer-contact">
+                        <a href="mailto:info@kriya.ltd">info@kriya.ltd</a>
+                        <a href="tel:+916385848466">+91 6385848466</a>
+                    </div>
+                    
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Other Products</h3>
+                    <div class="footer-links">
+                        <a href="#">K-Guard</a>
+                        <a href="#">Ecoza Max</a>
+                        <a href="#">Ecoza Ace</a>
+                        <a href="#">Ecoza Pro</a>
+                        <a href="#">Margoshine</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-disclaimer">
+                <p>For usage/dosage information, please refer to product documentation. Always follow label instructions and local regulations.</p>
+            </div>
+            
+            <div class="footer-legal">
+                <p>© Kriya Ltd 2025 | <a href="#">Privacy Policy</a> | <a href="#">Responsible Use</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

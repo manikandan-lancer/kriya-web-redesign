@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcozaMax | Premium Azadirachtin Biopesticide | Kriya Ltd</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #4CAF50;
+            --light-green: #E8F5E9;
+            --neutral-gray: #666;
+            --dark-text: #333;
+            --light-bg: #f9f9f9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, #2c5f2d, #4CAF50);
+            color: white;
+            padding: 60px 0 40px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 25px;
+            opacity: 0.9;
+        }
+        
+        .badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+        }
+        
+        /* Overview Section */
+        .overview {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .overview h2 {
+            color: #2c5f2d;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            text-align: center;
+            border-bottom: 2px solid #e8f4e3;
+            padding-bottom: 15px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .overview-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .overview-content p {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        /* Main Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .content-section h2 {
+            color: #2c5f2d;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            text-align: center;
+            border-bottom: 2px solid #e8f4e3;
+            padding-bottom: 15px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .feature-card {
+            background: #f9fdf8;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #4CAF50;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h3 {
+            color: #2c5f2d;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .feature-card h3 i {
+            color: #4CAF50;
+            font-size: 1.5rem;
+        }
+        
+        .feature-card p {
+            color: var(--neutral-gray);
+        }
+        
+        /* Dosage Section */
+        .dosage-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .dosage-table th, .dosage-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e8f4e3;
+        }
+        
+        .dosage-table th {
+            background-color: #f1f8e9;
+            color: #2c5f2d;
+            font-weight: 600;
+        }
+        
+        .dosage-table tr:hover {
+            background-color: #f9fdf8;
+        }
+        
+        .variant {
+            font-weight: 600;
+            color: #2c5f2d;
+        }
+        
+        /* Mode of Action Section */
+        .mode-of-action {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .mode-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .mode-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .mode-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .mode-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mode-image .caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: var(--neutral-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(to right, #2c5f2d, #4CAF50);
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .cta-section h2 {
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+            border: none;
+            color: white;
+        }
+        
+        .cta-section p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #2c5f2d;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid white;
+            margin: 0 10px;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: white;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: #2c5f2d;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c5f2d;
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 10px;
+        }
+        
+        .footer-links a {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-contact a {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .footer-social a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .footer-disclaimer {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .footer-legal {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .footer-legal a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .mode-of-action {
+                flex-direction: column;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px auto;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">ECOZA<span style="color: #FFD700;">MAX</span></div>
+            <h1>Premium Azadirachtin Biopesticide</h1>
+            <p class="tagline">Advanced neem-based solution for effective and eco-friendly pest control</p>
+            
+            <div class="badges">
+                <span class="badge">Azadirachtin 3.0% EC</span>
+                <span class="badge">Broad-spectrum control</span>
+                <span class="badge">Organic-certifiable</span>
+                <span class="badge">Residue-free</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Overview Section -->
+        <section class="overview">
+            <h2>Product Overview</h2>
+            <div class="overview-content">
+                <p>Ecoza is a premium neem-based biopesticide formulated with standardized azadirachtin fractions. Available in multiple strengths and convenient formulations, Ecoza provides broad-spectrum control against sucking and chewing pests.</p>
+                <p>Its eco-friendly profile allows distributors to position it as a residue-conscious, organic alternative to synthetic insecticides. With quick knockdown and systemic activity, Ecoza fits seamlessly into integrated pest management (IPM) programs worldwide.</p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="content-section">
+            <h2>Key Features</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3><i class="fas fa-leaf"></i> Natural Composition</h3>
+                    <p>Derived from premium neem seed extracts with standardized 3.0% azadirachtin content for consistent performance.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-shield-alt"></i> Broad-Spectrum Efficacy</h3>
+                    <p>Effectively controls aphids, whiteflies, thrips, mealybugs, caterpillars, and other sucking and chewing pests.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-certificate"></i> Eco-Friendly</h3>
+                    <p>Biodegradable formulation that's safe for beneficial insects, pollinators, and the environment when used as directed.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-sync-alt"></i> Multiple Modes of Action</h3>
+                    <p>Works as insect growth regulator, antifeedant, and repellent to prevent pest resistance development.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-seedling"></i> IPM Compatibility</h3>
+                    <p>Ideal for Integrated Pest Management programs with no harmful residues and short pre-harvest intervals.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Dosage Section -->
+        <section class="content-section">
+            <h2>Recommended Dosage</h2>
+            
+            <table class="dosage-table">
+                <tr>
+                    <th>Product Variant</th>
+                    <th>Dosage per Acre</th>
+                    <th>Dilution per Liter</th>
+                </tr>
+                <tr>
+                    <td class="variant">Ecoza Max (EC 3.0%)</td>
+                    <td>200 ml - 450 ml / acre</td>
+                    <td>1–2 ml per litre of water</td>
+                </tr>
+            </table>
+            
+            <div style="margin-top: 20px; padding: 15px; background: #f1f8e9; border-radius: 8px;">
+                <p><strong>Application Guidelines:</strong> Apply as foliar spray with thorough coverage of both sides of leaves. Repeat at 7-10 day intervals or as needed based on pest pressure. Use higher dosage for heavy infestations.</p>
+            </div>
+        </section>
+        
+        <!-- Mode of Action Section -->
+        <section class="content-section">
+            <h2>Mode of Action</h2>
+            
+            <div class="mode-of-action">
+                <div class="mode-text">
+                    <p>Azadirachtin, the active ingredient in EcozaMax, acts as a potent insect growth regulator (IGR) that disrupts the molting process and reproduction cycle of target pests.</p>
+                    
+                    <p>It also functions as an antifeedant, making treated plants unpalatable to pests, and as a repellent, deterring insects from laying eggs on treated surfaces.</p>
+                    
+                    <p>This multi-pronged approach effectively controls pest populations while minimizing the risk of resistance development, making EcozaMax an ideal component of sustainable agriculture practices.</p>
+                </div>
+                
+                <div class="mode-image">
+                    <img src="https://images.unsplash.com/photo-1587334984005-84fad92e6bfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Mode of Action - Insect Growth Regulation">
+                    <div class="caption">Azadirachtin disrupts insect molting and reproduction cycles</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>Ready to Use EcozaMax?</h2>
+            <p>Contact us for pricing, distribution opportunities, or technical support</p>
+            <a href="#" class="btn">Contact Sales</a>
+            <a href="#" class="btn btn-outline">Download Brochure</a>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="#">Home</a>
+                        <a href="#">About Us</a>
+                        <a href="#">All Products</a>
+                        <a href="#">Technology</a>
+                        <a href="#">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="footer-contact">
+                        <a href="mailto:info@kriya.ltd">info@kriya.ltd</a>
+                        <a href="tel:+916385848466">+91 6385848466</a>
+                    </div>
+                    
+                    <div class="footer-social">
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Other Products</h3>
+                    <div class="footer-links">
+                        <a href="#">Margoshine</a>
+                        <a href="#">K-Guard</a>
+                        <a href="#">WeedX</a>
+                        <a href="#">Mycova</a>
+                        <a href="#">Spindura</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-disclaimer">
+                <p>For usage/dosage information, please refer to product documentation. Always follow label instructions and local regulations.</p>
+            </div>
+            
+            <div class="footer-legal">
+                <p>© Kriya Ltd 2025 | <a href="#">Privacy Policy</a> | <a href="#">Responsible Use</a></p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
