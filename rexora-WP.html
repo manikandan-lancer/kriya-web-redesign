@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NPK Premium | Balanced Fertilizer Formulation | Kriya Ltd</title>
+    <title>Rexora WP | Metarhizium anisopliae Biopesticide | Kriya Ltd</title>
     <link rel="icon" href="assets/img/logo.jpg">
     <link rel="stylesheet" href="../assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -11,8 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <style>
         :root {
-            --primary-blue: #1e88e5;
-            --light-blue: #e3f2fd;
+            --primary-green: #4CAF50;
+            --light-green: #E8F5E9;
             --neutral-gray: #666;
             --dark-text: #333;
             --light-bg: #f9f9f9;
@@ -39,7 +39,7 @@
         
         /* Header Styles */
         header {
-            background: linear-gradient(to right, #0d47a1, #1e88e5);
+            background: linear-gradient(to right, #2c5f2d, #4CAF50);
             color: white;
             padding: 60px 0 40px;
             text-align: center;
@@ -97,11 +97,11 @@
         }
         
         .overview h2 {
-            color: #0d47a1;
+            color: #2c5f2d;
             margin-bottom: 25px;
             font-size: 1.8rem;
             text-align: center;
-            border-bottom: 2px solid #e3f2fd;
+            border-bottom: 2px solid #e8f4e3;
             padding-bottom: 15px;
             font-family: 'Cormorant Garamond', serif;
         }
@@ -128,11 +128,11 @@
         }
         
         .content-section h2 {
-            color: #0d47a1;
+            color: #2c5f2d;
             margin-bottom: 30px;
             font-size: 1.8rem;
             text-align: center;
-            border-bottom: 2px solid #e3f2fd;
+            border-bottom: 2px solid #e8f4e3;
             padding-bottom: 15px;
             font-family: 'Cormorant Garamond', serif;
         }
@@ -145,10 +145,10 @@
         }
         
         .feature-card {
-            background: #f5fbff;
+            background: #f9fdf8;
             padding: 25px;
             border-radius: 12px;
-            border-left: 4px solid #1e88e5;
+            border-left: 4px solid #4CAF50;
             transition: transform 0.3s;
         }
         
@@ -157,7 +157,7 @@
         }
         
         .feature-card h3 {
-            color: #0d47a1;
+            color: #2c5f2d;
             margin-bottom: 15px;
             display: flex;
             align-items: center;
@@ -165,12 +165,85 @@
         }
         
         .feature-card h3 i {
-            color: #1e88e5;
+            color: #4CAF50;
             font-size: 1.5rem;
         }
         
         .feature-card p {
             color: var(--neutral-gray);
+        }
+        
+        /* Target Pests Section */
+        .pests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .pest-card {
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            background: #f9fdf8;
+            border: 1px solid #e8f4e3;
+        }
+        
+        .pest-icon {
+            font-size: 2.5rem;
+            color: #2c5f2d;
+            margin-bottom: 15px;
+        }
+        
+        .pest-name {
+            font-weight: 600;
+            color: #2c5f2d;
+            margin-bottom: 10px;
+        }
+        
+        .pest-type {
+            font-size: 0.9rem;
+            color: var(--neutral-gray);
+        }
+        
+        /* Fungal Process Section */
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin: 40px 0;
+        }
+        
+        .process-step {
+            text-align: center;
+            padding: 25px;
+            background: #f9fdf8;
+            border-radius: 10px;
+            border: 1px solid #e8f4e3;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background: #4CAF50;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: bold;
+        }
+        
+        .step-title {
+            color: #2c5f2d;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        
+        .step-description {
+            color: var(--neutral-gray);
+            font-size: 0.9rem;
         }
         
         /* Dosage Section */
@@ -183,57 +256,22 @@
         .dosage-table th, .dosage-table td {
             padding: 15px;
             text-align: left;
-            border-bottom: 1px solid #e3f2fd;
+            border-bottom: 1px solid #e8f4e3;
         }
         
         .dosage-table th {
-            background-color: #e3f2fd;
-            color: #0d47a1;
+            background-color: #f1f8e9;
+            color: #2c5f2d;
             font-weight: 600;
         }
         
         .dosage-table tr:hover {
-            background-color: #f5fbff;
+            background-color: #f9fdf8;
         }
         
         .variant {
             font-weight: 600;
-            color: #0d47a1;
-        }
-        
-        /* NPK Ratio Section */
-        .npk-ratio {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 40px 0;
-            flex-wrap: wrap;
-        }
-        
-        .npk-element {
-            text-align: center;
-            padding: 20px;
-            border-radius: 10px;
-            background: #f5fbff;
-            min-width: 150px;
-        }
-        
-        .npk-value {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #0d47a1;
-            margin-bottom: 10px;
-        }
-        
-        .npk-label {
-            font-size: 1.2rem;
-            color: var(--dark-text);
-        }
-        
-        .npk-description {
-            margin-top: 10px;
-            font-size: 0.9rem;
-            color: var(--neutral-gray);
+            color: #2c5f2d;
         }
         
         /* Mode of Action Section */
@@ -273,9 +311,41 @@
             font-size: 0.9rem;
         }
         
+        /* Benefits Section */
+        .benefits-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            padding: 20px;
+            background: #f9fdf8;
+            border-radius: 10px;
+        }
+        
+        .benefit-icon {
+            color: #4CAF50;
+            font-size: 1.5rem;
+            margin-top: 5px;
+        }
+        
+        .benefit-content h4 {
+            color: #2c5f2d;
+            margin-bottom: 10px;
+        }
+        
+        .benefit-content p {
+            color: var(--neutral-gray);
+        }
+        
         /* CTA Section */
         .cta-section {
-            background: linear-gradient(to right, #0d47a1, #1e88e5);
+            background: linear-gradient(to right, #2c5f2d, #4CAF50);
             color: white;
             padding: 50px 0;
             text-align: center;
@@ -300,7 +370,7 @@
         .btn {
             display: inline-block;
             background: white;
-            color: #0d47a1;
+            color: #2c5f2d;
             padding: 12px 30px;
             border-radius: 30px;
             text-decoration: none;
@@ -323,12 +393,12 @@
         
         .btn-outline:hover {
             background: white;
-            color: #0d47a1;
+            color: #2c5f2d;
         }
         
         /* Footer */
         footer {
-            background: #0d47a1;
+            background: #2c5f2d;
             color: white;
             padding: 40px 0 20px;
             text-align: center;
@@ -427,6 +497,18 @@
                 grid-template-columns: 1fr;
             }
             
+            .pests-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefits-container {
+                grid-template-columns: 1fr;
+            }
+            
             .mode-of-action {
                 flex-direction: column;
             }
@@ -441,13 +523,11 @@
                 margin: 10px auto;
                 max-width: 250px;
             }
-            
-            .npk-ratio {
-                gap: 15px;
-            }
-            
-            .npk-element {
-                min-width: 120px;
+        }
+        
+        @media (max-width: 480px) {
+            .pests-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -557,15 +637,15 @@
     <br>
     <header>
         <div class="container">
-            <div class="logo">NPK<span style="color: #FFD700;">PREMIUM</span></div>
-            <h1 style="color: white;">Balanced NPK Fertilizer Formulation</h1>
-            <p class="tagline">Complete plant nutrition with optimal nitrogen, phosphorus, and potassium ratios</p>
+            <div class="logo">REXORA<span style="color: #FFD700;">WP</span></div>
+            <h1 style="color: white;">Metarhizium anisopliae Biopesticide</h1>
+            <p class="tagline">Advanced entomopathogenic fungus for sustainable pest management</p>
             
             <div class="badges">
-                <span class="badge">19:19:19 NPK Ratio</span>
-                <span class="badge">Water Soluble</span>
-                <span class="badge">Complete Nutrition</span>
-                <span class="badge">Enhanced Uptake</span>
+                <span class="badge">1x10⁹ CFU/g</span>
+                <span class="badge">Wettable Powder</span>
+                <span class="badge">Soil & Foliar Application</span>
+                <span class="badge">Organic Certified</span>
             </div>
         </div>
     </header>
@@ -575,37 +655,98 @@
         <section class="overview">
             <h2>Product Overview</h2>
             <div class="overview-content">
-                <p>NPK Premium is a balanced, water-soluble fertilizer formulated with optimal ratios of nitrogen, phosphorus, and potassium to support all stages of plant growth. With a 19:19:19 NPK ratio, it provides complete nutrition for a wide range of crops.</p>
-                <p>This premium formulation ensures maximum nutrient availability and uptake, promoting vigorous vegetative growth, strong root development, and improved flowering and fruiting. NPK Premium is suitable for fertigation, foliar application, and soil drenching across diverse agricultural systems.</p>
+                <p>Rexora WP is a premium bioinsecticide formulated with Metarhizium anisopliae, a highly effective entomopathogenic fungus that naturally controls a wide range of insect pests. This wettable powder formulation contains 1x10⁹ CFU/g of viable spores for maximum efficacy.</p>
+                <p>Rexora WP works through fungal infection, penetrating the insect cuticle and proliferating inside the host body. This biological control method provides sustainable pest management while being completely safe for humans, animals, and beneficial insects.</p>
             </div>
         </section>
 
-        <!-- NPK Ratio Section -->
+        <!-- Target Pests Section -->
         <section class="content-section">
-            <h2>Balanced NPK Ratio</h2>
+            <h2>Target Pests</h2>
             
-            <div class="npk-ratio">
-                <div class="npk-element">
-                    <div class="npk-value">19%</div>
-                    <div class="npk-label">Nitrogen (N)</div>
-                    <div class="npk-description">Promotes vegetative growth and chlorophyll production</div>
+            <div class="pests-grid">
+                <div class="pest-card">
+                    <div class="pest-icon">
+                        <i class="fas fa-locust"></i>
+                    </div>
+                    <div class="pest-name">White Grubs</div>
+                    <div class="pest-type">Holotrichia spp.</div>
                 </div>
                 
-                <div class="npk-element">
-                    <div class="npk-value">19%</div>
-                    <div class="npk-label">Phosphorus (P)</div>
-                    <div class="npk-description">Supports root development and energy transfer</div>
+                <div class="pest-card">
+                    <div class="pest-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <div class="pest-name">Sucking Pests</div>
+                    <div class="pest-type">Aphids, Thrips</div>
                 </div>
                 
-                <div class="npk-element">
-                    <div class="npk-value">19%</div>
-                    <div class="npk-label">Potassium (K)</div>
-                    <div class="npk-description">Enhances fruit quality and stress resistance</div>
+                <div class="pest-card">
+                    <div class="pest-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="pest-name">Mealybugs</div>
+                    <div class="pest-type">Multiple Species</div>
+                </div>
+                
+                <div class="pest-card">
+                    <div class="pest-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="pest-name">Soil Pests</div>
+                    <div class="pest-type">Termites, Weevils</div>
+                </div>
+                
+                <div class="pest-card">
+                    <div class="pest-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <div class="pest-name">Fruit Flies</div>
+                    <div class="pest-type">Bactrocera spp.</div>
+                </div>
+                
+                <div class="pest-card">
+                    <div class="pest-icon">
+                        <i class="fas fa-caterpillar"></i>
+                    </div>
+                    <div class="pest-name">Lepidoptera</div>
+                    <div class="pest-type">Early Instars</div>
                 </div>
             </div>
             
             <div style="text-align: center; margin-top: 30px;">
-                <p>Our balanced 19:19:19 formulation ensures that plants receive equal proportions of all three primary macronutrients, supporting balanced growth throughout the plant's life cycle.</p>
+                <p>Rexora WP provides effective biological control against a wide range of insect pests through fungal infection and proliferation.</p>
+            </div>
+        </section>
+
+        <!-- Fungal Process Section -->
+        <section class="content-section">
+            <h2>Fungal Infection Process</h2>
+            
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <div class="step-title">Spore Attachment</div>
+                    <div class="step-description">Fungal spores attach to the insect cuticle and germinate under favorable conditions</div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <div class="step-title">Cuticle Penetration</div>
+                    <div class="step-description">Germ tubes penetrate the insect cuticle using mechanical pressure and enzymes</div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <div class="step-title">Internal Proliferation</div>
+                    <div class="step-description">Fungus grows inside the insect body, consuming nutrients and producing toxins</div>
+                </div>
+                
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <div class="step-title">Host Death</div>
+                    <div class="step-description">Insect dies within 3-7 days and fungus emerges to produce new spores</div>
+                </div>
             </div>
         </section>
 
@@ -615,33 +756,33 @@
             
             <div class="features-grid">
                 <div class="feature-card">
-                    <h3><i class="fas fa-balance-scale"></i> Balanced Formulation</h3>
-                    <p>Equal proportions of nitrogen, phosphorus, and potassium (19:19:19) for comprehensive plant nutrition.</p>
+                    <h3><i class="fas fa-microscope"></i> High Potency</h3>
+                    <p>Contains 1x10⁹ CFU/g of viable Metarhizium anisopliae spores for maximum infection rate and efficacy.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <h3><i class="fas fa-tint"></i> High Solubility</h3>
-                    <p>Completely water-soluble for easy application through fertigation systems and foliar sprays.</p>
+                    <h3><i class="fas fa-shield-alt"></i> Broad Host Range</h3>
+                    <p>Effective against white grubs, sucking pests, mealybugs, soil insects, and early instar larvae.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <h3><i class="fas fa-leaf"></i> Enhanced Uptake</h3>
-                    <p>Advanced formulation ensures maximum nutrient absorption and utilization by plants.</p>
+                    <h3><i class="fas fa-certificate"></i> Environmentally Safe</h3>
+                    <p>Completely biodegradable and safe for humans, animals, pollinators, and beneficial insects.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <h3><i class="fas fa-seedling"></i> Versatile Application</h3>
-                    <p>Suitable for a wide range of crops including fruits, vegetables, cereals, and ornamentals.</p>
+                    <h3><i class="fas fa-sync-alt"></i> Self-Perpetuating</h3>
+                    <p>Creates secondary infection cycles as infected insects spread spores to healthy populations.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <h3><i class="fas fa-chart-line"></i> Improved Yield</h3>
-                    <p>Promotes healthy growth, flowering, and fruiting leading to higher quality and quantity of produce.</p>
+                    <h3><i class="fas fa-cloud-rain"></i> Rainfast</h3>
+                    <p>Wettable powder formulation provides excellent adhesion and rainfastness after application.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <h3><i class="fas fa-recycle"></i> Soil Health</h3>
-                    <p>Maintains soil fertility without causing salinity or pH imbalance when used as directed.</p>
+                    <h3><i class="fas fa-seedling"></i> Resistance Management</h3>
+                    <p>Unique mode of action helps manage resistance in pest populations.</p>
                 </div>
             </div>
         </section>
@@ -652,39 +793,39 @@
             
             <table class="dosage-table">
                 <tr>
-                    <th>Crop Type</th>
                     <th>Application Method</th>
-                    <th>Dosage per Acre</th>
-                    <th>Frequency</th>
+                    <th>Target Pest</th>
+                    <th>Dosage</th>
+                    <th>Water Volume</th>
                 </tr>
                 <tr>
-                    <td class="variant">Field Crops</td>
-                    <td>Soil Application</td>
-                    <td>50-75 kg</td>
-                    <td>At sowing and during growth stages</td>
+                    <td class="variant">Soil Application</td>
+                    <td>White Grubs, Termites</td>
+                    <td>2.5-3.0 kg/acre</td>
+                    <td>Mix with FYM/compost</td>
                 </tr>
                 <tr>
-                    <td class="variant">Vegetables</td>
-                    <td>Fertigation/Foliar</td>
-                    <td>5-10 kg (fertigation)<br>2-3 g/L (foliar)</td>
-                    <td>Every 10-15 days</td>
+                    <td class="variant">Foliar Spray</td>
+                    <td>Sucking Pests</td>
+                    <td>5-10 g/liter</td>
+                    <td>200-300 liters/acre</td>
                 </tr>
                 <tr>
-                    <td class="variant">Fruit Crops</td>
-                    <td>Soil Application</td>
-                    <td>100-200 g/tree</td>
-                    <td>Pre-flowering and fruit development</td>
+                    <td class="variant">Trunk Application</td>
+                    <td>Stem Borers</td>
+                    <td>10-15 g/tree</td>
+                    <td>Paste application</td>
                 </tr>
                 <tr>
-                    <td class="variant">Greenhouse Crops</td>
-                    <td>Fertigation</td>
-                    <td>1-2 g/L of water</td>
-                    <td>With each irrigation</td>
+                    <td class="variant">Nursery Treatment</td>
+                    <td>Soil-borne Pests</td>
+                    <td>10-15 g/kg seeds</td>
+                    <td>Seed treatment</td>
                 </tr>
             </table>
             
-            <div style="margin-top: 20px; padding: 15px; background: #e3f2fd; border-radius: 8px;">
-                <p><strong>Application Guidelines:</strong> For soil application, apply evenly and incorporate into soil. For fertigation, dissolve completely in water before application. For foliar spray, apply during cooler parts of the day for best absorption.</p>
+            <div style="margin-top: 20px; padding: 15px; background: #f1f8e9; border-radius: 8px;">
+                <p><strong>Application Guidelines:</strong> Apply during evening hours or cloudy conditions. Maintain adequate humidity for optimal fungal activity. Can be combined with organic fertilizers for soil application. Repeat applications at 10-15 day intervals for heavy infestations.</p>
             </div>
         </section>
         
@@ -694,28 +835,77 @@
             
             <div class="mode-of-action">
                 <div class="mode-text">
-                    <p>NPK Premium provides essential macronutrients in balanced proportions that work synergistically to support all aspects of plant growth and development.</p>
+                    <p>Metarhizium anisopliae in Rexora WP acts through a sophisticated biological process that ensures effective pest control:</p>
                     
-                    <p><strong>Nitrogen (N)</strong> is crucial for chlorophyll formation, protein synthesis, and vegetative growth. It promotes the development of leaves, stems, and overall plant vigor.</p>
+                    <p><strong>Contact and Infection:</strong> Fungal spores contact the insect cuticle, germinate, and penetrate using a combination of mechanical pressure and cuticle-degrading enzymes (proteases, chitinases).</p>
                     
-                    <p><strong>Phosphorus (P)</strong> supports energy transfer, root development, flowering, and fruiting. It plays a vital role in photosynthesis, respiration, and cell division.</p>
+                    <p><strong>Internal Colonization:</strong> Once inside the insect hemocoel, the fungus proliferates, consuming nutrients and producing secondary metabolites that weaken the host.</p>
                     
-                    <p><strong>Potassium (K)</strong> regulates water uptake, activates enzymes, improves disease resistance, and enhances fruit quality, size, and shelf life.</p>
+                    <p><strong>Host Death:</strong> The insect typically dies within 3-7 days post-infection due to nutrient depletion, tissue damage, and fungal toxins.</p>
                     
-                    <p>This balanced formulation ensures that plants never experience nutrient deficiencies that could limit growth or yield potential.</p>
+                    <p><strong>Sporulation:</strong> After host death, the fungus emerges through the cuticle and produces new spores that can infect additional insects, creating a self-sustaining control cycle.</p>
+                    
+                    <p>This biological control method is highly specific to target pests and poses no risk to non-target organisms, making it ideal for sustainable agriculture.</p>
                 </div>
                 
                 <div class="mode-image">
-                    <img src="https://images.unsplash.com/photo-1597848212624-e6d4bd66e1db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="NPK Fertilizer Application">
-                    <div class="caption">Balanced nutrition supports all stages of plant growth</div>
+                    <img src="https://images.unsplash.com/photo-1584634731339-252c581abfc5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Metarhizium anisopliae fungal growth">
+                    <div class="caption">Metarhizium anisopliae spores germinating and infecting insect host</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Benefits Section -->
+        <section class="content-section">
+            <h2>Key Benefits</h2>
+            
+            <div class="benefits-container">
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h4>Environmental Safety</h4>
+                        <p>Completely biodegradable and safe for the ecosystem, with no harmful residues in soil or water.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-bugs"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h4>Beneficial Protection</h4>
+                        <p>Highly specific to target pests, preserving natural enemies and pollinators in the ecosystem.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-virus"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h4>Resistance Management</h4>
+                        <p>Unique biological mode of action prevents resistance development in pest populations.</p>
+                    </div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="benefit-icon">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <div class="benefit-content">
+                        <h4>Self-Perpetuating</h4>
+                        <p>Creates secondary infection cycles, providing long-term pest suppression.</p>
+                    </div>
                 </div>
             </div>
         </section>
         
         <!-- CTA Section -->
         <section class="cta-section">
-            <h2>Ready to Use NPK Premium?</h2>
-            <p style="color: white;">Contact us for pricing, bulk orders, or technical support</p>
+            <h2>Ready to Use Rexora WP?</h2>
+            <p style="color: white;">Contact us for pricing, distribution opportunities, or technical support</p>
             <a href="#" class="btn">Contact Sales</a>
             <a href="#" class="btn btn-outline">Download Brochure</a>
         </section>

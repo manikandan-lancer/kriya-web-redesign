@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spindura Rix | Advanced Spinosad Insecticide | Kriya Ltd</title>
+    <link rel="icon" href="assets/img/logo.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <style>
+        :root {
+            --primary-green: #4CAF50;
+            --light-green: #E8F5E9;
+            --neutral-gray: #666;
+            --dark-text: #333;
+            --light-bg: #f9f9f9;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--dark-text);
+            background-color: #fff;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(to right, #2c5f2d, #4CAF50);
+            color: white;
+            padding: 60px 0 40px;
+            text-align: center;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .logo {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .tagline {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 25px;
+            opacity: 0.9;
+            color: white;
+        }
+        
+        .badges {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+            color: white;
+        }
+        
+        .badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            backdrop-filter: blur(5px);
+            color: white;
+        }
+        
+        /* Navigation Styles */
+        .navbar {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+        
+        .nav-logo img {
+            height: 50px;
+            width: auto;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        .nav-link {
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            transition: color 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-green);
+        }
+        
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            min-width: 250px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+        
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .dropdown-category {
+            padding: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .dropdown-category:last-child {
+            border-bottom: none;
+        }
+        
+        .dropdown-category a {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-decoration: none;
+            color: var(--dark-text);
+            font-weight: 500;
+        }
+        
+        .subcategory-menu {
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            min-width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(10px);
+            transition: all 0.3s;
+        }
+        
+        .dropdown-category:hover .subcategory-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+        
+        .subcategory-items {
+            padding: 15px;
+        }
+        
+        .subcategory-item {
+            display: block;
+            padding: 8px 0;
+            text-decoration: none;
+            color: var(--dark-text);
+            border-bottom: 1px solid #f5f5f5;
+        }
+        
+        .subcategory-item:hover {
+            color: var(--primary-green);
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        
+        .bar {
+            width: 25px;
+            height: 3px;
+            background: var(--dark-text);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        /* Overview Section */
+        .overview {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .overview h2 {
+            color: #2c5f2d;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+            text-align: center;
+            border-bottom: 2px solid #e8f4e3;
+            padding-bottom: 15px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        .overview-content {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .overview-content p {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        /* Main Content Sections */
+        .content-section {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        }
+        
+        .content-section h2 {
+            color: #2c5f2d;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            text-align: center;
+            border-bottom: 2px solid #e8f4e3;
+            padding-bottom: 15px;
+            font-family: 'Cormorant Garamond', serif;
+        }
+        
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        
+        .feature-card {
+            background: #f9fdf8;
+            padding: 25px;
+            border-radius: 12px;
+            border-left: 4px solid #4CAF50;
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-card h3 {
+            color: #2c5f2d;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .feature-card h3 i {
+            color: #4CAF50;
+            font-size: 1.5rem;
+        }
+        
+        .feature-card p {
+            color: var(--neutral-gray);
+        }
+        
+        /* Target Pests Section */
+        .pests-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .pest-card {
+            background: #f9fdf8;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #e8f4e3;
+        }
+        
+        .pest-card h4 {
+            color: #2c5f2d;
+            margin-bottom: 10px;
+        }
+        
+        .pest-card p {
+            color: var(--neutral-gray);
+            font-size: 0.95rem;
+        }
+        
+        /* Dosage Section */
+        .dosage-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        .dosage-table th, .dosage-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #e8f4e3;
+        }
+        
+        .dosage-table th {
+            background-color: #f1f8e9;
+            color: #2c5f2d;
+            font-weight: 600;
+        }
+        
+        .dosage-table tr:hover {
+            background-color: #f9fdf8;
+        }
+        
+        .variant {
+            font-weight: 600;
+            color: #2c5f2d;
+        }
+        
+        /* Mode of Action Section */
+        .mode-of-action {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+        
+        .mode-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .mode-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .mode-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .mode-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mode-image .caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: var(--neutral-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Benefits Section */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .benefit-card {
+            background: #f9fdf8;
+            padding: 25px;
+            border-radius: 10px;
+            border-top: 4px solid #4CAF50;
+        }
+        
+        .benefit-card h4 {
+            color: #2c5f2d;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .benefit-card h4 i {
+            color: #4CAF50;
+        }
+        
+        .benefit-card p {
+            color: var(--neutral-gray);
+        }
+        
+        /* Application Methods */
+        .methods-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 20px;
+        }
+        
+        .method-card {
+            background: #f9fdf8;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            border: 2px solid #e8f4e3;
+        }
+        
+        .method-card h4 {
+            color: #2c5f2d;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .method-card h4 i {
+            color: #4CAF50;
+            font-size: 1.5rem;
+        }
+        
+        .method-card p {
+            color: var(--neutral-gray);
+        }
+        
+        /* Rix Features */
+        .rix-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .rix-feature-card {
+            background: #f9fdf8;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border: 1px solid #e8f4e3;
+        }
+        
+        .rix-feature-card h4 {
+            color: #2c5f2d;
+            margin-bottom: 10px;
+        }
+        
+        .rix-feature-card p {
+            color: var(--neutral-gray);
+            font-size: 0.95rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(to right, #2c5f2d, #4CAF50);
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            border-radius: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .cta-section h2 {
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+            border: none;
+            color: white;
+        }
+        
+        .cta-section p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+            color: white;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: white;
+            color: #2c5f2d;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid white;
+            margin: 0 10px;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: white;
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn-outline:hover {
+            background: white;
+            color: #2c5f2d;
+        }
+        
+        /* Footer */
+        footer {
+            background: #2c5f2d;
+            color: white;
+            padding: 40px 0 20px;
+            text-align: center;
+            border-radius: 20px 20px 0 0;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 10px;
+        }
+        
+        .footer-links a {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .footer-contact a {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+        
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .footer-social a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+        
+        .footer-disclaimer {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 20px;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .footer-legal {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .footer-legal a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 70px;
+                flex-direction: column;
+                background-color: white;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                padding: 20px 0;
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
+            
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+            
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+            
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+            
+            .dropdown-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                display: none;
+            }
+            
+            .dropdown.active .dropdown-menu {
+                display: block;
+            }
+            
+            .subcategory-menu {
+                position: static;
+                opacity: 1;
+                visibility: visible;
+                transform: none;
+                box-shadow: none;
+                display: none;
+            }
+            
+            .dropdown-category.active .subcategory-menu {
+                display: block;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pests-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .methods-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .rix-features {
+                grid-template-columns: 1fr;
+            }
+            
+            .mode-of-action {
+                flex-direction: column;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .btn {
+                display: block;
+                margin: 10px auto;
+                max-width: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/img/logo.png" alt="Kriya Ltd">
+            </a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                
+                <!-- Updated Products Dropdown -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link">Products <span class="material-symbols-outlined">expand_more</span></a>
+                    <div class="dropdown-menu products-menu">
+                        <div class="dropdown-category">
+                            <a href="biocontrol.html">Biocontrol <span class="material-symbols-outlined">chevron_right</span></a>
+                            <div class="subcategory-menu">
+                                <div class="subcategory-items">
+                                    <a href="ecoza.html" class="subcategory-item" data-tooltip="Azadirachtin">Ecoza</a>
+                                    <a href="margoshine.html" class="subcategory-item" data-tooltip="Neem Oil">Margoshine</a>
+                                    <a href="kguard.html" class="subcategory-item" data-tooltip="Karanjin">K-Guard</a>
+                                    <a href="weedx.html" class="subcategory-item" data-tooltip="MCT">WeedX</a>
+                                    <a href="admira.html" class="subcategory-item" data-tooltip="Essential Oil">Admira</a>
+                                    <a href="spindura.html" class="subcategory-item" data-tooltip="Spinosad">Spindura</a>
+                                    <a href="margospin.html" class="subcategory-item" data-tooltip="Neem Oil + Spinosad">MargoSpin</a>
+                                    <a href="mycova.html" class="subcategory-item" data-tooltip="Beauveria bassian">Mycova</a>
+                                    <a href="rexora.html" class="subcategory-item" data-tooltip="Metarhizium anisopliae">Rexora</a>
+                                    <a href="biota.html" class="subcategory-item" data-tooltip="Trichoderma viride">Biota (V/H)</a>
+                                    <a href="seira.html" class="subcategory-item" data-tooltip="Verticillium lecanii">Seira</a>
+                                    <a href="encilo.html" class="subcategory-item" data-tooltip="Paecilomyces fumosoroseus">EnCilo</a>
+                                    <a href="neuvita.html" class="subcategory-item" data-tooltip="Ampelomyces quisqualis">Neuvita</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dropdown-category">
+                            <a href="biostimulants.html">Biostimulants <span class="material-symbols-outlined">chevron_right</span></a>
+                            <div class="subcategory-menu">
+                                <div class="subcategory-items">
+                                    <a href="igreen.html" class="subcategory-item" data-tooltip="Microbial Consortium">IGreen</a>
+                                    <a href="zenita.html" class="subcategory-item" data-tooltip="Neem Limonoids based PGP">Zenita</a>
+                                    <a href="cropsia.html" class="subcategory-item" data-tooltip="Plant Extract based PGP">Cropsia</a>
+                                    <a href="blooma.html" class="subcategory-item" data-tooltip="Seaweed based PGP">Blooma</a>
+                                    <a href="enrhize.html" class="subcategory-item" data-tooltip="Arbuscular Mycorrhizal">Enrhize</a>
+                                    <a href="orgocare.html" class="subcategory-item" data-tooltip="Plant based Stress Management">Orgocare</a>
+                                    <a href="envicta.html" class="subcategory-item" data-tooltip="Humic based PGP">Envicta</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dropdown-category">
+                            <a href="substrates.html">Substrates <span class="material-symbols-outlined">chevron_right</span></a>
+                            <div class="subcategory-menu">
+                                <div class="subcategory-items">
+                                    <a href="maxineem.html" class="subcategory-item" data-tooltip="Neem Cake">Maxineem</a>
+                                    <a href="kmix.html" class="subcategory-item" data-tooltip="Karanja Cake">K-Mix</a>
+                                    <a href="mystica.html" class="subcategory-item" data-tooltip="Wetting & Spreading Agents">Mystica</a>
+                                    <a href="engrow.html" class="subcategory-item" data-tooltip="Seed Coating">Engrow</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dropdown-category">
+                            <a href="home-garden.html">Home & Garden</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link">Technology <span class="material-symbols-outlined">expand_more</span></a>
+                    <div class="dropdown-menu technology-menu">
+                        <div class="dropdown-category">
+                            <a href="karyo.html" class="subcategory-item" data-tooltip="Advanced Delievery Platform">Karyo</a>
+                        </div>
+                        
+                        <div class="dropdown-category">
+                            <a href="wynn.html" class="subcategory-item" data-tooltip="Microbial Platform">Wynn</a> 
+                        </div>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a href="contract-manufacturing.html" class="nav-link">Contract Manufacturing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+    <br>
+    <header>
+        <div class="container">
+            <div class="logo">SPINDURA<span style="color: #FFD700;">RIX</span></div>
+            <h1 style="color: white;">Advanced Spinosad Insecticide</h1>
+            <p class="tagline">Premium formulation with enhanced efficacy and extended residual control</p>
+            
+            <div class="badges">
+                <span class="badge">Spinosad 45% SC</span>
+                <span class="badge">Fast-acting</span>
+                <span class="badge">Extended residual</span>
+                <span class="badge">IPM compatible</span>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <!-- Overview Section -->
+        <section class="overview">
+            <h2>Product Overview</h2>
+            <div class="overview-content">
+                <p>Spindura Rix is a premium suspension concentrate formulation containing 45% Spinosad, a highly effective insecticide derived from the soil bacterium Saccharopolyspora spinosa. This advanced formulation combines the exceptional pest control capabilities of Spinosad with enhanced stability and extended residual activity.</p>
+                <p>Spindura Rix provides rapid knockdown and long-lasting control of lepidopteran pests and other targeted insects while maintaining excellent environmental safety profiles. The Rix formulation features improved rainfastness, better plant coverage, and enhanced compatibility with integrated pest management programs.</p>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="content-section">
+            <h2>Key Features</h2>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3><i class="fas fa-vial"></i> Advanced SC Formulation</h3>
+                    <p>Suspension concentrate ensures excellent stability, easy mixing, and uniform application.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-bolt"></i> Rapid Action</h3>
+                    <p>Provides fast knockdown of target pests with visible results within hours of application.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-shield-alt"></i> Extended Residual</h3>
+                    <p>Offers prolonged protection with residual activity lasting 7-14 days depending on conditions.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-leaf"></i> Selective Action</h3>
+                    <p>Targets specific pest groups while being safe for most beneficial insects and pollinators.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <h3><i class="fas fa-recycle"></i> IPM Compatibility</h3>
+                    <p>Integrates seamlessly with biological control agents and other IPM components.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Rix Features Section -->
+        <section class="content-section">
+            <h2>Rix Version Advantages</h2>
+            
+            <div class="rix-features">
+                <div class="rix-feature-card">
+                    <h4>Enhanced Rainfastness</h4>
+                    <p>Superior adhesion and resistance to wash-off from rainfall or irrigation.</p>
+                </div>
+                
+                <div class="rix-feature-card">
+                    <h4>Improved Coverage</h4>
+                    <p>Advanced spreading agents ensure complete plant coverage and penetration.</p>
+                </div>
+                
+                <div class="rix-feature-card">
+                    <h4>Extended Residual</h4>
+                    <p>Longer-lasting protection with reduced application frequency requirements.</p>
+                </div>
+                
+                <div class="rix-feature-card">
+                    <h4>UV Stabilization</h4>
+                    <p>Enhanced resistance to UV degradation for consistent performance.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Target Pests Section -->
+        <section class="content-section">
+            <h2>Target Pests</h2>
+            
+            <div class="pests-grid">
+                <div class="pest-card">
+                    <h4>Helicoverpa armigera</h4>
+                    <p>Highly effective against American bollworm in cotton and other crops.</p>
+                </div>
+                
+                <div class="pest-card">
+                    <h4>Spodoptera species</h4>
+                    <p>Excellent control of armyworms, fall armyworm, and tobacco cutworm.</p>
+                </div>
+                
+                <div class="pest-card">
+                    <h4>Plutella xylostella</h4>
+                    <p>Effective management of diamondback moth in cruciferous vegetables.</p>
+                </div>
+                
+                <div class="pest-card">
+                    <h4>Leafminers</h4>
+                    <p>Controls various leafminer species in vegetables and ornamentals.</p>
+                </div>
+                
+                <div class="pest-card">
+                    <h4>Thrips</h4>
+                    <p>Manages thrips populations in multiple cropping systems.</p>
+                </div>
+                
+                <div class="pest-card">
+                    <h4>Fruit Flies</h4>
+                    <p>Effective against fruit fly species in orchards and vegetable crops.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Dosage Section -->
+        <section class="content-section">
+            <h2>Recommended Dosage</h2>
+            
+            <table class="dosage-table">
+                <tr>
+                    <th>Crop Type</th>
+                    <th>Dosage per Acre</th>
+                    <th>Water Volume</th>
+                </tr>
+                <tr>
+                    <td class="variant">Cotton</td>
+                    <td>80-100 ml / acre</td>
+                    <td>200-300 liters water</td>
+                </tr>
+                <tr>
+                    <td class="variant">Vegetables</td>
+                    <td>60-80 ml / acre</td>
+                    <td>200-400 liters water</td>
+                </tr>
+                <tr>
+                    <td class="variant">Fruits</td>
+                    <td>80-120 ml / acre</td>
+                    <td>400-600 liters water</td>
+                </tr>
+                <tr>
+                    <td class="variant">Pulses</td>
+                    <td>60-80 ml / acre</td>
+                    <td>200-300 liters water</td>
+                </tr>
+                <tr>
+                    <td class="variant">Cereals</td>
+                    <td>80-100 ml / acre</td>
+                    <td>200-300 liters water</td>
+                </tr>
+            </table>
+            
+            <div style="margin-top: 20px; padding: 15px; background: #f1f8e9; border-radius: 8px;">
+                <p><strong>Application Guidelines:</strong> Shake well before use. Prepare suspension in clean water and use within 4-6 hours. Apply during early morning or late evening hours. Ensure thorough coverage of both leaf surfaces. Repeat applications at 10-14 day intervals based on pest pressure. Avoid application during peak sunlight hours or when bees are actively foraging.</p>
+            </div>
+        </section>
+        
+        <!-- Mode of Action Section -->
+        <section class="content-section">
+            <h2>Mode of Action</h2>
+            
+            <div class="mode-of-action">
+                <div class="mode-text">
+                    <p>Spindura Rix employs a unique biological mode of action that makes it highly effective against target pests while maintaining environmental safety:</p>
+                    
+                    <p><strong>Nicotinic Acetylcholine Receptor Activation:</strong> Spinosad acts on the nicotinic acetylcholine receptors in the insect nervous system, causing rapid excitation of nerve cells.</p>
+                    
+                    <p><strong>GABA Receptor Interaction:</strong> Simultaneously affects GABA-gated chloride channels, leading to disrupted nerve function and uncontrolled muscle contractions.</p>
+                    
+                    <p><strong>Rapid Paralysis:</strong> The combined action on multiple neural targets results in rapid paralysis and feeding cessation within hours of exposure.</p>
+                    
+                    <p><strong>Ingestion and Contact Activity:</strong> Works primarily through ingestion but also has significant contact activity, providing multiple routes of entry.</p>
+                    
+                    <p><strong>Selective Toxicity:</strong> The unique mode of action provides selective toxicity to target pests while being relatively safe to most beneficial insects, mammals, and birds.</p>
+                    
+                    <p><strong>Minimal Resistance Risk:</strong> The complex mode of action reduces the likelihood of resistance development compared to conventional insecticides.</p>
+                </div>
+                
+                <div class="mode-image">
+                    <img src="https://images.unsplash.com/photo-1587334984005-84fad92e6bfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Spinosad Mode of Action">
+                    <div class="caption">Spinosad - Natural insecticide with unique neural action mechanism</div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Application Methods Section -->
+        <section class="content-section">
+            <h2>Application Methods</h2>
+            
+            <div class="methods-grid">
+                <div class="method-card">
+                    <h4><i class="fas fa-spray-can"></i> Foliar Spray</h4>
+                    <p>Apply as foliar spray with thorough coverage of both leaf surfaces for maximum efficacy.</p>
+                </div>
+                
+                <div class="method-card">
+                    <h4><i class="fas fa-tint"></i> High Volume Spray</h4>
+                    <p>Use higher water volumes for dense canopy crops to ensure complete coverage.</p>
+                </div>
+                
+                <div class="method-card">
+                    <h4><i class="fas fa-cloud"></i> Low Volume Spray</h4>
+                    <p>Effective in low volume applications for efficient coverage in various conditions.</p>
+                </div>
+                
+                <div class="method-card">
+                    <h4><i class="fas fa-tractor"></i> Aerial Application</h4>
+                    <p>Suitable for aerial application in large-scale farming operations.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Benefits Section -->
+        <section class="content-section">
+            <h2>Key Benefits</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <h4><i class="fas fa-chart-line"></i> Superior Efficacy</h4>
+                    <p>Provides 90-95% control of target pests with rapid knockdown and extended protection.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4><i class="fas fa-tree"></i> Environmental Safety</h4>
+                    <p>Low toxicity to mammals, birds, and most beneficial insects when used as directed.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4><i class="fas fa-leaf"></i> Resistance Management</h4>
+                    <p>Unique mode of action helps manage resistance in pest populations.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <h4><i class="fas fa-recycle"></i> Short Pre-harvest Interval</h4>
+                    <p>Minimal waiting period between application and harvest for most crops.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h2>Ready to Use Spindura Rix?</h2>
+            <p>Contact us for pricing, distribution opportunities, or technical support</p>
+            <a href="contact.html" class="btn">Contact Sales</a>
+            <a href="#" class="btn btn-outline">Download Brochure</a>
+        </section>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="about.html">About</a>
+                    <a href="biocontrol.html">Products</a>
+                    <a href="karyo.html">Technology</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="footer-contact">
+                    <a href="mailto:info@kriya.ltd">info@kriya.ltd</a>
+                    <a href="https://wa.me/916385848466">+91 6385848466</a>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/108402158/" aria-label="LinkedIn">
+                        <span class="material-symbols-outlined">person</span>
+                    </a>
+                    <a href="https://x.com/kriyabiosys" aria-label="Twitter">
+                        <span class="material-symbols-outlined">chat</span>
+                    </a>
+                    <a href="https://www.instagram.com/kriyabiosys/" aria-label="Instagram">
+                        <span class="material-symbols-outlined">photo_camera</span>
+                    </a>
+                    <a href="https://www.youtube.com/@kriyabiosys" aria-label="YouTube">
+                        <span class="material-symbols-outlined">play_circle</span>
+                    </a>
+                    <a href="https://www.facebook.com/kriyabiosys" aria-label="Facebook">
+                        <span class="material-symbols-outlined">thumb_up</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-disclaimer">
+                <p>For usage/dosage information, please refer to product documentation. Always follow label instructions and local regulations.</p>
+            </div>
+            
+            <div class="footer-legal">
+                <p>© Kriya Ltd 2025 | <a href="#">Privacy Policy</a> | <a href="#">Responsible Use</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }));
+        
+        // Dropdown functionality for mobile
+        document.querySelectorAll('.dropdown > .nav-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    const dropdown = link.parentElement;
+                    dropdown.classList.toggle('active');
+                }
+            });
+        });
+        
+        // Subcategory functionality for mobile
+        document.querySelectorAll('.dropdown-category > a').forEach(link => {
+            link.addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    const category = link.parentElement;
+                    category.classList.toggle('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
