@@ -91,33 +91,38 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Handle dropdown category clicks on mobile
+    // Handle dropdown category clicks on mobile - FIXED FOR REDIRECT
     dropdownCategories.forEach(category => {
         const link = category.querySelector('a');
+        const hasSubcategories = category.querySelector('.subcategory-menu');
         
         if (link) {
             link.addEventListener('click', function(e) {
                 if (window.innerWidth <= 768) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    const isActive = !category.classList.contains('active');
-                    
-                    requestAnimationFrame(() => {
-                        category.classList.toggle('active', isActive);
+                    // Only prevent default if there are subcategories
+                    if (hasSubcategories) {
+                        e.preventDefault();
+                        e.stopPropagation();
                         
-                        // Close other categories in the same dropdown
-                        if (isActive) {
-                            const parentDropdown = category.closest('.dropdown');
-                            if (parentDropdown) {
-                                parentDropdown.querySelectorAll('.dropdown-category').forEach(otherCategory => {
-                                    if (otherCategory !== category) {
-                                        otherCategory.classList.remove('active');
-                                    }
-                                });
+                        const isActive = !category.classList.contains('active');
+                        
+                        requestAnimationFrame(() => {
+                            category.classList.toggle('active', isActive);
+                            
+                            // Close other categories in the same dropdown
+                            if (isActive) {
+                                const parentDropdown = category.closest('.dropdown');
+                                if (parentDropdown) {
+                                    parentDropdown.querySelectorAll('.dropdown-category').forEach(otherCategory => {
+                                        if (otherCategory !== category) {
+                                            otherCategory.classList.remove('active');
+                                        }
+                                    });
+                                }
                             }
-                        }
-                    });
+                        });
+                    }
+                    // If no subcategories, allow normal link behavior (redirect)
                 }
             });
         }

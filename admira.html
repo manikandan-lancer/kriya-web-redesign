@@ -152,7 +152,7 @@
     } */
     
     /* Hamburger Menu */
-    .hamburger {
+    /* .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
@@ -164,7 +164,7 @@
       background-color: var(--dark-text);
       margin: 3px 0;
       transition: 0.3s;
-    }
+    } */
     
     /* Breadcrumb */
     .breadcrumb {
@@ -315,7 +315,7 @@
     
     /* Responsive */
     @media (max-width: 768px) {
-      .nav-menu {
+      /* .nav-menu {
         position: fixed;
         left: -100%;
         top: 70px;
@@ -352,10 +352,6 @@
         transform: translateY(-8px) rotate(-45deg);
       }
       
-      .products-grid {
-        grid-template-columns: 1fr;
-      }
-      
       .dropdown-menu {
         position: static;
         opacity: 1;
@@ -363,11 +359,15 @@
         transform: none;
         box-shadow: none;
         display: none;
-      }
-      
+        }
+        
       .nav-item.dropdown:hover .dropdown-menu {
         display: block;
-      }
+      } */
+        
+        .products-grid {
+          grid-template-columns: 1fr;
+        }
       
       .products-menu {
         flex-direction: column;
@@ -382,7 +382,7 @@
   <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo">
-                <img src="assets/img/logo.png" alt="Kriya Ltd" style="width: 15%; height: 15%;">
+                <img src="assets/img/logo.png" alt="Kriya Ltd" style="width: 25%; height: 25%;">
             </a>
             
             <ul class="nav-menu">
@@ -603,21 +603,6 @@
         </div>
     </footer>
 
-  <script>
-    // Mobile menu toggle
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav-menu");
-
-    hamburger.addEventListener("click", () => {
-      hamburger.classList.toggle("active");
-      navMenu.classList.toggle("active");
-    });
-
-    // Close mobile menu when clicking on a link
-    document.querySelectorAll(".nav-menu a").forEach(n => n.addEventListener("click", () => {
-      hamburger.classList.remove("active");
-      navMenu.classList.remove("active");
-    }));
-  </script>
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
