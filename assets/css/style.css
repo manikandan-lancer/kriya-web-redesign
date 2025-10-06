@@ -1446,6 +1446,42 @@ p {
     text-decoration: underline;
 }
 
+/* --- Social Media Icons (Boxicons) --- */
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-social a:hover {
+  background: var(--accent-gold, #EA6E26);
+  transform: translateY(-3px);
+}
+
+.footer-social i {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.footer-logo-img {
+    max-width: 150px;
+    height: auto;
+    filter: brightness(0) invert(1);
+}
+
+.footer-social a:hover {
+  transform: translateY(-3px);
+}
+
+
+
 /* Contact Page Styles */
 .contact-main {
     padding: 4rem 0;
@@ -2002,3 +2038,4 @@ html {
         scroll-behavior: auto;
     }
 }
+
