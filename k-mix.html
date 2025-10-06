@@ -3,11 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MargoSpin | Biocontrol | Kriya Ltd</title>
+  <title>K-Mix | Substrates | Kriya Ltd</title>
   
   <!-- Styles -->
+   <link rel="icon" href="assets/img/logo.jpg">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
   
   <style>
     :root {
@@ -289,72 +291,6 @@
       background: #3d8b40;
     }
     
-    /* Product Details Section */
-    .product-details {
-      padding: 3rem 0;
-      background-color: var(--light-bg);
-    }
-    
-    .details-content {
-      display: flex;
-      gap: 3rem;
-      align-items: flex-start;
-    }
-    
-    .details-image {
-      flex: 1;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    }
-    
-    .details-image img {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-    
-    .details-text {
-      flex: 1;
-    }
-    
-    .features-list {
-      list-style: none;
-      margin: 1.5rem 0;
-    }
-    
-    .features-list li {
-      padding: 0.5rem 0;
-      position: relative;
-      padding-left: 1.5rem;
-    }
-    
-    .features-list li:before {
-      content: "✓";
-      color: var(--primary-green);
-      font-weight: bold;
-      position: absolute;
-      left: 0;
-    }
-    
-    .specs-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1.5rem 0;
-    }
-    
-    .specs-table th, .specs-table td {
-      padding: 0.75rem;
-      text-align: left;
-      border-bottom: 1px solid #eee;
-    }
-    
-    .specs-table th {
-      background-color: #f5f5f5;
-      font-weight: 600;
-      width: 40%;
-    }
-    
     /* Footer */
     .footer {
       background: #f5f5f5;
@@ -437,10 +373,6 @@
         flex-direction: column;
         min-width: auto;
       }
-      
-      .details-content {
-        flex-direction: column;
-      }
     }
   </style>
 </head>
@@ -448,152 +380,141 @@
 
   <!-- Navbar -->
   <nav class="navbar">
-    <div class="container nav-container">
-      <a href="../../index.html" class="nav-logo">
-        <img src="../../assets/img/logo.png" alt="Kriya Ltd">
-      </a>
-
-      <ul class="nav-menu">
-        <li><a href="../../index.html">Home</a></li>
-        <li><a href="../../about.html">About</a></li>
-
-        <!-- Products Dropdown -->
-        <li class="nav-item dropdown">
-          <a href="../biocontrol.html" class="nav-link active">
-            Products <span class="material-symbols-outlined">expand_more</span>
-          </a>
-          <div class="dropdown-menu products-menu">
-            <div class="dropdown-category">
-              <a href="../biocontrol.html" class="active">Biocontrol</a>
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="assets/img/logo.png" alt="Kriya Ltd" style="width: 15%; height: 15%;">
+            </a>
+            
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                
+		<!-- Updated Products Dropdown -->
+<li class="nav-item dropdown">
+    <a class="nav-link">Products <span class="material-symbols-outlined">expand_more</span></a>
+    <div class="dropdown-menu products-menu">
+        <div class="dropdown-category">
+            <a href="biocontrol.html">Biocontrol <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
+                <div class="subcategory-items">
+                    <a href="ecoza.html" class="subcategory-item" data-tooltip="Azadirachtin">Ecoza</a>
+                    <a href="margoshine.html" class="subcategory-item" data-tooltip="Neem Oil">Margoshine</a>
+                    <a href="k-guard.html" class="subcategory-item" data-tooltip="Karanjin">K-Guard</a>
+                    <a href="weedx.html" class="subcategory-item" data-tooltip="MCT">WeedX</a>
+                    <a href="admira.html" class="subcategory-item" data-tooltip="Essential Oil">Admira</a>
+                    <a href="spindura.html" class="subcategory-item" data-tooltip="Spinosad">Spindura</a>
+                    <a href="margospin.html" class="subcategory-item" data-tooltip="Neem Oil + Spinosad">MargoSpin</a>
+                    <a href="mycova.html" class="subcategory-item" data-tooltip="Beauveria bassian">Mycova</a>
+                    <a href="rexora.html" class="subcategory-item" data-tooltip="Metarhizium anisopliae">Rexora</a>
+                    <a href="biota.html" class="subcategory-item" data-tooltip="Trichoderma viride">Biota (V/H)</a>
+                    <a href="seira.html" class="subcategory-item" data-tooltip="Verticillium lecanii">Seira</a>
+                    <a href="encilo.html" class="subcategory-item" data-tooltip="Paecilomyces fumosoroseus">EnCilo</a>
+                    <a href="neuvita.html" class="subcategory-item" data-tooltip="Ampelomyces quisqualis">Neuvita</a>
+                </div>
             </div>
-            <div class="dropdown-category">
-              <a href="../biostimulants.html">Biostimulants</a>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="biostimulants.html">Biostimulants <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
+                <div class="subcategory-items">
+                    <a href="igreen.html" class="subcategory-item" data-tooltip="Microbial Consortium">IGreen</a>
+                    <a href="zenita.html" class="subcategory-item" data-tooltip="Neem Limonoids based PGP">Zenita</a>
+                    <a href="cropsia.html" class="subcategory-item" data-tooltip="Plant Extract based PGP">Cropsia</a>
+                    <a href="blooma.html" class="subcategory-item" data-tooltip="Seaweed based PGP">Blooma</a>
+                    <a href="enrhize.html" class="subcategory-item" data-tooltip="Arbuscular Mycorrhizal">Enrhize</a>
+                    <a href="orgocare.html" class="subcategory-item" data-tooltip="Plant based Stress Management">Orgocare</a>
+                    <a href="envicta.html" class="subcategory-item" data-tooltip="Humic based PGP">Envicta</a>
+                </div>
             </div>
-            <div class="dropdown-category">
-              <a href="../substrates.html">Substrates</a>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="substrates.html" class="active">Substrates <span class="material-symbols-outlined">chevron_right</span></a>
+            <div class="subcategory-menu">
+                <div class="subcategory-items">
+                    <a href="maxineem.html" class="subcategory-item" data-tooltip="Neem Cake">Maxineem</a>
+                    <a href="kmix.html" class="subcategory-item active" data-tooltip="Karanja Cake">K-Mix</a>
+                    <a href="mystica.html" class="subcategory-item" data-tooltip="Wetting & Spreading Agents">Mystica</a>
+                    <a href="engrow.html" class="subcategory-item" data-tooltip="Seed Coating">Engrow</a>
+                </div>
             </div>
-            <div class="dropdown-category">
-              <a href="../home-garden.html">Home & Garden</a>
-            </div>
-          </div>
-        </li>
-
-        <!-- Technology Dropdown -->
-        <li class="nav-item dropdown">
-          <a href="../../technology/karyo.html" class="nav-link">
-            Technology <span class="material-symbols-outlined">expand_more</span>
-          </a>
-          <div class="dropdown-menu">
-            <a href="../../technology/karyo.html">Karyo</a>
-            <a href="../../technology/wynn.html">Wynn</a>
-          </div>
-        </li>
-
-        <li><a href="../../contract-manufacturing.html">Contract Manufacturing</a></li>
-        <li><a href="../../contact.html">Contact</a></li>
-      </ul>
-
-      <div class="hamburger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="home-garden.html">Home & Garden</a>
+        </div>
     </div>
-  </nav>
+</li>
+
+<li class="nav-item dropdown">
+    <a class="nav-link">Technology <span class="material-symbols-outlined">expand_more</span></a>
+    <div class="dropdown-menu technology-menu">
+        <div class="dropdown-category">
+            <a href="karyo.html" class="subcategory-item" data-tooltip="Advanced Delievery Platform">Karyo</a>
+        </div>
+        
+        <div class="dropdown-category">
+            <a href="wynn.html" class="subcategory-item" data-tooltip="Microbial Platform">Wynn</a> 
+        </div>
+    </div>
+</li>
+
+                <li class="nav-item">
+                    <a href="contract-manufacturing.html" class="nav-link">Contract Manufacturing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
 
   <!-- Breadcrumb -->
   <section class="breadcrumb container">
-    <a href="../../index.html">Home</a> &gt;
-    <a href="../biocontrol.html">Biocontrol</a> &gt;
-    <strong>MargoSpin</strong>
+    <a href="index.html">Home</a> &gt;
+    <a href="substrates.html">Substrates</a> &gt;
+    <strong>K-Mix</strong>
   </section>
 
   <!-- Page Header -->
   <section class="hero">
     <div class="container">
-      <h1>MargoSpin Products</h1>
+      <h1>K-Mix</h1>
       <p class="section-subtitle">
-        Advanced combination formula featuring neem extracts and spinosad for superior pest control with dual-action mechanism.
+        Premium karanja cake organic manure for enhanced soil fertility, natural pest management, and sustainable agriculture.
       </p>
     </div>
   </section>
 
-  <!-- MargoSpin Products Grid -->
+  <!-- Single Product Display -->
   <section class="container">
     <div class="products-grid">
-      <!-- MargoRix -->
+      <!-- K-Mix Karanja Cake -->
       <div class="product-card">
         <div class="product-image">
-          <img src="../../assets/img/products/margospin-packshot.jpg" alt="MargoSpin Standard">
+          <img src="assets/img/products/kmix-packshot.jpg" alt="K-Mix Karanja Cake">
         </div>
         <div class="product-content">
-          <span class="product-badge">MargoRix</span>
-          <h3 class="product-title">MargoRix</h3>
-          <div class="product-spec">Neem Extracts + Spinosad 1.5%</div>
-          <p class="product-description">Powerful combination formula that provides both antifeedant and contact action against a wide range of pests.</p>
-          <a href="margospin-combi.html" class="btn">View Product Details</a>
-        </div>
-      </div>
-
-      <!-- Margoshine -->
-      <div class="product-card">
-        <div class="product-image">
-          <img src="../../assets/img/products/margospin-packshot.jpg" alt="MargoSpin Plus">
-        </div>
-        <div class="product-content">
-          <span class="product-badge">Margoshine</span>
-          <h3 class="product-title">Margoshine</h3>
-          <div class="product-spec">Enhanced Neem + Spinosad 2.5%</div>
-          <p class="product-description">Enhanced formulation with higher spinosad concentration for challenging pest situations and resistant populations.</p>
-          <a href="margospin-plus.html" class="btn">View Product Details</a>
-        </div>
-      </div>
-
-
-  <!-- Product Details Section -->
-  <section class="product-details">
-    <div class="container">
-      <div class="details-content">
-        <div class="details-image">
-          <img src="../../assets/img/products/margospin-detail.jpg" alt="MargoSpin Application">
-        </div>
-        <div class="details-text">
-          <h2>About MargoSpin</h2>
-          <p>MargoSpin represents a breakthrough in integrated pest management, combining the proven efficacy of neem-based compounds with the powerful action of spinosad. This synergistic combination offers multiple modes of action, reducing the risk of pest resistance while providing comprehensive protection.</p>
-          
-          <h3>Key Benefits</h3>
-          <ul class="features-list">
-            <li>Dual-action mechanism: antifeedant + contact action</li>
-            <li>Reduced risk of pest resistance development</li>
-            <li>Safe for beneficial insects and pollinators</li>
-            <li>Broad-spectrum control of chewing and sucking pests</li>
-            <li>Compatible with IPM programs</li>
-            <li>Short pre-harvest interval</li>
-          </ul>
-          
-          <h3>Technical Specifications</h3>
-          <table class="specs-table">
-            <tr>
-              <th>Active Ingredients</th>
-              <td>Azadirachtin + Spinosad</td>
-            </tr>
-            <tr>
-              <th>Formulation</th>
-              <td>Suspension Concentrate (SC)</td>
-            </tr>
-            <tr>
-              <th>Target Pests</th>
-              <td>Thrips, Caterpillars, Leaf miners, Aphids, Whiteflies</td>
-            </tr>
-            <tr>
-              <th>Recommended Crops</th>
-              <td>Vegetables, Fruits, Cereals, Cotton, Soybean</td>
-            </tr>
-            <tr>
-              <th>Dosage</th>
-              <td>1-2 ml per liter of water</td>
-            </tr>
-          </table>
+          <span class="product-badge">Organic Substrate</span>
+          <h3 class="product-title">K-Mix Karanja Cake</h3>
+          <div class="product-spec">Premium Karanja Cake Manure</div>
+          <p class="product-description">
+            High-quality karanja cake derived from cold-pressed karanja seeds. Provides excellent soil enrichment 
+            with natural pest control properties. Rich in essential nutrients and bioactive compounds for healthy 
+            plant growth and improved soil structure.
+          </p>
+          <!-- <a href="kmix-details.html" class="btn">View Product Details</a> -->
         </div>
       </div>
     </div>
@@ -601,10 +522,48 @@
 
   <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <p>© 2026 Kriya Ltd | <a href="../../about.html">About</a> | <a href="../biocontrol.html">Products</a> | <a href="../../technology/karyo.html">Technology</a> | <a href="../../contact.html">Contact</a></p>
-    </div>
-  </footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="about.html">About</a>
+                    <a href="substrates.html">Products</a>
+                    <a href="karyo.html">Technology</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                
+                <div class="footer-contact">
+                    <a href="mailto:info@kriya.ltd">info@kriya.ltd</a>
+                    <a href="https://wa.me/916385848466">+91 6385848466</a>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/company/108402158/" aria-label="LinkedIn">
+                        <span class="material-symbols-outlined">person</span>
+                    </a>
+                    <a href="https://x.com/kriyabiosys" aria-label="Twitter">
+                        <span class="material-symbols-outlined">chat</span>
+                    </a>
+                    <a href="https://www.instagram.com/kriyabiosys/" aria-label="Instagram">
+                        <span class="material-symbols-outlined">photo_camera</span>
+                    </a>
+                    <a href="https://www.youtube.com/@kriyabiosys" aria-label="YouTube">
+                        <span class="material-symbols-outlined">play_circle</span>
+                    </a>
+                    <a href="https://www.facebook.com/kriyabiosys" aria-label="Facebook">
+                        <span class="material-symbols-outlined">thumb_up</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-disclaimer">
+                <p>For usage/dosage information, please refer to product documentation. Always follow label instructions and local regulations.</p>
+            </div>
+            
+            <div class="footer-legal">
+                <p>© Kriya Ltd 2025 | <a href="#">Privacy Policy</a> | <a href="#">Responsible Use</a></p>
+            </div>
+        </div>
+    </footer>
 
   <script>
     // Mobile menu toggle
