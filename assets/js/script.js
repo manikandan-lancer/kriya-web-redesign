@@ -266,9 +266,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize active navigation
     setActiveNavLink();
 
-    // Enhanced tooltip functionality
+    // Enhanced tooltip functionality - FIXED
     function setupTooltips() {
-        const tooltipItems = document.querySelectorAll('[data-tooltip]');
+        const tooltipItems = document.querySelectorAll('.subcategory-item[data-tooltip]');
         
         tooltipItems.forEach(item => {
             // Remove default title to prevent double tooltips
@@ -277,9 +277,25 @@ document.addEventListener('DOMContentLoaded', function() {
                 item.removeAttribute('title');
             }
             
-            // Add touch support for mobile (though we disable tooltips on mobile)
+            // Ensure tooltips work on desktop
+            if (window.innerWidth > 768) {
+                // Add a small delay for better UX
+                let tooltipTimer;
+                
+                item.addEventListener('mouseenter', function() {
+                    tooltipTimer = setTimeout(() => {
+                        // Tooltip will show via CSS :hover pseudo-element
+                    }, 100);
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    clearTimeout(tooltipTimer);
+                });
+            }
+            
+            // Disable tooltips on mobile by preventing default touch behavior
             item.addEventListener('touchstart', function(e) {
-                if (window.innerWidth > 768) {
+                if (window.innerWidth <= 768) {
                     e.preventDefault();
                 }
             }, { passive: false });
@@ -287,6 +303,23 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     setupTooltips();
+
+    // Fix for tooltip positioning in nested dropdowns
+    function fixTooltipZIndex() {
+        const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+        const subcategoryMenus = document.querySelectorAll('.subcategory-menu');
+        
+        // Ensure tooltips appear above all dropdown content
+        dropdownMenus.forEach(menu => {
+            menu.style.zIndex = '1001';
+        });
+        
+        subcategoryMenus.forEach(menu => {
+            menu.style.zIndex = '1002';
+        });
+    }
+
+    fixTooltipZIndex();
 });
 
 // Your existing product data and utility functions...
